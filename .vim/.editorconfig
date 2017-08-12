@@ -1,0 +1,22 @@
+root = true
+
+[*]
+end_of_line = LF
+charset = utf-8
+indent_size = 2
+indent_style = space
+trim_trailing_whitespace = true
+
+[*.{cpp,h,hpp,js,php,py}]
+max_line_length = 80
+insert_final_newline = true
+
+[*.{html,phtml}]
+insert_final_newline = false
+
+[Makefile]
+indent_style = tab
+indent_size = 4
+
+# Adding
+[*.tmpl]

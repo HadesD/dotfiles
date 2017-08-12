@@ -1,0 +1,16 @@
+pane	0	0	:~	1	:*	0	:/home/darkhades	1	zsh	:
+pane	LaraCC	0	:vi	1	:*	0	:/data/GitHub/cppcms	0	vi	:vi
+pane	LaraCC	0	:vi	1	:*	1	:/data/GitHub/cppcms	0	zsh	:
+pane	LaraCC	0	:vi	1	:*	2	:/data/GitHub/cppcms	0	zsh	:
+pane	LaraCC	0	:vi	1	:*	3	:/data/GitHub/cppcms	1	zsh	:
+pane	LaraCC	0	:vi	1	:*	4	:/data/GitHub/cppcms	0	zsh	:
+pane	PicToChar	0	:..Hub/PicToChar	1	:*	0	:/data/GitHub/PicToChar	1	vi	:vi
+pane	PicToChar	0	:..Hub/PicToChar	1	:*	1	:/data/GitHub/PicToChar	0	zsh	:
+pane	PicToChar	0	:..Hub/PicToChar	1	:*	2	:/data/GitHub/PicToChar	0	zsh	:
+pane	PicToChar	0	:..Hub/PicToChar	1	:*	3	:/data/GitHub/PicToChar	0	zsh	:
+pane	Vim	0	:~/.vim	1	:*	0	:/home/darkhades/.vim	1	zsh	:
+window	0	0	1	:*	c0fd,185x54,0,0,0
+window	LaraCC	0	1	:*	d586,185x54,0,0{130x54,0,0,1,54x54,131,0[54x13,131,0,2,54x17,131,14,3,54x11,131,32,4,54x10,131,44,5]}
+window	PicToChar	0	1	:*	fc9a,185x54,0,0{130x54,0,0,6,54x54,131,0[54x27,131,0,7,54x13,131,28,8,54x12,131,42,9]}
+window	Vim	0	1	:*	60af,185x54,0,0,10
+state	PicToChar	Vim
