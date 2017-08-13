@@ -79,3 +79,9 @@
 [submodule ".vim/bundle/tcomment_vim"]
 	path = .vim/bundle/tcomment_vim
 	url = https://github.com/tomtom/tcomment_vim.git
+[submodule ".vim/bundle/vimshell.vim"]
+	path = .vim/bundle/vimshell.vim
+	url = https://github.com/Shougo/vimshell.vim.git
+[submodule ".vim/bundle/vimproc.vim"]
+	path = .vim/bundle/vimproc.vim
+	url = https://github.com/Shougo/vimproc.vim.git

@@ -22,10 +22,20 @@ ln -s ~/dotfile/.vim ~/.vim && \
 ln -s ~/.vim/.vimrc ~/.vimrc
 ```
 
-*Install YouCompleteMe*
+_**Install YouCompleteMe**_
 ```bash
 cd ~/.vim/bundle/YouCompleteMe && \
 ./install.py --all
+```
+
+_**Install VimProc**_
+```
+vi
+:VimProcInstall
+```
+_or_
+```
+cd ~/.vim/bundle/vimproc.vim && make
 ```
 
 ### Tmux
