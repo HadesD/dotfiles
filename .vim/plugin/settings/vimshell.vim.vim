@@ -1,0 +1,1 @@
+abbreviate terminal VimShell
