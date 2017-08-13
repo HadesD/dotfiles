@@ -18,5 +18,9 @@ insert_final_newline = false
 indent_style = tab
 indent_size = 4
 
+[.gitmodules]
+indent_size = 4
+indent_style = tab
+
 # Adding
 [*.tmpl]
