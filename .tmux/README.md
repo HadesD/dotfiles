@@ -8,7 +8,6 @@ Tmux settings
 # Install
 
 ```bash
-git clone git@github.com:HadesD/.tmux.git ~/.tmux && \
 ln -s ~/.tmux/.tmux.conf ~/.tmux.conf && \
 chmod -R 0777 ~/.tmux && \
 cd ~/.tmux && \
