@@ -1,4 +1,8 @@
+#include <iostream>
+#include <vector>
+#include <string>
 #include <thread>
+#include <map>
 
 int f = 1;
 
@@ -15,4 +19,8 @@ int main()
       f = 3;
     }
   });
+
+  // v<C-n>I
+  // cs{[
+  std::vector<std::string> v = { "f", "", "", "" };
 }

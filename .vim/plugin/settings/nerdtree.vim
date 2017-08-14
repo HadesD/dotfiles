@@ -1,4 +1,4 @@
-nmap <C-n> :NERDTreeToggle<CR>
+map <C-m> :NERDTreeToggle<CR>
 let NERDTreeShowHidden          = 1
 let g:NERDTreeShowIgnoredStatus = 1
 if v:version < 703
