@@ -18,7 +18,7 @@ sudo apt-get install vim-gui-common vim-runtime clang1 clang-3.8-dev
 
 - Symlink
 ```
-ln -s ~/dotfile/.vim ~/.vim && \
+ln -s ~/dotfiles/.vim ~/.vim && \
 ln -s ~/.vim/.vimrc ~/.vimrc
 ```
 
@@ -43,6 +43,6 @@ cd ~/.vim/bundle/vimproc.vim && make
 - Symlink
 
 ```
-ln -s ~/dotfile/.tmux ~/.tmux && \
+ln -s ~/dotfiles/.tmux ~/.tmux && \
 ln -s ~/.tmux/.tmux.conf ~/.tmux.conf
 ```

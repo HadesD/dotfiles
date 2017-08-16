@@ -7,5 +7,6 @@ else
   let g:loaded_nerdtree_git_status = 1
   let g:loaded_neosnippet = 1
   let g:loaded_neocomplete = 1
+  let g:loaded_vimshell = 1
 end
 

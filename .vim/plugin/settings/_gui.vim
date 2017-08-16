@@ -9,7 +9,8 @@ hi IndentGuidesEven ctermbg=235
 " highlight NonText guifg=#abc123 ctermfg=123
 highlight NonText guifg=bg ctermfg=bg
 
-" set enc=utf-8
-set fillchars=vert:\│
+if &encoding != "euc-jp"
+  set fillchars=vert:\│
+endif
 
 autocmd BufRead,BufNewFile .tmux.conf setf sh
