@@ -1,3 +1,7 @@
+if v:version < 703
+  let g:loaded_youcompleteme = 1
+  finish
+endif
 let g:ycm_keep_logfiles                = 1
 let g:ycm_log_level                    = 'debug'
 let g:ycm_confirm_extra_conf           = 0

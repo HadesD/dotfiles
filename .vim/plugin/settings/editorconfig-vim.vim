@@ -1,3 +1,8 @@
+if v:version < 703
+  let g:loaded_EditorConfig = 1
+  finish
+endif
+
 let s:dotfile = '.editorconfig'
 
 if has('unix')
