@@ -25,7 +25,7 @@ elseif &encoding == "euc-jp"
   let g:airline_symbols.linenr = 'Line'
   let g:airline_symbols.maxlinenr = ' Col'
   let g:airline_symbols.branch = ''
-  let g:airline_symbols.paste = 'P'
+  let g:airline_symbols.paste = 'PASTE'
   let g:airline_symbols.spell = 'S'
   let g:airline_symbols.notexists = ''
   let g:airline_symbols.whitespace = '¦®'
