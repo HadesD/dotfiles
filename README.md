@@ -46,3 +46,12 @@ cd ~/.vim/bundle/vimproc.vim && make
 ln -s ~/dotfiles/.tmux ~/.tmux && \
 ln -s ~/.tmux/.tmux.conf ~/.tmux.conf
 ```
+
+### ZSH
+
+- ZSH_CUSTOM
+
+```
+echo "ZSH_CUSTOM=$HOME/dotfiles/zshcustom" | tee -a ~/.zshrc && \
+source ~/.zshrc
+```
