@@ -52,6 +52,5 @@ ln -s ~/.tmux/.tmux.conf ~/.tmux.conf
 - ZSH_CUSTOM
 
 ```
-echo "ZSH_CUSTOM=$HOME/dotfiles/zshcustom" | tee -a ~/.zshrc && \
-source ~/.zshrc
+sed -i -e "1i export ZSH_CUSTOM=\$HOME/dotfiles/zshcustom" ~/.zshrc
 ```
