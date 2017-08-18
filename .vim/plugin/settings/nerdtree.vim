@@ -1,7 +1,9 @@
 map <C-m> :NERDTreeToggle<CR>
-let NERDTreeShowHidden          = 1
+
+let g:NERDTreeShowHidden          = 1
 let g:NERDTreeShowIgnoredStatus = 1
-if v:version < 703
-  let NERDTreeDirArrows         = 0
+
+if &encoding != "utf-8"
+  let g:NERDTreeDirArrows         = 0
 end
 
