@@ -1,2 +1,2 @@
-setlocal noexpandtab
+set noexpandtab
 set noet
