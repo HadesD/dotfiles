@@ -28,8 +28,7 @@ elseif &encoding == "euc-jp"
   let g:airline_symbols.paste = 'PASTE'
   let g:airline_symbols.spell = 'S'
   let g:airline_symbols.notexists = ''
-  let g:airline_symbols.whitespace = '¦®'
-else
+  let g:airline_symbols.whitespace = '|'
   let g:airline#extensions#tabline#enabled = 0
 endif
 
