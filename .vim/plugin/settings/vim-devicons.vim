@@ -1,7 +1,10 @@
+let g:NERDTreeLimitedSyntax = 1
+
 if &encoding != "utf-8" || v:version < 703
   let g:loaded_webdevicons = 1
   let g:webdevicons_enable = 0
   let g:webdevicons_enable_nerdtree = 0
+  let g:NERDTreeSyntaxDisableDefaultExtensions = 1
   finish
 endif
 
