@@ -5,7 +5,9 @@
 ### Clone
 
 ```
-git clone git@github.com:HadesD/dotfiles.git ~/dotfiles
+git clone git@github.com:HadesD/dotfiles.git ~/dotfiles && \
+cd ~/dotfiles && \
+git submodule update --init --recursive
 ```
 
 ### Vim
