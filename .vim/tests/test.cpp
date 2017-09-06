@@ -4,6 +4,11 @@
 #include <thread>
 #include <map>
 
+class Test
+{
+
+};
+
 int f = 1;
 
 int main()
