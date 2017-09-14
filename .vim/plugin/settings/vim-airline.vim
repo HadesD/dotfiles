@@ -1,3 +1,8 @@
+if v:version < 703
+  " Crash bug
+  let s:_system = system("cd ~/.vim/bundle/vim-airline && git reset e7a5c97df13b3bcf1313e8dff6acf8a4675d6762 && git checkout .")
+endif
+
 let g:airline_detect_paste = 1
 
 if !exists('g:airline_symbols')
