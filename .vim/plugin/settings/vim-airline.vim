@@ -6,8 +6,10 @@ endif
 
 let s:remoteSession = ($STY == "")
 if s:remoteSession
-  let g:airline_powerline_fonts = 1
-  let g:Powerline_symbols = 'fancy'
+  if !has('win32unix')
+    let g:airline_powerline_fonts = 1
+    let g:Powerline_symbols = 'fancy'
+  endif
   " let g:airline_section_z = airline#section#create(['windowswap', '%3p%% ', 'linenr', ':%3v'])
 else
 endif
