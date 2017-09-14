@@ -1,4 +1,4 @@
-if v:version < 703 || !has('python') || !has('python3')
+if v:version < 703 || (!has('python') && !has('python3'))
   let g:loaded_youcompleteme = 1
   finish
 endif
