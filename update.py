@@ -19,3 +19,6 @@ subprocess.call(['git', 'submodule', 'update', '--recursive', '--init'])
 
 print('Rebase', '\n')
 subprocess.call(['git', 'pull', '--rebase'])
+
+print('Tmux', '\n')
+subprocess.call(['tmux', 'source', os.path.dirname(os.path.abspath(__file__)) + '/.tmux/.tmux.conf'])
