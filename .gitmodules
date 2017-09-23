@@ -158,3 +158,7 @@
 	path = .vim/bundle/vim-unimpaired
 	url = https://github.com/tpope/vim-unimpaired
 	ignore = dirty
+[submodule ".vim/bundle/vim-smooth-scroll"]
+	path = .vim/bundle/vim-smooth-scroll
+	url = https://github.com/terryma/vim-smooth-scroll.git
+	ignore = dirty
