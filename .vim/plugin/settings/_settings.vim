@@ -19,12 +19,13 @@ set showmatch
 
 " backup
 set backup
+set backupdir-=.
 if has('unix')
-  set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+  set backupdir^=~/tmp,/tmp
   set backupskip=/tmp/*,/private/tmp/*
   set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 elseif has('win32') || has('win64')
-  set backupdir=$HOME/.vim-tmp,$HOME/.tmp,$HOME/tmp,$HOME/var/tmp,$HOME/tmp
+  set backupdir^=$TEMP
   set backupskip=$HOME/tmp/*,$HOME/private/tmp/*
   set directory=$HOME/.vim-tmp,$HOME/.tmp,$HOME/tmp,$HOME/var/tmp,$HOME/tmp
 endif

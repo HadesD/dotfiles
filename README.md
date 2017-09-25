@@ -5,7 +5,7 @@
 ### Clone
 
 ```
-git clone git@github.com:HadesD/dotfiles.git ~/dotfiles && \
+git clone https://HadesD@github.com/HadesD/dotfiles.git ~/dotfiles && \
 cd ~/dotfiles && \
 git submodule update --init --recursive
 ```
@@ -20,7 +20,9 @@ sudo apt-get install vim-gui-common vim-runtime clang1 clang-3.8-dev
 
 - Symlink
 ```
+rm -rf ~/.vim && \
 ln -s ~/dotfiles/.vim ~/.vim && \
+rm -rf ~/.vimrc && \
 ln -s ~/.vim/.vimrc ~/.vimrc
 ```
 
