@@ -20,9 +20,11 @@ set showmatch
 
 " backup
 set backup
-set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
-set backupskip=/tmp/*,/private/tmp/*
-set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+if has('unix')
+  set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+  set backupskip=/tmp/*,/private/tmp/*
+  set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+endif
 set writebackup
 
 " --- Code Style ---
