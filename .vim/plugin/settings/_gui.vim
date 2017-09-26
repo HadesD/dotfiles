@@ -31,4 +31,8 @@ if has("gui_running")
 	elseif has("gui_win32")
 		set guifont=Consolas:h11:cANSI
 	endif
+  set langmenu=en_US
+  let $LANG = 'en_US'
+  source $VIMRUNTIME/delmenu.vim
+  source $VIMRUNTIME/menu.vim
 endif
