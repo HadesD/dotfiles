@@ -3,6 +3,9 @@
 import os
 import sys
 import shutil
+import subprocess
+
+subprocess.call(['git', 'config', '--global', 'core.fileMode', 'false'])
 
 DIR = os.path.dirname(os.path.realpath(__file__))
 CWD = os.getcwd()

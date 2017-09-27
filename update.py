@@ -15,6 +15,10 @@ def renewPathogen():
 
 def gitSubmodule():
   print('Submodule', '\n')
+  subprocess.call([
+    'git', 'submodule', 'foreach', '--recursive',
+    'git', 'checkout', '.'
+  ])
   subprocess.call(['git', 'pull', 'origin', 'master'])
   subprocess.call(['git', 'submodule', 'update', '--recursive', '--remote'])
   subprocess.call(['git', 'submodule', 'update', '--recursive', '--init'])
