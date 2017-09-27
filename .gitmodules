@@ -166,3 +166,7 @@
 	path = .vim/bundle/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
 	ignore = dirty
+[submodule ".vim/bundle/vim-minimap"]
+	path = .vim/bundle/vim-minimap
+	url = https://github.com/severin-lemaignan/vim-minimap.git
+	ignore = dirty
