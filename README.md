@@ -15,7 +15,7 @@ git submodule update --init --recursive
 - Ubuntu
 
 ```bash
-sudo apt-get install vim-gui-common vim-runtime clang1 clang-3.8-dev
+sudo apt-get install vim-gui-common vim-runtime
 ```
 
 - Symlink
@@ -41,6 +41,11 @@ _or_
 ```
 cd ~/.vim/bundle/vimproc.vim && make
 ```
+
+_**Install Ag.vim**_
+
+- Goto: https://github.com/ggreer/the_silver_searcher#installing
+- Ubuntu: sudo apt-get install silversearcher-ag
 
 ### Tmux
 

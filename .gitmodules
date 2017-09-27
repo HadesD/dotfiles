@@ -22,10 +22,6 @@
 	path = .vim/bundle/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter.git
 	ignore = dirty
-[submodule ".vim/bundle/YouCompleteMe"]
-	path = .vim/bundle/YouCompleteMe
-	url = https://github.com/Valloric/YouCompleteMe.git
-	ignore = dirty
 [submodule ".vim/bundle/vim-cpp-enhanced-highlight"]
 	path = .vim/bundle/vim-cpp-enhanced-highlight
 	url = https://github.com/octol/vim-cpp-enhanced-highlight.git
@@ -161,4 +157,12 @@
 [submodule ".vim/bundle/vim-smooth-scroll"]
 	path = .vim/bundle/vim-smooth-scroll
 	url = https://github.com/terryma/vim-smooth-scroll.git
+	ignore = dirty
+[submodule ".vim/bundle/ag.vim"]
+	path = .vim/bundle/ag.vim
+	url = https://github.com/rking/ag.vim.git
+	ignore = dirty
+[submodule ".vim/bundle/YouCompleteMe"]
+	path = .vim/bundle/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe.git
 	ignore = dirty
