@@ -21,10 +21,13 @@ set showmatch
 set backup
 set backupdir-=.
 set dir-=.
+set undodir-=.
 if has('unix')
-  set backupdir^=~/tmp,/tmp
+  set backupdir^=/tmp
+  set undodir^=~/tmp,/tmp
 elseif has('win32') || has('win64')
   set backupdir^=$TEMP
+  set undodir^=$TEMP
 endif
 set writebackup
 
