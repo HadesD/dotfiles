@@ -4,34 +4,35 @@ import os
 import sys
 import subprocess
 
+DIR = os.path.dirname(os.path.abspath(__file__))
+
 def renewPathogen():
-  print('Update Pathogen', '\n')
+  print('Update Pathogen')
   subprocess.call([
     'curl', '-LSo',
-    os.path.dirname(os.path.abspath(__file__)) + '/.vim/autoload/pathogen.vim',
+    DIR + '/.vim/autoload/pathogen.vim',
     'https://raw.githubusercontent.com/tpope/vim-pathogen/master/autoload/pathogen.vim'
   ])
-  print('Finished', '\n')
+  print('Finished')
 
-def gitSubmodule():
-  print('Submodule', '\n')
+def gitUpdate():
+  print('Git :: submodule :: checkout')
   subprocess.call([
     'git', 'submodule', 'foreach', '--recursive',
     'git', 'checkout', '.'
   ])
+  print('Git :: pull')
   subprocess.call(['git', 'pull', 'origin', 'master'])
+  print('Git :: rubmodule :: update')
   subprocess.call(['git', 'submodule', 'update', '--recursive', '--remote'])
   subprocess.call(['git', 'submodule', 'update', '--recursive', '--init'])
-
-def gitRebase():
-  print('Rebase', '\n')
+  print('Git :: rebase')
   subprocess.call(['git', 'pull', '--rebase'])
 
 def tmux():
-  print('Tmux', '\n')
-  subprocess.call(['tmux', 'source', os.path.dirname(os.path.abspath(__file__)) + '/.tmux/.tmux.conf'])
+  print('Tmux')
+  subprocess.call(['tmux', 'source', DIR + '/.tmux/.tmux.conf'])
 
 renewPathogen()
 gitSubmodule()
-gitRebase()
 tmux()

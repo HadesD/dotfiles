@@ -41,5 +41,4 @@ import update
 
 update.renewPathogen()
 update.gitSubmodule()
-update.gitRebase()
 update.tmux()
