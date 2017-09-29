@@ -30,7 +30,7 @@ if (sys.platform == 'linux2') or (sys.platform == 'darwin'):
 
   print('Vim :: start :: Symlink')
   os.symlink(DIR + '/.vim', dot_vim_dir)
-  os.symlink(DIR + '/.vim/.vimrc', dot_vimrc_file)
+  os.symlink(DIR + '/.vim/vimrc', dot_vimrc_file)
 elif (sys.platform == "win32"):
   # Is Windows
   print('Updating...')
