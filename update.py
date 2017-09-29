@@ -18,7 +18,7 @@ def renewPathogen():
 def gitUpdate():
   print('Git :: submodule :: checkout')
   subprocess.call([
-    'git', 'submodule', 'foreach', '--recursive',
+    'git', 'submodule', 'foreach',# '--recursive',
     'git', 'checkout', '.'
   ])
   print('Git :: pull')
@@ -28,11 +28,16 @@ def gitUpdate():
   subprocess.call(['git', 'submodule', 'update', '--recursive', '--init'])
   print('Git :: rebase')
   subprocess.call(['git', 'pull', '--rebase'])
+  print('Git :: submodule :: pull')
+  subprocess.call([
+    'git', 'submodule', 'foreach',# '--recursive',
+    'git', 'pull', 'origin', 'master'
+  ])
 
 def tmux():
   print('Tmux')
   subprocess.call(['tmux', 'source', DIR + '/.tmux/.tmux.conf'])
 
 renewPathogen()
-gitSubmodule()
+gitUpdate()
 tmux()

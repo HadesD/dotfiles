@@ -40,5 +40,5 @@ else:
 import update
 
 update.renewPathogen()
-update.gitSubmodule()
+update.gitUpdate()
 update.tmux()
