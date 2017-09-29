@@ -83,6 +83,14 @@ get_python_inc(),
 if platform.system() != 'Windows':
   flags.append( '-std=c++11' )
 
+# CaroOnline
+if (os.path.exists('Common/third_party/asio')):
+  flags.append( '-I' )
+  flags.append( '../Common/third_party/asio/asio/include' )
+
+if (os.path.exists('Common/third_party/asio')):
+  flags.append( '-I' )
+  flags.append( '../Common/third_party/spdlog/include' )
 
 # Set this to the absolute path to the folder (NOT the file!) containing the
 # compile_commands.json file to use that instead of 'flags'. See here for
