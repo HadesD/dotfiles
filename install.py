@@ -39,6 +39,5 @@ else:
 
 import update
 
-update.renewPathogen()
 update.gitUpdate()
 update.tmux()

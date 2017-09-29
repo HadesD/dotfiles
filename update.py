@@ -6,15 +6,6 @@ import subprocess
 
 DIR = os.path.dirname(os.path.abspath(__file__))
 
-def renewPathogen():
-  print('Update Pathogen')
-  subprocess.call([
-    'curl', '-LSo',
-    DIR + '/.vim/autoload/pathogen.vim',
-    'https://raw.githubusercontent.com/tpope/vim-pathogen/master/autoload/pathogen.vim'
-  ])
-  print('Finished')
-
 def gitUpdate():
   print('Git :: submodule :: checkout')
   subprocess.call([
@@ -38,6 +29,5 @@ def tmux():
   print('Tmux')
   subprocess.call(['tmux', 'source', DIR + '/.tmux/.tmux.conf'])
 
-renewPathogen()
 gitUpdate()
 tmux()
