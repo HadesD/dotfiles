@@ -3,7 +3,14 @@
 #include <string>
 #include <thread>
 #include <map>
-skldjdf
+
+enum class TestEnum
+{
+  sfdsdf,
+    FFF,
+    TEST,
+};
+
 class Test
 {
 

@@ -5,8 +5,8 @@
 ### Clone & Auto Install
 
 ```
-git clone https://HadesD@github.com/HadesD/dotfiles.git ~/dotfiles && \
-cd ~/dotfiles && \
+git clone https://HadesD@github.com/HadesD/dotfiles.git $HOME/dotfiles && \
+cd $HOME/dotfiles && \
 python install.py
 ```
 
