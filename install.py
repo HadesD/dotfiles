@@ -33,7 +33,10 @@ if (sys.platform == 'linux2') or (sys.platform == 'darwin'):
   os.symlink(DIR + '/.vim/vimrc', dot_vimrc_file)
 elif (sys.platform == "win32"):
   # Is Windows
-  print('Updating...')
+  print('Auto install is being updated...')
+  print('Manual VIM install')
+  print('- Copy ./vim to $HOME/vimfiles')
+  print('- Copy ./vim/vimrc to $HOME/_vimrc')
 else:
   print('OS not found')
 
