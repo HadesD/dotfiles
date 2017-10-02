@@ -1,8 +1,12 @@
 function! _runtime#init(...) abort
   if has('unix')
-    set rtp+=$HOME/.vim/autoload/vim-pathogen
+    let s:dot_vim = $HOME.'/.vim'
   elseif (has('win32') || has('win64')) && !has('win32unix')
-    set rtp+=$VIMRUNTIME/../vim80/autoload/vim-pathogen
+    let s:dot_vim = $HOME.'/vimfiles'
+	set enc=utf-8
   end
+  if (exists('s:dot_vim'))
+    let &rtp = &rtp.','.s:dot_vim.'/autoload/vim-pathogen'
+  endif
   execute pathogen#infect()
 endfunction
