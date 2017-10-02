@@ -9,13 +9,13 @@ if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
 
-let s:remoteSession = ($STY == "")
-if s:remoteSession
+if g:is_ssh == ""
   if !has('win32unix')
     let g:airline_powerline_fonts = 1
     let g:Powerline_symbols = 'fancy'
   endif
   " let g:airline_section_z = airline#section#create(['windowswap', '%3p%% ', 'linenr', ':%3v'])
+
 else
 endif
 

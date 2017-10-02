@@ -9,7 +9,7 @@ hi IndentGuidesEven ctermbg=235
 " highlight NonText guifg=#abc123 ctermfg=123
 highlight NonText guifg=bg ctermfg=bg
 
-if &encoding != "euc-jp"
+if &encoding == "utf-8"
   set fillchars=vert:\│
 endif
 
