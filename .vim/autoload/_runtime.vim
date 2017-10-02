@@ -15,6 +15,6 @@ endfunction
 function _runtime#checkSSH() abort
   let g:is_ssh = 0
   if has('unix')
-    let g:is_ssh = $SSH_TTY
+    let g:is_ssh = ($SSH_TTY != "")
   endif
 endfunction
