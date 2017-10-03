@@ -102,14 +102,6 @@
 	path = .vim/bundle/tcomment_vim
 	url = https://github.com/tomtom/tcomment_vim.git
 	ignore = dirty
-[submodule ".vim/bundle/vimshell.vim"]
-	path = .vim/bundle/vimshell.vim
-	url = https://github.com/Shougo/vimshell.vim.git
-	ignore = dirty
-[submodule ".vim/bundle/vimproc.vim"]
-	path = .vim/bundle/vimproc.vim
-	url = https://github.com/Shougo/vimproc.vim.git
-	ignore = dirty
 [submodule ".vim/bundle/vim-multiple-cursors"]
 	path = .vim/bundle/vim-multiple-cursors
 	ignore = dirty
