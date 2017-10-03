@@ -31,6 +31,19 @@ if (sys.platform == 'linux2') or (sys.platform == 'darwin'):
   print('Vim :: start :: Symlink')
   os.symlink(DIR + '/.vim', dot_vim_dir)
   os.symlink(DIR + '/.vim/vimrc', dot_vimrc_file)
+
+  CURRENT_SHELL_RC = HOME + '/.zshrc'
+  if (os.path.exists(CURRENT_SHELL_RC)):
+    print('ZSH :: start')
+    r = open(CURRENT_SHELL_RC, 'r').read()
+    w = open(CURRENT_SHELL_RC, 'w').write(
+      'export ZSH_CUSTOM=$HOME/dotfiles/zshcustom\n'
+      + 'export EDITOR=vim\n'
+      + r
+    )
+  else:
+    print('ZSH :: NOT FOUND!!!')
+
 elif (sys.platform == "win32"):
   # Is Windows
   print('Auto install is being updated...')

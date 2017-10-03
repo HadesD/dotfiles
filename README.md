@@ -24,16 +24,6 @@ cd ~/.vim/bundle/YouCompleteMe && \
 ./install.py --all
 ```
 
-_**Install Vim :: VimProc**_
-```
-vi
-:VimProcInstall
-```
-_or_
-```
-cd ~/.vim/bundle/vimproc.vim && make
-```
-
 _**Install Vim :: Ag.vim**_
 
 - Goto: https://github.com/ggreer/the_silver_searcher#installing
@@ -43,8 +33,3 @@ _**Install Vim :: Ag.vim**_
 
 - Goto: https://github.com/robbyrussell/oh-my-zsh#basic-installation
 
-- ZSH_CUSTOM
-
-```
-sed -i -e "1i export ZSH_CUSTOM=\$HOME/dotfiles/zshcustom" ~/.zshrc
-```
