@@ -6,6 +6,7 @@ import shutil
 import subprocess
 
 subprocess.call(['git', 'config', '--global', 'core.fileMode', 'false'])
+subprocess.call(['git', 'config', 'core.fileMode', 'false'])
 
 DIR = os.path.dirname(os.path.realpath(__file__))
 CWD = os.getcwd()
@@ -35,14 +36,30 @@ if (sys.platform == 'linux2') or (sys.platform == 'darwin'):
   CURRENT_SHELL_RC = HOME + '/.zshrc'
   if (os.path.exists(CURRENT_SHELL_RC)):
     print('ZSH :: start')
-    r = open(CURRENT_SHELL_RC, 'r').read()
+    r = open(CURRENT_SHELL_RC, 'r').read().close()
     w = open(CURRENT_SHELL_RC, 'w').write(
       'export ZSH_CUSTOM=$HOME/dotfiles/zshcustom\n'
       + 'export EDITOR=vim\n'
       + r
-    )
+    ).close()
   else:
     print('ZSH :: NOT FOUND!!!')
+
+  print('Vim :: start :: PowerLine Font')
+  fonts_dir = HOME + '/.fonts'
+  if not os.path.exists(fonts_dir):
+    os.makedirs(fonts_dir)
+  os.symlink(DIR + '/.vim/bundle/powerline/PowerlineSymbols.otf', fonts_dir)
+  conf_font_dir = HOME + '/.config/fontconfig/conf.d'
+  if not os.path.exists(conf_font_dir):
+    os.makedirs(conf_font_dir)
+  os.symlink(
+    DIR + '/.vim/bundle/powerline/10-powerline-symbols.conf',
+    conf_font_dir
+  )
+
+  print('Vim :: start :: fonts :: cache')
+  subprocess.call(['fc-cache', '-vf', fonts_dir])
 
   print('Vim :: start :: YouCompleteMe')
   print('-- Goto: ' + dot_vim_dir + '/bundle/YouCompleteMe')

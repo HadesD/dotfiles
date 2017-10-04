@@ -9,7 +9,7 @@ if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
 
-if g:is_ssh == ""
+if g:is_ssh == 0
   if !has('win32unix') && !has('win32')
     let g:airline_powerline_fonts = 1
     let g:Powerline_symbols = 'fancy'

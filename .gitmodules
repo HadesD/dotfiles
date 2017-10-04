@@ -164,3 +164,6 @@
 [submodule ".vim/bundle/PHP-Indenting-for-VIm"]
 	path = .vim/bundle/PHP-Indenting-for-VIm
 	url = https://github.com/2072/PHP-Indenting-for-VIm.git
+[submodule ".vim/bundle/powerline"]
+	path = .vim/bundle/powerline
+	url = https://github.com/powerline/powerline.git
