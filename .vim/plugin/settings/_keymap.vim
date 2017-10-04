@@ -31,5 +31,5 @@ nnoremap <leader>ev :vsp $MYVIMRC<CR>
 nnoremap <leader>ez :vsp ~/.zshrc<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
 
-" toggle gundo
-nnoremap <leader>u :GundoToggle<CR>
+abbreviate terminal term ++curwin
+
