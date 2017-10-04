@@ -1,2 +1,2 @@
-" set filetype=html
-" set syntax=php
+" set syntax=php.html
+" set filetype=php.html
