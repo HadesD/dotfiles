@@ -25,9 +25,4 @@ def gitUpdate():
     'git', 'pull', 'origin', 'master'
   ])
 
-def tmux():
-  print('Tmux')
-  subprocess.call(['tmux', 'source', DIR + '/.tmux/.tmux.conf'])
-
 gitUpdate()
-tmux()

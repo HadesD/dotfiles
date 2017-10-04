@@ -44,16 +44,21 @@ if (sys.platform == 'linux2') or (sys.platform == 'darwin'):
   else:
     print('ZSH :: NOT FOUND!!!')
 
+  print('Vim :: start :: YouCompleteMe')
+  print('-- Goto: ' + dot_vim_dir + '/bundle/YouCompleteMe')
+  print('./install --all')
+
 elif (sys.platform == "win32"):
   # Is Windows
+  HOME = os.environ['HOME']
+
   print('Auto install is being updated...')
   print('Manual VIM install')
-  print('- Copy ./vim to $HOME/vimfiles')
-  print('- Copy ./vim/vimrc to $HOME/_vimrc')
+  print('- Copy ./vim to ' + HOME + '/vimfiles')
+  print('- Copy ./vim/vimrc to ' + HOME +'/_vimrc')
 else:
   print('OS not found')
 
 import update
 
 update.gitUpdate()
-update.tmux()
