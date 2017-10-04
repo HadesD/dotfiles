@@ -9,6 +9,7 @@ function! _runtime#init(...) abort
   if (exists('s:dot_vim'))
     let &rtp = &rtp.','.s:dot_vim.'/autoload/vim-pathogen'
   endif
+  set encoding=utf-8
   execute pathogen#infect()
 endfunction
 
