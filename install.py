@@ -14,12 +14,12 @@ CWD = os.getcwd()
 def remove(path):
   if (os.path.exists(path)):
     print('Detele :: ' + path)
-    if (os.path.islink(path)):
+    if (os.path.islink(path)) or os.path.isfile(path):
       os.remove(path)
     else:
       shutil.rmtree(path)
 
-if (sys.platform == 'linux2') or (sys.platform == 'darwin'):
+if (sys.platform == 'linux2') or (sys.platform == 'darwin') or (sys.platform == 'msys'):
   print('Unix :: found')
 
   HOME = os.environ['HOME']
@@ -54,18 +54,21 @@ if (sys.platform == 'linux2') or (sys.platform == 'darwin'):
   fonts_dir = HOME + '/.fonts'
   if not os.path.exists(fonts_dir):
     os.makedirs(fonts_dir)
-    font_name = 'PowerlineSymbols.otf'
-    remove(fonts_dir + '/' + font_name)
-    os.symlink(DIR + '/.vim/bundle/powerline/'+font_name, fonts_dir)
-    conf_font_dir = HOME + '/.config/fontconfig/conf.d'
-    if not os.path.exists(conf_font_dir):
-      os.makedirs(conf_font_dir)
-      conf_font_name = '10-powerline-symbols.conf'
-      remove(conf_font_dir + '/' + conf_font_name)
-      os.symlink(
-        DIR + '/.vim/bundle/powerline/',
-        conf_font_dir
-      )
+
+  font_name = 'PowerlineSymbols.otf'
+  remove(fonts_dir + '/' + font_name)
+  os.symlink(DIR + '/.vim/bundle/powerline/'+font_name, fonts_dir)
+
+  conf_font_dir = HOME + '/.config/fontconfig/conf.d'
+  if not os.path.exists(conf_font_dir):
+    os.makedirs(conf_font_dir)
+
+  conf_font_name = '10-powerline-symbols.conf'
+  remove(conf_font_dir + '/' + conf_font_name)
+  os.symlink(
+    DIR + '/.vim/bundle/powerline/',
+    conf_font_dir
+  )
 
   print('Vim :: start :: fonts :: cache')
   subprocess.call(['fc-cache', '-vf', fonts_dir])
