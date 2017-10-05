@@ -150,9 +150,6 @@
 	path = .vim/bundle/ag.vim
 	url = https://github.com/rking/ag.vim.git
 	ignore = dirty
-[submodule ".vim/bundle/YouCompleteMe"]
-	path = .vim/bundle/YouCompleteMe
-	url = https://github.com/Valloric/YouCompleteMe.git
 [submodule ".vim/bundle/vim-minimap"]
 	path = .vim/bundle/vim-minimap
 	url = https://github.com/severin-lemaignan/vim-minimap.git
