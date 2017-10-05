@@ -19,6 +19,17 @@ def remove(path):
     else:
       shutil.rmtree(path)
 
+def installYCM():
+  print('Vim :: start :: YouCompleteMe')
+  subprocess.call([
+    'git',
+    'clone',
+    'https://github.com/Valloric/YouCompleteMe.git',
+    '.vim/bundle/YouCompleteMe'
+  ])
+  print('Goto: ' + dot_vim_dir + '/bundle/YouCompleteMe')
+  print('python ./install --all')
+
 if (sys.platform == 'linux2') or (sys.platform == 'darwin') or (sys.platform == 'msys'):
   print('Unix :: found')
 
@@ -28,12 +39,12 @@ if (sys.platform == 'linux2') or (sys.platform == 'darwin') or (sys.platform == 
   remove(dot_vim_dir)
   this_vim_dir = DIR + '/vim'
 
-  dot_vimrc_file = HOME + '/.vimrc'
-  remove(dot_vimrc_file)
+  # dot_vimrc_file = HOME + '/.vimrc'
+  # remove(dot_vimrc_file)
 
   print('Vim :: start :: Symlink')
   os.symlink(this_vim_dir, dot_vim_dir)
-  os.symlink(this_vim_dir + '/vimrc', dot_vimrc_file)
+  # os.symlink(this_vim_dir + '/vimrc', dot_vimrc_file)
 
   CURRENT_SHELL_RC = HOME + '/.zshrc'
   if (os.path.exists(CURRENT_SHELL_RC)):
@@ -81,9 +92,7 @@ if (sys.platform == 'linux2') or (sys.platform == 'darwin') or (sys.platform == 
   print('Vim :: start :: fonts :: cache')
   subprocess.call(['fc-cache', '-vf', fonts_dir])
 
-  print('Vim :: start :: YouCompleteMe')
-  print('-- Goto: ' + dot_vim_dir + '/bundle/YouCompleteMe')
-  print('./install --all')
+  installYCM()
 
 elif (sys.platform == "win32"):
   # Is Windows

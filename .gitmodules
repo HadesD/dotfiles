@@ -153,7 +153,6 @@
 [submodule ".vim/bundle/YouCompleteMe"]
 	path = .vim/bundle/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
-	ignore = dirty
 [submodule ".vim/bundle/vim-minimap"]
 	path = .vim/bundle/vim-minimap
 	url = https://github.com/severin-lemaignan/vim-minimap.git
@@ -161,9 +160,12 @@
 [submodule ".vim/autoload/vim-pathogen"]
 	path = .vim/autoload/vim-pathogen
 	url = https://github.com/tpope/vim-pathogen.git
+	ignore = dirty
 [submodule ".vim/bundle/PHP-Indenting-for-VIm"]
 	path = .vim/bundle/PHP-Indenting-for-VIm
 	url = https://github.com/2072/PHP-Indenting-for-VIm.git
+	ignore = dirty
 [submodule ".vim/bundle/powerline"]
 	path = .vim/bundle/powerline
 	url = https://github.com/powerline/powerline.git
+	ignore = dirty
