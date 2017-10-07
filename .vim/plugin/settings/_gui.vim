@@ -12,7 +12,6 @@ if has("gui_running")
   source $VIMRUNTIME/menu.vim
 else
   " Block cursor
-  set term=xterm
   set t_Co=256  " vim-monokai now only support 256 colours in terminal.
   let &t_AB="\e[48;5;%dm"
   let &t_AF="\e[38;5;%dm"
@@ -21,6 +20,8 @@ else
     let &t_SI.="\e[5 q"
     let &t_EI.="\e[1 q"
     let &t_te.="\e[0 q"
+  elseif has('win32') || has('win64')
+    set term=xterm
   endif
 endif
 
