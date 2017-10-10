@@ -19,7 +19,7 @@ def gitUpdate():
   subprocess.call(['git', 'pull', 'origin', 'master'])
   print('Git :: submodule :: update')
   # subprocess.call(['git', 'submodule', 'update', '--recursive', '--remote'])
-  subprocess.call(['git', 'submodule', 'update', '--recursive', '--init'])
+  subprocess.call(['git', 'submodule', 'update', '--init', '--recursive'])
   print('Git :: rebase')
   subprocess.call(['git', 'pull', '--rebase'])
   print('Git :: submodule :: pull')
@@ -33,9 +33,9 @@ def ycmUpdate():
   YCM_DIR=THIS_VIM_DIR + '/bundle/YouCompleteMe'
   subprocess.call(['git', 'pull'], cwd=YCM_DIR)
 
-  print('Vim :: YouCompleteMe :: pull')
+  print('Vim :: YouCompleteMe :: submodule')
   subprocess.call(
-    ['git', 'submodule', 'update', '--recursive', '--init'],
+    ['git', 'submodule', 'update', '--init', '--recursive'],
     cwd=YCM_DIR
   )
 
