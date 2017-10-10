@@ -9,7 +9,9 @@ subprocess.call(['git', 'config', '--global', 'core.fileMode', 'false'])
 subprocess.call(['git', 'config', 'core.fileMode', 'false'])
 
 DIR = os.path.dirname(os.path.realpath(__file__))
-CWD = os.getcwd()
+HOME = os.environ['HOME']
+DOT_VIM_NAME = ''
+THIS_VIM_DIR = DIR + '/' + '.vim'
 
 def remove(path):
   if (os.path.exists(path)):
@@ -28,7 +30,11 @@ def installYCM():
     '.vim/bundle/YouCompleteMe'
   ])
   print('Goto: ' + dot_vim_dir + '/bundle/YouCompleteMe')
-  print('python ./install --all')
+  print('python install.py --all')
+
+if (sys.argv[0] == 'ycm'):
+  installYCM()
+  exit()
 
 if (sys.platform == 'linux2') or (sys.platform == 'darwin') or (sys.platform == 'msys'):
   print('Unix :: found')

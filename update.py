@@ -5,6 +5,9 @@ import sys
 import subprocess
 
 DIR = os.path.dirname(os.path.abspath(__file__))
+HOME = os.environ['HOME']
+DOT_VIM_NAME = ''
+THIS_VIM_DIR = DIR + '/' + '.vim'
 
 def gitUpdate():
   print('Git :: submodule :: checkout')
@@ -25,4 +28,16 @@ def gitUpdate():
     'git', 'pull', 'origin', 'master'
   ])
 
+def ycmUpdate():
+  print('Vim :: YouCompleteMe :: pull')
+  YCM_DIR=THIS_VIM_DIR + '/bundle/YouCompleteMe'
+  subprocess.call(['git', 'pull'], cwd=YCM_DIR)
+
+  print('Vim :: YouCompleteMe :: pull')
+  subprocess.call(
+    ['git', 'submodule', 'update', '--recursive', '--init'],
+    cwd=YCM_DIR
+  )
+
 gitUpdate()
+ycmUpdate()
