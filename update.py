@@ -12,19 +12,18 @@ THIS_VIM_DIR = DIR + '/' + '.vim'
 def gitUpdate():
   print('Git :: submodule :: checkout')
   subprocess.call([
-    'git', 'submodule', 'foreach',# '--recursive',
+    'git', 'submodule', 'foreach',
     'git', 'checkout', '.'
   ])
   print('Git :: pull')
   subprocess.call(['git', 'pull', 'origin', 'master'])
   print('Git :: submodule :: update')
-  # subprocess.call(['git', 'submodule', 'update', '--recursive', '--remote'])
   subprocess.call(['git', 'submodule', 'update', '--init', '--recursive'])
   print('Git :: rebase')
   subprocess.call(['git', 'pull', '--rebase'])
   print('Git :: submodule :: pull')
   subprocess.call([
-    'git', 'submodule', 'foreach',# '--recursive',
+    'git', 'submodule', 'foreach',
     'git', 'pull', 'origin', 'master'
   ])
 
@@ -36,6 +35,13 @@ def ycmUpdate():
   print('Vim :: YouCompleteMe :: submodule')
   subprocess.call(
     ['git', 'submodule', 'update', '--init', '--recursive'],
+    cwd=YCM_DIR
+  )
+  subprocess.call(
+    [
+      'git', 'submodule', 'foreach',
+      'git', 'pull', 'origin', 'master'
+    ],
     cwd=YCM_DIR
   )
 
