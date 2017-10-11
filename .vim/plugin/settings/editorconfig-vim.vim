@@ -5,7 +5,7 @@ endif
 
 let s:dotfile = '.editorconfig'
 
-if has('unix')
+if has('unix') || has('win32unix')
   let g:EditorConfig_exec_path    = $HOME . '/.vim/' . s:dotfile
   if !empty(glob(getcwd() . '/.git'))
         \ && empty(glob(getcwd() . '/' . s:dotfile))
