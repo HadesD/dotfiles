@@ -36,14 +36,16 @@ if (sys.argv[0] == 'ycm'):
   installYCM()
   exit()
 
-if (sys.platform == 'linux2') or (sys.platform == 'darwin') or (sys.platform == 'msys'):
+if (sys.platform == 'linux2') \
+   or (sys.platform == 'darwin') \
+   or (sys.platform == 'msys'):
   print('Unix :: found')
 
   HOME = os.environ['HOME']
 
   dot_vim_dir = HOME + '/.vim'
   remove(dot_vim_dir)
-  this_vim_dir = DIR + '/vim'
+  this_vim_dir = DIR + '/.vim'
 
   # dot_vimrc_file = HOME + '/.vimrc'
   # remove(dot_vimrc_file)
@@ -76,7 +78,7 @@ if (sys.platform == 'linux2') or (sys.platform == 'darwin') or (sys.platform == 
   try:
     font_name = 'PowerlineSymbols.otf'
     remove(fonts_dir + '/' + font_name)
-    os.symlink(dot_vim_dir + '/vim/bundle/powerline/'+font_name, fonts_dir)
+    os.symlink(dot_vim_dir + '/bundle/powerline/'+font_name, fonts_dir)
   except:
     print('Symlink :: error')
 
@@ -95,14 +97,14 @@ if (sys.platform == 'linux2') or (sys.platform == 'darwin') or (sys.platform == 
   except:
     print('Symlink :: error')
 
-  print('Vim :: start :: fonts :: cache')
-  subprocess.call(['fc-cache', '-vf', fonts_dir])
+  if sys.platform == 'linux2':
+    installYCM()
+    # print('Vim :: start :: fonts :: cache')
+    # subprocess.call(['fc-cache', '-vf', fonts_dir])
 
-  installYCM()
-
-elif (sys.platform == "win32"):
-  # Is Windows
-  HOME = os.environ['HOME']
+  elif (sys.platform == "win32"):
+    # Is Windows
+    HOME = os.environ['HOME']
 
   print('Auto install is being updated...')
   print('Manual VIM install')
