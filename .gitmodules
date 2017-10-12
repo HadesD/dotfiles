@@ -166,3 +166,6 @@
 	path = .vim/bundle/powerline
 	url = https://github.com/powerline/powerline.git
 	ignore = dirty
+[submodule ".vim/bundle/vim-power-mode"]
+	path = .vim/bundle/vim-power-mode
+	url = https://HadesD@github.com/HadesD/vim-power-mode.git
