@@ -54,7 +54,9 @@ def installPowerLineFont():
 
   font_name = 'PowerlineSymbols.otf'
   remove(fonts_dir + '/' + font_name)
-  os.symlink(powerline_dir + '/' + font_name, fonts_dir)
+
+  if not os.path.exists(fonts_dir + '/' + font_name):
+    os.symlink(powerline_dir + '/' + font_name, fonts_dir)
 
   conf_font_dir = HOME + '/.config/fontconfig/conf.d'
   if not os.path.exists(conf_font_dir):
@@ -63,10 +65,11 @@ def installPowerLineFont():
   conf_font_name = '10-powerline-symbols.conf'
   remove(conf_font_dir + '/' + conf_font_name)
   font_name = 'PowerlineSymbols.otf'
-  os.symlink(
-    powerline_dir,
-    conf_font_dir
-  )
+  if not os.path.exists(conf_font_dir + '/' + conf_font_name):
+    os.symlink(
+      powerline_dir + '/' + conf_font_name,
+      conf_font_dir
+    )
 
 if (sys.argv[0] == 'ycm'):
   installYCM()
