@@ -23,23 +23,29 @@ def remove(path):
       shutil.rmtree(path)
 
 def installYCM():
+  ycm_dir = THIS_VIM_DIR + '/bundle/YouCompleteMe'
+  if (os.path.exists(ycm_dir)):
+    return
   print('Vim :: start :: YouCompleteMe')
   subprocess.call([
     'git',
     'clone',
     'https://github.com/Valloric/YouCompleteMe.git',
-    '.vim/bundle/YouCompleteMe'
+    ycm_dir
   ])
-  print('Goto: ' + DOT_VIM_DIR + '/bundle/YouCompleteMe')
+  print('Goto: ' + ycm_dir + '/bundle/YouCompleteMe')
   print('python install.py --all')
 
 def installPowerLineFont():
   print('Vim :: start :: PowerlineFont')
+  powerline_dir = THIS_VIM_DIR + '/bundle/powerline'
+  if (os.path.exists(powerline_dir)):
+    return
   subprocess.call([
     'git',
     'clone',
     'https://github.com/powerline/powerline.git',
-    '.vim/bundle/YouCompleteMe'
+    powerline_dir
   ])
   print('Vim :: start :: PowerLine Font')
   fonts_dir = HOME + '/.fonts'
@@ -48,7 +54,7 @@ def installPowerLineFont():
 
   font_name = 'PowerlineSymbols.otf'
   remove(fonts_dir + '/' + font_name)
-  os.symlink(DOT_VIM_DIR + '/bundle/powerline/'+font_name, fonts_dir)
+  os.symlink(powerline_dir + '/' + font_name, fonts_dir)
 
   conf_font_dir = HOME + '/.config/fontconfig/conf.d'
   if not os.path.exists(conf_font_dir):
@@ -58,7 +64,7 @@ def installPowerLineFont():
   remove(conf_font_dir + '/' + conf_font_name)
   font_name = 'PowerlineSymbols.otf'
   os.symlink(
-    DOT_VIM_DIR + '/bundle/powerline/',
+    powerline_dir,
     conf_font_dir
   )
 
