@@ -28,6 +28,7 @@ def gitUpdate():
   ])
 
 def ycmUpdate():
+  YCM_DIR=THIS_VIM_DIR + '/bundle/YouCompleteMe'
   print('Vim :: YouCompleteMe :: checkout')
   subprocess.call(['git', 'pull', 'origin', 'master'], cwd=YCM_DIR)
 
@@ -38,7 +39,6 @@ def ycmUpdate():
   ], cwd=YCM_DIR)
 
   print('Vim :: YouCompleteMe :: pull')
-  YCM_DIR=THIS_VIM_DIR + '/bundle/YouCompleteMe'
   subprocess.call(['git', 'pull', 'origin', 'master'], cwd=YCM_DIR)
 
   print('Vim :: YouCompleteMe :: submodule')
