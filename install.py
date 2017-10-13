@@ -10,6 +10,7 @@ subprocess.call(['git', 'config', 'core.fileMode', 'false'])
 
 DIR = os.path.dirname(os.path.realpath(__file__))
 HOME = os.environ['HOME']
+DOT_VIM_DIR = HOME + '/.vim'
 DOT_VIM_NAME = ''
 THIS_VIM_DIR = DIR + '/' + '.vim'
 
@@ -29,8 +30,37 @@ def installYCM():
     'https://github.com/Valloric/YouCompleteMe.git',
     '.vim/bundle/YouCompleteMe'
   ])
-  print('Goto: ' + dot_vim_dir + '/bundle/YouCompleteMe')
+  print('Goto: ' + DOT_VIM_DIR + '/bundle/YouCompleteMe')
   print('python install.py --all')
+
+def installPowerLineFont():
+  print('Vim :: start :: PowerlineFont')
+  subprocess.call([
+    'git',
+    'clone',
+    'https://github.com/powerline/powerline.git',
+    '.vim/bundle/YouCompleteMe'
+  ])
+  print('Vim :: start :: PowerLine Font')
+  fonts_dir = HOME + '/.fonts'
+  if not os.path.exists(fonts_dir):
+    os.makedirs(fonts_dir)
+
+  font_name = 'PowerlineSymbols.otf'
+  remove(fonts_dir + '/' + font_name)
+  os.symlink(DOT_VIM_DIR + '/bundle/powerline/'+font_name, fonts_dir)
+
+  conf_font_dir = HOME + '/.config/fontconfig/conf.d'
+  if not os.path.exists(conf_font_dir):
+    os.makedirs(conf_font_dir)
+
+  conf_font_name = '10-powerline-symbols.conf'
+  remove(conf_font_dir + '/' + conf_font_name)
+  font_name = 'PowerlineSymbols.otf'
+  os.symlink(
+    DOT_VIM_DIR + '/bundle/powerline/',
+    conf_font_dir
+  )
 
 if (sys.argv[0] == 'ycm'):
   installYCM()
@@ -43,16 +73,14 @@ if (sys.platform == 'linux2') \
 
   HOME = os.environ['HOME']
 
-  dot_vim_dir = HOME + '/.vim'
-  remove(dot_vim_dir)
-  this_vim_dir = DIR + '/.vim'
+  remove(DOT_VIM_DIR)
 
   # dot_vimrc_file = HOME + '/.vimrc'
   # remove(dot_vimrc_file)
 
   print('Vim :: start :: Symlink')
-  os.symlink(this_vim_dir, dot_vim_dir)
-  # os.symlink(this_vim_dir + '/vimrc', dot_vimrc_file)
+  os.symlink(THIS_VIM_DIR, DOT_VIM_DIR)
+  # os.symlink(THIS_VIM_DIR + '/vimrc', dot_vimrc_file)
 
   CURRENT_SHELL_RC = HOME + '/.zshrc'
   if (os.path.exists(CURRENT_SHELL_RC)):
@@ -70,37 +98,9 @@ if (sys.platform == 'linux2') \
   else:
     print('ZSH :: NOT FOUND!!!')
 
-  print('Vim :: start :: PowerLine Font')
-  fonts_dir = HOME + '/.fonts'
-  if not os.path.exists(fonts_dir):
-    os.makedirs(fonts_dir)
-
-  try:
-    font_name = 'PowerlineSymbols.otf'
-    remove(fonts_dir + '/' + font_name)
-    os.symlink(dot_vim_dir + '/bundle/powerline/'+font_name, fonts_dir)
-  except:
-    print('Symlink :: error')
-
-  conf_font_dir = HOME + '/.config/fontconfig/conf.d'
-  if not os.path.exists(conf_font_dir):
-    os.makedirs(conf_font_dir)
-
-  conf_font_name = '10-powerline-symbols.conf'
-  remove(conf_font_dir + '/' + conf_font_name)
-  try:
-    font_name = 'PowerlineSymbols.otf'
-    os.symlink(
-      dot_vim_dir + '/bundle/powerline/',
-      conf_font_dir
-    )
-  except:
-    print('Symlink :: error')
-
   if sys.platform == 'linux2':
     installYCM()
-    # print('Vim :: start :: fonts :: cache')
-    # subprocess.call(['fc-cache', '-vf', fonts_dir])
+    installPowerLineFont()
 
   elif (sys.platform == "win32"):
     # Is Windows
@@ -116,3 +116,4 @@ else:
 import update
 
 update.gitUpdate()
+

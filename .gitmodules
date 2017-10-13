@@ -162,10 +162,6 @@
 	path = .vim/bundle/PHP-Indenting-for-VIm
 	url = https://github.com/2072/PHP-Indenting-for-VIm.git
 	ignore = dirty
-[submodule ".vim/bundle/powerline"]
-	path = .vim/bundle/powerline
-	url = https://github.com/powerline/powerline.git
-	ignore = dirty
 [submodule ".vim/bundle/vim-power-mode"]
 	path = .vim/bundle/vim-power-mode
 	url = https://HadesD@github.com/HadesD/vim-power-mode.git

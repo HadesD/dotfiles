@@ -7,3 +7,4 @@ __pycache__
 *.pyc
 
 /.vim/bundle/YouCompleteMe
+/.vim/bundle/powerline

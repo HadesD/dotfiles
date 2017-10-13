@@ -28,22 +28,28 @@ def gitUpdate():
   ])
 
 def ycmUpdate():
+  print('Vim :: YouCompleteMe :: checkout')
+  subprocess.call(['git', 'pull', 'origin', 'master'], cwd=YCM_DIR)
+
+  print('Vim :: YouCompleteMe :: checkout')
+  subprocess.call([
+    'git', 'submodule', 'foreach',
+    'git', 'checkout', '.'
+  ], cwd=YCM_DIR)
+
   print('Vim :: YouCompleteMe :: pull')
   YCM_DIR=THIS_VIM_DIR + '/bundle/YouCompleteMe'
-  subprocess.call(['git', 'pull'], cwd=YCM_DIR)
+  subprocess.call(['git', 'pull', 'origin', 'master'], cwd=YCM_DIR)
 
   print('Vim :: YouCompleteMe :: submodule')
   subprocess.call(
     ['git', 'submodule', 'update', '--init', '--recursive'],
     cwd=YCM_DIR
   )
-  subprocess.call(
-    [
-      'git', 'submodule', 'foreach',
-      'git', 'pull', 'origin', 'master'
-    ],
-    cwd=YCM_DIR
-  )
+  subprocess.call([
+    'git', 'submodule', 'foreach',
+    'git', 'pull', 'origin', 'master'
+  ], cwd=YCM_DIR)
 
 gitUpdate()
 ycmUpdate()
