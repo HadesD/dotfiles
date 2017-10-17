@@ -5,21 +5,21 @@ endif
 
 let s:dotfile = '.editorconfig'
 
-if has('unix') || has('win32unix')
+if has('unix')
   let g:EditorConfig_exec_path = $HOME . '/.vim/' . s:dotfile
-  if !empty(glob(getcwd() . '/.git'))
-        \ && empty(glob(getcwd() . '/' . s:dotfile))
-        \ && !empty(glob(g:EditorConfig_exec_path))
-    let s:symlink = system('ln -s ' . g:EditorConfig_exec_path . ' ' . getcwd())
-  endif
+  let s:cmd = 'ln -s ' . g:EditorConfig_exec_path . ' .'
 elseif has('win32') || has('win64')
   let g:EditorConfig_exec_path = $HOME . '/vimfiles/' . s:dotfile
+  let s:cmd = 'copy ' . g:EditorConfig_exec_path . ' .'
+endif
+if exists('s:cmd')
   if !empty(glob(getcwd() . '/.git'))
         \ && empty(glob(getcwd() . '/' . s:dotfile))
         \ && !empty(glob(g:EditorConfig_exec_path))
-    let s:path = substitute(g:EditorConfig_exec_path, "\\", "/", "")
-    let s:cmd = 'copy ' . s:path . ' ' . getcwd() . '/' . s:dotfile
-    let s:symlink = system(s:cmd)
-    exe 'echom ' '"'.s:cmd.'"'
+    if exists(':AsyncRun')
+      silent exe 'AsyncRun ' cmd
+    else
+      system(cmd)
+    end
   endif
-endif
+end
