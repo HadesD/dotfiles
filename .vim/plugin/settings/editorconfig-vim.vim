@@ -17,9 +17,9 @@ if exists('s:cmd')
         \ && empty(glob(getcwd() . '/' . s:dotfile))
         \ && !empty(glob(g:EditorConfig_exec_path))
     if exists(':AsyncRun')
-      silent exe 'AsyncRun ' cmd
+      silent exe 'AsyncRun ' s:cmd
     else
-      system(cmd)
+      let run = system(s:cmd)
     end
   endif
 end
