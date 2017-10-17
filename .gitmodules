@@ -165,3 +165,6 @@
 [submodule ".vim/bundle/vim-power-mode"]
 	path = .vim/bundle/vim-power-mode
 	url = https://HadesD@github.com/HadesD/vim-power-mode.git
+[submodule ".vim/bundle/asyncrun.vim"]
+	path = .vim/bundle/asyncrun.vim
+	url = https://github.com/skywind3000/asyncrun.vim

@@ -6,13 +6,16 @@ if has("gui_running")
 	elseif has("gui_win32")
 		set guifont=Consolas:h11:cANSI
 	endif
+  set guioptions-=m  "remove menu bar
+  set guioptions-=T  "remove toolbar
+  set guioptions-=r  "remove right-hand scroll bar
+  set guioptions-=L  "remove left-hand scroll bar
   set langmenu=en_US
   let $LANG = 'en_US'
   source $VIMRUNTIME/delmenu.vim
   source $VIMRUNTIME/menu.vim
 else
-  " Block cursor
-  set t_Co=256  " vim-monokai now only support 256 colours in terminal.
+  set t_Co=256
   let &t_AB="\e[48;5;%dm"
   let &t_AF="\e[38;5;%dm"
   if has('win32unix')
