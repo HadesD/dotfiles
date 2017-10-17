@@ -1,3 +1,3 @@
-" nmap <C-_> gcc
-" vmap <C-_> gc
+nmap <silent> <C-_> :TComment<CR>
+vmap <silent> <C-_> :TComent<CR>
 
