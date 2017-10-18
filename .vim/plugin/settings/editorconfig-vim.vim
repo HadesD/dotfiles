@@ -1,4 +1,4 @@
-if v:version < 703
+if v:version < 703 || !has('python')
   let g:loaded_EditorConfig = 1
   finish
 endif
