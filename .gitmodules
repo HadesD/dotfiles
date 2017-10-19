@@ -168,3 +168,15 @@
 [submodule ".vim/bundle/asyncrun.vim"]
 	path = .vim/bundle/asyncrun.vim
 	url = https://github.com/skywind3000/asyncrun.vim
+[submodule ".vim/bundle/vim-endwise"]
+	path = .vim/bundle/vim-endwise
+	url = https://github.com/tpope/vim-endwise
+[submodule ".vim/bundle/vim-workspace"]
+	path = .vim/bundle/vim-workspace
+	url = https://github.com/thaerkh/vim-workspace
+[submodule ".vim/bundle/vim-better-whitespace"]
+	path = .vim/bundle/vim-better-whitespace
+	url = https://github.com/ntpeters/vim-better-whitespace.git
+[submodule ".vim/bundle/vim-paste-easy"]
+	path = .vim/bundle/vim-paste-easy
+	url = https://github.com/roxma/vim-paste-easy.git
