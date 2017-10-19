@@ -28,7 +28,12 @@ def gitUpdate():
   ])
 
 def ycmUpdate():
-  YCM_DIR=THIS_VIM_DIR + '/bundle/YouCompleteMe'
+  YCM_DIR = THIS_VIM_DIR + '/bundle/YouCompleteMe'
+
+  if not os.path.exists(YCM_DIR):
+    print('Vim :: YouCompleteMe :: 404 - Not found')
+    return
+
   print('Vim :: YouCompleteMe :: checkout')
   subprocess.call(['git', 'pull', 'origin', 'master'], cwd=YCM_DIR)
 
