@@ -159,7 +159,7 @@
 	url = https://github.com/tpope/vim-pathogen.git
 	ignore = dirty
 [submodule ".vim/bundle/PHP-Indenting-for-VIm"]
-	path = .vim/bundle/PHP-Indenting-for-VIm
+	path = .vim/bundle/PHP-Indenting-for-Vim
 	url = https://github.com/2072/PHP-Indenting-for-VIm.git
 	ignore = dirty
 [submodule ".vim/bundle/vim-power-mode"]
