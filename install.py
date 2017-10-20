@@ -33,8 +33,19 @@ def installYCM():
     'https://github.com/Valloric/YouCompleteMe.git',
     ycm_dir
   ])
-  print('Goto: ' + ycm_dir + '/bundle/YouCompleteMe')
-  print('python install.py --all')
+  subprocess.call([
+    'git',
+    'submodule',
+    '--update',
+    '--init'
+  ], cwd=ycm_dir
+  )
+  subprocess.call([
+    'python',
+    'install.py',
+    '--all',
+  ], cwd=ycm_dir
+  )
 
 def installPowerLineFont():
   print('Vim :: start :: PowerlineFont')
