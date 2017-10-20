@@ -168,9 +168,6 @@
 [submodule ".vim/bundle/asyncrun.vim"]
 	path = .vim/bundle/asyncrun.vim
 	url = https://github.com/skywind3000/asyncrun.vim
-[submodule ".vim/bundle/vim-endwise"]
-	path = .vim/bundle/vim-endwise
-	url = https://github.com/tpope/vim-endwise
 [submodule ".vim/bundle/vim-workspace"]
 	path = .vim/bundle/vim-workspace
 	url = https://github.com/thaerkh/vim-workspace
