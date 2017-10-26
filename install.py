@@ -60,6 +60,7 @@ def installPowerLineFont():
     'https://github.com/powerline/powerline.git',
     powerline_dir
   ])
+  return
   print('Vim :: start :: PowerLine Font')
   fonts_dir = HOME + '/.fonts'
   if not os.path.exists(fonts_dir):
