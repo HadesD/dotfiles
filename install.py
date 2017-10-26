@@ -12,7 +12,8 @@ DIR = os.path.dirname(os.path.realpath(__file__))
 HOME = os.environ['HOME']
 DOT_VIM_DIR = HOME + '/.vim'
 DOT_VIM_NAME = ''
-THIS_VIM_DIR = DIR + '/' + '.vim'
+THIS_VIM_DIR = DIR + '/.vim'
+THIS_TMUX_DIR = DIR + '/.tmux'
 
 def remove(path):
   if (os.path.exists(path)):
@@ -119,7 +120,9 @@ if (sys.platform == 'linux2') \
     print('ZSH :: NOT FOUND!!!')
 
   print('Tmux :: start :: Symlink')
-  os.symlink(THIS_VIM_DIR+'../.tmux', HOME+'/.tmux')
+  remove(HOME+'/.tmux')
+  remove(HOME+'/.tmux.conf')
+  os.symlink(THIS_TMUX_DIR+'/.tmux', HOME+'/.tmux')
   os.symlink(HOME+'/.tmux/.tmux.conf', HOME+'/.tmux.conf')
 
   if sys.platform == 'linux2':
