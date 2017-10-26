@@ -34,6 +34,7 @@ def installYCM():
     'https://github.com/Valloric/YouCompleteMe.git',
     ycm_dir
   ])
+  return
   subprocess.call([
     'git',
     'submodule',
