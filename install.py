@@ -118,6 +118,10 @@ if (sys.platform == 'linux2') \
   else:
     print('ZSH :: NOT FOUND!!!')
 
+  print('Tmux :: start :: Symlink')
+  os.symlink(THIS_VIM_DIR+'../.tmux', HOME+'/.tmux')
+  os.symlink(HOME+'/.tmux/.tmux.conf', HOME+'/.tmux.conf')
+
   if sys.platform == 'linux2':
     installYCM()
     installPowerLineFont()
