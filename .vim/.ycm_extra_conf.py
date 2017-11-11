@@ -32,6 +32,7 @@ from distutils.sysconfig import get_python_inc
 import platform
 import os
 import ycm_core
+import sys
 
 # These are the compilation flags that will be used in case there's no
 # compilation database set (by default, one is not set).
@@ -95,28 +96,38 @@ if (os.path.exists('Common/third_party/asio')):
 #                                   Cocos Dev                                   #
 #################################################################################
 if (os.path.exists('cocos2d')):
-  flags.append(['-I', 'cocos2d'])
-  flags.append(['-I', 'cocos2d/cocos'])
-  flags.append(['-I', 'cocos2d/cocos/base'])
-  flags.append(['-I', 'cocos2d/cocos/physics'])
-  flags.append(['-I', 'cocos2d/cocos/math'])
-  flags.append(['-I', 'cocos2d/cocos/2d'])
-  flags.append(['-I', 'cocos2d/cocos/ui'])
-  flags.append(['-I', 'cocos2d/cocos/network'])
-  flags.append(['-I', 'cocos2d/cocos/audio/include'])
-  flags.append(['-I', 'cocos2d/cocos/editor-support'])
-  flags.append(['-I', 'cocos2d/extensions'])
-  flags.append(['-I', 'cocos2d/external'])
-  flags.append(['-I', 'cocos2d/external/chipmunk/include/chipmunk'])
+  # COCOS2D_ROOT = os.path
+  flags.extend(['-I', 'Classes'])
+  flags.extend(['-I', 'cocos2d'])
+  flags.extend(['-I', 'cocos2d/cocos'])
+  flags.extend(['-I', 'cocos2d/external'])
+  flags.extend(['-I', 'cocos2d/cocos/platform'])
+  flags.extend(['-I', 'cocos2d/cocos/audio/include'])
+  # flags.extend(['-I', 'cocos2d/cocos/base'])
+  # flags.extend(['-I', 'cocos2d/cocos/physics'])
+  # flags.extend(['-I', 'cocos2d/cocos/math'])
+  # flags.extend(['-I', 'cocos2d/cocos/2d'])
+  # flags.extend(['-I', 'cocos2d/cocos/3d'])
+  # flags.extend(['-I', 'cocos2d/cocos/ui'])
+  # flags.extend(['-I', 'cocos2d/cocos/vr'])
+  # flags.extend(['-I', 'cocos2d/cocos/network'])
+  # flags.extend(['-I', 'cocos2d/cocos/audio/include'])
+  # flags.extend(['-I', 'cocos2d/cocos/editor-support'])
+  # flags.extend(['-I', 'cocos2d/external/chipmunk/include/chipmunk'])
+  flags.extend(['-D', 'COCOS2D_DEBUG=1'])
+  flags.extend(['-D', 'CC_ENABLE_CHIPMUNK_INTEGRATION'])
 
   if (sys.platform == "darwin"):
-    flags.append(['-I', 'cocos2d/external/curl/include/ios'])
-    flags.append(['-I', 'cocos2d/cocos/platform/mac'])
-    flags.append(['-I', 'cocos2d/cocos/platform/ios'])
-  # elif (sys.platform == "linux" or sys.platform == "linux2"):
+    # MacOS
+    flags.extend(['-I', 'cocos2d/external/glfw3/include/mac'])
+    flags.extend(['-D', 'CC_TARGET_OS_MAC'])
+  elif (sys.platform == "linux" or sys.platform == "linux2"):
     # Linux
-  # elif (sys.platform == "win32"):
+    flags.extend(['-D', 'CC_TARGET_OS_LINUX'])
+    flags.extend(['-D', 'LINUX'])
+  elif (sys.platform == "win32"):
     # Windows
+    flags.extend(['-I', 'cocos2d/external/glfw3/include/win32'])
 
 # Set this to the absolute path to the folder (NOT the file!) containing the
 # compile_commands.json file to use that instead of 'flags'. See here for
