@@ -129,6 +129,13 @@ if (os.path.exists('cocos2d')):
     # Windows
     flags.extend(['-I', 'cocos2d/external/glfw3/include/win32'])
 
+#################################################################################
+#                                   LaraCC                                      #
+#################################################################################
+CPPCMS_INC = 'Dependencies/cppcms/include'
+if (os.path.exists(CPPCMS_INC)):
+  flags.extend(['-I', CPPCMS_INC])
+
 # Set this to the absolute path to the folder (NOT the file!) containing the
 # compile_commands.json file to use that instead of 'flags'. See here for
 # more details: http://clang.llvm.org/docs/JSONCompilationDatabase.html
