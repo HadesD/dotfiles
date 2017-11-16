@@ -10,3 +10,4 @@ export EDITOR=vim
 
 # # `Frozing' tty, so after any command terminal settings will be restored
 ttyctl -f
+export GIT_LFS_SKIP_SMUDGE=1
