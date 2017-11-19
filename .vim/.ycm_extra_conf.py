@@ -88,9 +88,9 @@ if platform.system() != 'Windows':
 # CaroOnline
 #################################################################################
 if (os.path.exists('Common/third_party/asio')):
-  flags.append(['-I', '../Common/third_party/asio/asio/include'])
+  flags.extend(['-I', '../Common/third_party/asio/asio/include'])
   if (os.path.exists('Common/third_party/asio')):
-    flags.append(['-I', '../Common/third_party/spdlog/include'])
+    flags.extend(['-I', '../Common/third_party/spdlog/include'])
 
 #################################################################################
 #                                   Cocos Dev                                   #
