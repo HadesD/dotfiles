@@ -9,8 +9,8 @@ if has('unix')
   let g:EditorConfig_exec_path = $HOME . '/.vim/' . s:dotfile
   let s:cmd = 'ln -s ' . g:EditorConfig_exec_path . ' ' . getcwd()
 elseif has('win32') || has('win64')
-  let g:EditorConfig_exec_path = $HOME . '/vimfiles/' . s:dotfile
-  let s:cmd = 'copy ' . g:EditorConfig_exec_path . ' ' . getcwd() . ' -O -X -E -H -K'
+  let g:EditorConfig_exec_path = $HOME . '\vimfiles\' . s:dotfile
+  let s:cmd = 'copy ' . g:EditorConfig_exec_path . ' ' . getcwd()
 endif
 
 if exists('s:cmd')

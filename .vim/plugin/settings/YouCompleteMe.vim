@@ -21,7 +21,7 @@ if has('unix')
   let s:cmd = 'ln -s ' . g:ycm_global_ycm_extra_conf . ' ' . getcwd()
 elseif has('win32') || has('win64')
   let g:ycm_global_ycm_extra_conf = $HOME . '/vimfiles/' . s:dotfile
-  let s:cmd = 'copy ' . g:ycm_global_ycm_extra_conf . ' ' . getcwd() . ' -O -X -E -H -K'
+  let s:cmd = 'copy ' . g:ycm_global_ycm_extra_conf . ' ' . getcwd()
 endif
 
 if exists('s:cmd')
