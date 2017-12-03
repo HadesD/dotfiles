@@ -136,6 +136,19 @@ CPPCMS_INC = 'Dependencies/cppcms/include'
 if (os.path.exists(CPPCMS_INC)):
   flags.extend(['-I', CPPCMS_INC])
 
+#################################################################################
+#                                   Godot                                       #
+#################################################################################
+if (os.path.exists('Dependencies/godot-cpp/include/include')):
+  flags.extend(['-I', 'Dependencies/godot-cpp/include/include/core'])
+if (os.path.exists('include/godot_cpp')):
+  flags.extend(['-I', 'include'])
+if (os.path.exists('cpp_bindings')):
+  flags.extend(['-I', 'cpp_bindings/include'])
+  flags.extend(['-I', 'cpp_bindings/include/core'])
+if (os.path.exists('godot_headers')):
+  flags.extend(['-I', 'godot_headers'])
+
 # Set this to the absolute path to the folder (NOT the file!) containing the
 # compile_commands.json file to use that instead of 'flags'. See here for
 # more details: http://clang.llvm.org/docs/JSONCompilationDatabase.html
