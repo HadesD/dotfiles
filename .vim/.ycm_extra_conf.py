@@ -134,7 +134,15 @@ if (os.path.exists('cocos2d')):
 #################################################################################
 CPPCMS_INC = 'Dependencies/cppcms/include'
 if (os.path.exists(CPPCMS_INC)):
-  flags.extend(['-I', CPPCMS_INC])
+  flags.extend([
+    '-I', CPPCMS_INC,
+    '-I', CPPCMS_INC + '/booster'
+  ])
+CPPDB_INC = 'Dependencies/cppdb/include'
+if (os.path.exists(CPPDB_INC)):
+  flags.extend([
+    '-I', CPPDB_INC
+  ])
 
 #################################################################################
 #                                   Godot                                       #
