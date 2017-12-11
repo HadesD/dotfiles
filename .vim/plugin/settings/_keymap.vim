@@ -33,3 +33,5 @@ nnoremap <leader>sv :source $MYVIMRC<CR>
 
 abbreviate terminal term ++curwin
 
+abbreviate qqb CloseHiddenBuffers
+
