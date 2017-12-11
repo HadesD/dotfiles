@@ -177,3 +177,6 @@
 [submodule ".vim/bundle/MatchTag"]
 	path = .vim/bundle/MatchTag
 	url = https://github.com/gregsexton/MatchTag.git
+[submodule ".vim/bundle/vim-matchit"]
+	path = .vim/bundle/vim-matchit
+	url = https://github.com/adelarsq/vim-matchit.git
