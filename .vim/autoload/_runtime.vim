@@ -8,7 +8,10 @@ function! _runtime#init(...) abort
   if (exists('s:dot_vim'))
     let &rtp = &rtp.','.s:dot_vim.'/autoload/vim-pathogen,'.s:dot_vim.'/bundle/powerline/powerline/bindings/vim'
   endif
-  set encoding=utf-8
+  if (v:version > 703)
+    set encoding=utf-8
+  else
+  endif
   execute pathogen#infect()
 endfunction
 

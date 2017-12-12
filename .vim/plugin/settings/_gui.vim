@@ -40,5 +40,7 @@ highlight NonText guifg=bg ctermfg=bg
 
 autocmd BufRead,BufNewFile .tmux.conf setf sh
 
-set fillchars=vert:\│
+if (&enc == 'utf-8')
+  set fillchars=vert:\│
+endif
 
