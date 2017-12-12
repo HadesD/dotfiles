@@ -1,2 +1,2 @@
-let g:polyglot_disabled = ['cpp']
+let g:polyglot_disabled = ['cpp', 'julia']
 
