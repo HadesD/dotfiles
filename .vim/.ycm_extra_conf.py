@@ -103,17 +103,6 @@ if (os.path.exists('cocos2d')):
   flags.extend(['-I', 'cocos2d/external'])
   flags.extend(['-I', 'cocos2d/cocos/platform'])
   flags.extend(['-I', 'cocos2d/cocos/audio/include'])
-  # flags.extend(['-I', 'cocos2d/cocos/base'])
-  # flags.extend(['-I', 'cocos2d/cocos/physics'])
-  # flags.extend(['-I', 'cocos2d/cocos/math'])
-  # flags.extend(['-I', 'cocos2d/cocos/2d'])
-  # flags.extend(['-I', 'cocos2d/cocos/3d'])
-  # flags.extend(['-I', 'cocos2d/cocos/ui'])
-  # flags.extend(['-I', 'cocos2d/cocos/vr'])
-  # flags.extend(['-I', 'cocos2d/cocos/network'])
-  # flags.extend(['-I', 'cocos2d/cocos/audio/include'])
-  # flags.extend(['-I', 'cocos2d/cocos/editor-support'])
-  # flags.extend(['-I', 'cocos2d/external/chipmunk/include/chipmunk'])
   flags.extend(['-D', 'COCOS2D_DEBUG=1'])
   flags.extend(['-D', 'CC_ENABLE_CHIPMUNK_INTEGRATION'])
 
@@ -142,6 +131,11 @@ CPPDB_INC = 'Dependencies/cppdb/include'
 if (os.path.exists(CPPDB_INC)):
   flags.extend([
     '-I', CPPDB_INC
+  ])
+SQLITE_INC = 'Dependencies/sqlite_modern_cpp/include'
+if (os.path.exists(CPPDB_INC)):
+  flags.extend([
+    '-I', SQLITE_INC+'/hdr'
   ])
 
 #################################################################################
