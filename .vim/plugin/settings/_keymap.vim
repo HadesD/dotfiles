@@ -35,3 +35,5 @@ abbreviate terminal term ++curwin
 
 abbreviate qqb CloseHiddenBuffers
 
+nmap <BS> <C-W>h
+
