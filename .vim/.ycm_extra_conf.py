@@ -137,6 +137,11 @@ if (os.path.exists(CPPDB_INC)):
   flags.extend([
     '-I', SQLITE_INC+'/hdr'
   ])
+HOEDOWN_INC = 'Dependencies/hoedown/include'
+if (os.path.exists(HOEDOWN_INC)):
+  flags.extend([
+    '-I', HOEDOWN_INC + '/src'
+  ])
 
 #################################################################################
 #                                   Godot                                       #
