@@ -5,4 +5,4 @@ autocmd BufNewFile,BufRead *.phtml set syntax=php.html
 autocmd BufNewFile,BufRead * set formatoptions-=cro
 autocmd BufNewFile,BufRead .babelrc set filetype=json | set syntax=json
 
-autocmd BufNewFile,BufRead *.blade.chtml set filetype=html | set syntax=html
+autocmd BufNewFile,BufRead *.blade.chtml set filetype=cppcmstmpl.html | set syntax=cppcmstmpl.html
