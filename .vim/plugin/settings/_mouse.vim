@@ -1,8 +1,9 @@
 function! _toogleMouse(...) abort
-  if (&mouse == 'a')
-    set mouse=c
+  let is_found = stridx(&mouse, 'a')
+  if (is_found)
+    set mouse+=a
   else
-    set mouse=a
+    set mouse-=a
   end
 endfunction
 
