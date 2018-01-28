@@ -113,6 +113,9 @@ if (sys.platform == 'linux2') \
     f.close()
     f = open(CURRENT_SHELL_RC, 'w')
     f.write(
+
+# if (os.path.exists(HOME + '/.gitconfig'))
+
       'export ZSH_CUSTOM=$HOME/dotfiles/zshcustom\n'
       + 'export EDITOR=vim\n'
       + r

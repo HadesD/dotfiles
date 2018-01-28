@@ -161,21 +161,28 @@
 [submodule ".vim/bundle/vim-power-mode"]
 	path = .vim/bundle/vim-power-mode
 	url = https://HadesD@github.com/HadesD/vim-power-mode.git
+	ignore = dirty
 [submodule ".vim/bundle/asyncrun.vim"]
 	path = .vim/bundle/asyncrun.vim
 	url = https://github.com/skywind3000/asyncrun.vim
+	ignore = dirty
 [submodule ".vim/bundle/vim-better-whitespace"]
 	path = .vim/bundle/vim-better-whitespace
 	url = https://github.com/ntpeters/vim-better-whitespace.git
+	ignore = dirty
 [submodule ".vim/bundle/MatchTagAlways"]
 	path = .vim/bundle/MatchTagAlways
 	url = https://github.com/Valloric/MatchTagAlways.git
+	ignore = dirty
 [submodule ".vim/bundle/MatchTag"]
 	path = .vim/bundle/MatchTag
 	url = https://github.com/gregsexton/MatchTag.git
+	ignore = dirty
 [submodule ".vim/bundle/vim-matchit"]
 	path = .vim/bundle/vim-matchit
 	url = https://github.com/adelarsq/vim-matchit.git
+	ignore = dirty
 [submodule ".vim/bundle/auto-pairs"]
 	path = .vim/bundle/auto-pairs
 	url = https://github.com/jiangmiao/auto-pairs.git
+	ignore = dirty
