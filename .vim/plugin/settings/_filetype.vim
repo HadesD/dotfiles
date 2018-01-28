@@ -6,3 +6,6 @@ autocmd BufNewFile,BufRead * set formatoptions-=cro
 autocmd BufNewFile,BufRead .babelrc set filetype=json | set syntax=json
 
 autocmd BufNewFile,BufRead *.blade.chtml set filetype=cppcmstmpl.html | set syntax=cppcmstmpl.html
+
+autocmd BufNewFile,BufRead *.gitconfig set filetype=gitconfig | set syntax=gitconfig
+
