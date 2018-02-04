@@ -114,17 +114,9 @@
 	path = .vim/bundle/vim-nerdtree-syntax-highlight
 	url = https://github.com/tiagofumo/vim-nerdtree-syntax-highlight.git
 	ignore = dirty
-[submodule ".vim/bundle/a.vim"]
-	path = .vim/bundle/a.vim
-	url = https://github.com/vim-scripts/a.vim.git
-	ignore = dirty
 [submodule ".vim/bundle/vim-cpp"]
 	path = .vim/bundle/vim-cpp
 	url = https://github.com/vim-jp/vim-cpp.git
-	ignore = dirty
-[submodule ".vim/bundle/tagbar"]
-	path = .vim/bundle/tagbar
-	url = https://github.com/majutsushi/tagbar.git
 	ignore = dirty
 [submodule ".vim/bundle/ultisnips"]
 	path = .vim/bundle/ultisnips
@@ -145,10 +137,6 @@
 [submodule ".vim/bundle/ag.vim"]
 	path = .vim/bundle/ag.vim
 	url = https://github.com/rking/ag.vim.git
-	ignore = dirty
-[submodule ".vim/bundle/vim-minimap"]
-	path = .vim/bundle/vim-minimap
-	url = https://github.com/severin-lemaignan/vim-minimap.git
 	ignore = dirty
 [submodule ".vim/autoload/vim-pathogen"]
 	path = .vim/autoload/vim-pathogen
