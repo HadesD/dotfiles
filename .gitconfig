@@ -42,4 +42,5 @@
   lg = log --graph --date=short --decorate=short --pretty=format:'%C(yellow)%h %C(cyan)%cd %Cblue%cn%Cred%d %Creset%s'
   lm = log --merges --pretty=format:'%C(yellow)%h %C(cyan)%ci %Cblue%cn%Cred%d %Creset%s %C(cyan)%b'
   uiau = update-index --assume-unchanged
+  uinau = update-index --no-assume-unchanged
 
