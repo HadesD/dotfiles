@@ -39,3 +39,4 @@ autocmd CursorMoved silent *
 autocmd BufRead *
   \ call FollowSymlink() |
   \ call SetProjectRoot()
+

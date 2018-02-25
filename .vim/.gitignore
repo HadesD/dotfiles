@@ -2,3 +2,6 @@
 *.swp
 .netrwhist
 
+pack/plugins/start/YouCompleteMe
+pack/plugins/start/powerline
+

@@ -24,7 +24,7 @@ def remove(path):
       shutil.rmtree(path)
 
 def installYCM():
-  ycm_dir = THIS_VIM_DIR + '/bundle/YouCompleteMe'
+  ycm_dir = THIS_VIM_DIR + '/pack/plugins/start/YouCompleteMe'
   if (os.path.exists(ycm_dir)):
     return
   print('Vim :: start :: YouCompleteMe')

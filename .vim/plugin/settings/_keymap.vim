@@ -8,25 +8,9 @@ abbreviate qq qa
 " Silver searcher
 abbreviate ag Ag
 
-noremap <silent> <C-S> :update<CR>
-vnoremap <silent> <C-S> <C-C>:update<CR>
-inoremap <silent> <C-S> <C-O>:update<CR>
-
-" " $/^ doesn't do anything
-" nnoremap $ <nop>
-" nnoremap ^ <nop>
-
-" edit vimrc/zshrc and load vimrc bindings
-nnoremap <leader>ev :vsp $MYVIMRC<CR>
-nnoremap <leader>ez :vsp ~/.zshrc<CR>
-nnoremap <leader>sv :source $MYVIMRC<CR>
-
 abbreviate terminal term ++curwin
 
 abbreviate qqb CloseHiddenBuffers
 
 nmap <BS> <C-W>h
-
-" `gf` opens file under cursor in a new vertical split
-nnoremap gf :vertical wincmd f<CR>
 

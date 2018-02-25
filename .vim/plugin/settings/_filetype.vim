@@ -10,4 +10,3 @@ autocmd BufNewFile,BufRead *.blade.chtml set filetype=cppcmstmpl.html | set synt
 
 autocmd BufNewFile,BufRead *.gitconfig set filetype=gitconfig | set syntax=gitconfig
 
-

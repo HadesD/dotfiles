@@ -29,7 +29,10 @@ else
 endif
 
 set background=dark
-colorscheme monokai
+
+if (exists('g:dot_vim_dir') && filereadable(g:dot_vim_dir . '/pack/plugins/start/vim-monokai/colors/monokai.vim'))
+  colorscheme monokai
+endif
 
 " hi IndentGuidesOdd  ctermbg=None
 hi IndentGuidesOdd ctermbg=235

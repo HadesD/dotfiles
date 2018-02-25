@@ -157,6 +157,12 @@
 [submodule ".vim/pack/plugins/start/nerdtree"]
 	path = .vim/pack/plugins/start/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
+	ignore = dirty
 [submodule ".vim/pack/plugins/start/vim-buftabline"]
 	path = .vim/pack/plugins/start/vim-buftabline
 	url = https://github.com/ap/vim-buftabline.git
+	ignore = dirty
+[submodule ".vim/pack/plugins/start/ale"]
+	path = .vim/pack/plugins/start/ale
+	url = https://github.com/w0rp/ale.git
+	ignore = dirty

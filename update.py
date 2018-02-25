@@ -28,7 +28,7 @@ def gitUpdate():
   ])
 
 def ycmUpdate():
-  YCM_DIR = THIS_VIM_DIR + '/bundle/YouCompleteMe'
+  YCM_DIR = THIS_VIM_DIR + '/pack/plugins/start/YouCompleteMe'
 
   if not os.path.exists(YCM_DIR):
     print('Vim :: YouCompleteMe :: 404 - Not found')
