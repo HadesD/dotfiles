@@ -39,9 +39,9 @@ hi IndentGuidesOdd ctermbg=235
 hi IndentGuidesEven ctermbg=235
 
 " highlight NonText guifg=#abc123 ctermfg=123
-highlight NonText guifg=bg ctermfg=bg
+hi NonText guifg=bg ctermfg=bg
 
-autocmd BufRead,BufNewFile .tmux.conf setf sh
+au BufRead,BufNewFile .tmux.conf setf sh
 
 if (&enc == 'utf-8')
   set fillchars=vert:\│
