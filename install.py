@@ -49,42 +49,6 @@ def installYCM():
   ], cwd=ycm_dir
   )
 
-def installPowerLineFont():
-  print('Vim :: start :: PowerlineFont')
-  powerline_dir = THIS_VIM_DIR + '/bundle/powerline'
-  if (os.path.exists(powerline_dir)):
-    return
-  subprocess.call([
-    'git',
-    'clone',
-    'https://github.com/powerline/powerline.git',
-    powerline_dir
-  ])
-  return
-  print('Vim :: start :: PowerLine Font')
-  fonts_dir = HOME + '/.fonts'
-  if not os.path.exists(fonts_dir):
-    os.makedirs(fonts_dir)
-
-  font_name = 'PowerlineSymbols.otf'
-  remove(fonts_dir + '/' + font_name)
-
-  if not os.path.exists(fonts_dir + '/' + font_name):
-    os.symlink(powerline_dir + '/' + font_name, fonts_dir)
-
-  conf_font_dir = HOME + '/.config/fontconfig/conf.d'
-  if not os.path.exists(conf_font_dir):
-    os.makedirs(conf_font_dir)
-
-  conf_font_name = '10-powerline-symbols.conf'
-  remove(conf_font_dir + '/' + conf_font_name)
-  font_name = 'PowerlineSymbols.otf'
-  if not os.path.exists(conf_font_dir + '/' + conf_font_name):
-    os.symlink(
-      powerline_dir + '/' + conf_font_name,
-      conf_font_dir
-    )
-
 if (sys.argv[0] == 'ycm'):
   installYCM()
   exit()
@@ -132,7 +96,6 @@ if (sys.platform == 'linux2') \
 
   if sys.platform == 'linux2':
     installYCM()
-    installPowerLineFont()
 
   elif (sys.platform == "win32"):
     # Is Windows

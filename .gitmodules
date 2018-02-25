@@ -174,3 +174,12 @@
 	path = .vim/bundle/auto-pairs
 	url = https://github.com/jiangmiao/auto-pairs.git
 	ignore = dirty
+[submodule ".vim/bundle/lightline"]
+	path = .vim/bundle/lightline
+	url = https://github.com/itchyny/lightline.vim.git
+[submodule ".vim/bundle/lightline-ale"]
+	path = .vim/bundle/lightline-ale
+	url = https://github.com/maximbaz/lightline-ale.git
+[submodule ".vim/bundle/ale"]
+	path = .vim/bundle/ale
+	url = https://github.com/w0rp/ale.git
