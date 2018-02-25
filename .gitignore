@@ -9,3 +9,5 @@ __pycache__
 /.vim/bundle/YouCompleteMe
 /.vim/bundle/powerline
 
+.netrw-whistlist
+
