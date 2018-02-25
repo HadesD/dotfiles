@@ -154,3 +154,6 @@
 	path = .vim/pack/plugins/start/vim-vinegar
 	url = https://github.com/tpope/vim-vinegar.git
 	ignore = dirty
+[submodule ".vim/pack/plugins/start/nerdtree"]
+	path = .vim/pack/plugins/start/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
