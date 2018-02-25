@@ -4,6 +4,12 @@
 #include <thread>
 #include <map>
 
+template<typename T>
+class TestClass
+{
+  TestClass();
+};
+
 // sdfsdf
 
 enum class TestEnum
@@ -38,3 +44,4 @@ int main()
   // cs{[
   std::vector<std::string> v = { "f", "", "", "" };
 }
+

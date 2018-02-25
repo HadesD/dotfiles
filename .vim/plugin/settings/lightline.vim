@@ -1,7 +1,7 @@
 set noshowmode
 
 let g:lightline = {}
-let g:lightline.colorscheme = 'wombat'
+let g:lightline.colorscheme = 'jellybeans'
 let g:lightline.component_expand = {
       \  'linter_warnings': 'lightline#ale#warnings',
       \  'linter_errors': 'lightline#ale#errors',
