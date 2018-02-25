@@ -1,67 +1,3 @@
-[submodule ".vim/bundle/vim-gitgutter"]
-	path = .vim/bundle/vim-gitgutter
-	url = https://github.com/airblade/vim-gitgutter.git
-	ignore = dirty
-[submodule ".vim/bundle/vim-cpp-enhanced-highlight"]
-	path = .vim/bundle/vim-cpp-enhanced-highlight
-	url = https://github.com/octol/vim-cpp-enhanced-highlight.git
-	ignore = dirty
-[submodule ".vim/bundle/editorconfig-vim"]
-	path = .vim/bundle/editorconfig-vim
-	url = https://github.com/editorconfig/editorconfig-vim.git
-	ignore = dirty
-[submodule ".vim/bundle/vim-monokai"]
-	path = .vim/bundle/vim-monokai
-	url = https://github.com/crusoexia/vim-monokai.git
-	ignore = dirty
-[submodule ".vim/bundle/vim-easy-align"]
-	path = .vim/bundle/vim-easy-align
-	url = https://github.com/junegunn/vim-easy-align.git
-	ignore = dirty
-[submodule ".vim/bundle/vim-markdown-preview"]
-	path = .vim/bundle/vim-markdown-preview
-	url = https://github.com/JamshedVesuna/vim-markdown-preview.git
-	ignore = dirty
-[submodule ".vim/bundle/vim-json"]
-	path = .vim/bundle/vim-json
-	url = https://github.com/elzr/vim-json.git
-	ignore = dirty
-[submodule ".vim/bundle/ctrlp.vim"]
-	path = .vim/bundle/ctrlp.vim
-	url = https://github.com/ctrlpvim/ctrlp.vim.git
-	ignore = dirty
-[submodule ".vim/bundle/vim-indent-guides"]
-	path = .vim/bundle/vim-indent-guides
-	url = https://github.com/nathanaelkane/vim-indent-guides.git
-	ignore = dirty
-[submodule ".vim/bundle/supertab"]
-	path = .vim/bundle/supertab
-	url = https://github.com/ervandew/supertab.git
-	ignore = dirty
-[submodule ".vim/bundle/vim-tmux-navigator"]
-	path = .vim/bundle/vim-tmux-navigator
-	url = https://github.com/christoomey/vim-tmux-navigator.git
-	ignore = dirty
-[submodule ".vim/bundle/neocomplete.vim"]
-	path = .vim/bundle/neocomplete.vim
-	url = https://github.com/Shougo/neocomplete.vim.git
-	ignore = dirty
-[submodule ".vim/bundle/Conque-GDB"]
-	path = .vim/bundle/Conque-GDB
-	url = https://github.com/vim-scripts/Conque-GDB.git
-	ignore = dirty
-[submodule ".vim/bundle/vim-polyglot"]
-	path = .vim/bundle/vim-polyglot
-	url = https://github.com/sheerun/vim-polyglot.git
-	ignore = dirty
-[submodule ".vim/bundle/vim-closetag"]
-	path = .vim/bundle/vim-closetag
-	url = https://github.com/alvan/vim-closetag.git
-	ignore = dirty
-[submodule ".vim/bundle/vim-surround"]
-	path = .vim/bundle/vim-surround
-	url = https://github.com/tpope/vim-surround.git
-	ignore = dirty
 [submodule ".tmux/plugins/tpm"]
 	path = .tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm.git
@@ -74,204 +10,147 @@
 	path = .tmux/plugins/vim-tmux-navigator
 	url = https://github.com/christoomey/vim-tmux-navigator.git
 	ignore = dirty
-[submodule ".vim/bundle/tcomment_vim"]
-	path = .vim/bundle/tcomment_vim
-	url = https://github.com/tomtom/tcomment_vim.git
-	ignore = dirty
-[submodule ".vim/bundle/vim-multiple-cursors"]
-	path = .vim/bundle/vim-multiple-cursors
-	ignore = dirty
-	url = https://github.com/terryma/vim-multiple-cursors.git
-[submodule ".vim/bundle/vim-repeat"]
-	path = .vim/bundle/vim-repeat
-	ignore = dirty
-	url = https://github.com/tpope/vim-repeat.git
-[submodule ".vim/bundle/vim-devicons"]
-	path = .vim/bundle/vim-devicons
-	url = https://github.com/ryanoasis/vim-devicons.git
-	ignore = dirty
-[submodule ".vim/bundle/vim-nerdtree-syntax-highlight"]
-	path = .vim/bundle/vim-nerdtree-syntax-highlight
-	url = https://github.com/tiagofumo/vim-nerdtree-syntax-highlight.git
-	ignore = dirty
-[submodule ".vim/bundle/vim-cpp"]
-	path = .vim/bundle/vim-cpp
-	url = https://github.com/vim-jp/vim-cpp.git
-	ignore = dirty
-[submodule ".vim/bundle/ultisnips"]
-	path = .vim/bundle/ultisnips
-	url = https://github.com/SirVer/ultisnips.git
-	ignore = dirty
-[submodule ".vim/bundle/vim-snippets"]
-	path = .vim/bundle/vim-snippets
-	url = https://github.com/honza/vim-snippets.git
-	ignore = dirty
-[submodule ".vim/bundle/vim-unimpaired"]
-	path = .vim/bundle/vim-unimpaired
-	url = https://github.com/tpope/vim-unimpaired
-	ignore = dirty
-[submodule ".vim/bundle/vim-smooth-scroll"]
-	path = .vim/bundle/vim-smooth-scroll
-	url = https://github.com/terryma/vim-smooth-scroll.git
-	ignore = dirty
-[submodule ".vim/bundle/ag.vim"]
-	path = .vim/bundle/ag.vim
-	url = https://github.com/rking/ag.vim.git
-	ignore = dirty
 [submodule ".vim/autoload/vim-pathogen"]
 	path = .vim/autoload/vim-pathogen
 	url = https://github.com/tpope/vim-pathogen.git
 	ignore = dirty
-[submodule ".vim/bundle/PHP-Indenting-for-VIm"]
-	path = .vim/bundle/PHP-Indenting-for-Vim
-	url = https://github.com/2072/PHP-Indenting-for-VIm.git
-	ignore = dirty
-[submodule ".vim/bundle/vim-power-mode"]
-	path = .vim/bundle/vim-power-mode
-	url = https://HadesD@github.com/HadesD/vim-power-mode.git
-	ignore = dirty
-[submodule ".vim/bundle/asyncrun.vim"]
-	path = .vim/bundle/asyncrun.vim
-	url = https://github.com/skywind3000/asyncrun.vim
-	ignore = dirty
-[submodule ".vim/bundle/vim-better-whitespace"]
-	path = .vim/bundle/vim-better-whitespace
-	url = https://github.com/ntpeters/vim-better-whitespace.git
-	ignore = dirty
-[submodule ".vim/bundle/MatchTagAlways"]
-	path = .vim/bundle/MatchTagAlways
-	url = https://github.com/Valloric/MatchTagAlways.git
-	ignore = dirty
-[submodule ".vim/bundle/MatchTag"]
-	path = .vim/bundle/MatchTag
-	url = https://github.com/gregsexton/MatchTag.git
-	ignore = dirty
-[submodule ".vim/bundle/vim-matchit"]
-	path = .vim/bundle/vim-matchit
-	url = https://github.com/adelarsq/vim-matchit.git
-	ignore = dirty
-[submodule ".vim/bundle/auto-pairs"]
-	path = .vim/bundle/auto-pairs
-	url = https://github.com/jiangmiao/auto-pairs.git
-	ignore = dirty
-[submodule ".vim/bundle/lightline"]
-	path = .vim/bundle/lightline
-	url = https://github.com/itchyny/lightline.vim.git
-	ignore = dirty
-[submodule ".vim/bundle/lightline-ale"]
-	path = .vim/bundle/lightline-ale
-	url = https://github.com/maximbaz/lightline-ale.git
-	ignore = dirty
-[submodule ".vim/bundle/ale"]
-	path = .vim/bundle/ale
-	url = https://github.com/w0rp/ale.git
-	ignore = dirty
-[submodule ".vim/bundle/vim-vinegar"]
-	path = .vim/bundle/vim-vinegar
-	url = https://github.com/tpope/vim-vinegar.git
-	ignore = dirty
 [submodule ".vim/pack/plugins/start/vim-gitgutter"]
 	path = .vim/pack/plugins/start/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter.git
+	ignore = dirty
 [submodule ".vim/pack/plugins/start/vim-cpp-enhanced-highlight"]
 	path = .vim/pack/plugins/start/vim-cpp-enhanced-highlight
 	url = https://github.com/octol/vim-cpp-enhanced-highlight.git
+	ignore = dirty
 [submodule ".vim/pack/plugins/start/editorconfig-vim"]
 	path = .vim/pack/plugins/start/editorconfig-vim
 	url = https://github.com/editorconfig/editorconfig-vim.git
+	ignore = dirty
 [submodule ".vim/pack/plugins/start/vim-monokai"]
 	path = .vim/pack/plugins/start/vim-monokai
 	url = https://github.com/crusoexia/vim-monokai.git
+	ignore = dirty
 [submodule ".vim/pack/plugins/start/vim-easy-align"]
 	path = .vim/pack/plugins/start/vim-easy-align
 	url = https://github.com/junegunn/vim-easy-align.git
+	ignore = dirty
 [submodule ".vim/pack/plugins/start/vim-json"]
 	path = .vim/pack/plugins/start/vim-json
 	url = https://github.com/elzr/vim-json.git
+	ignore = dirty
 [submodule ".vim/pack/plugins/start/ctrlp.vim"]
 	path = .vim/pack/plugins/start/ctrlp.vim
 	url = https://github.com/ctrlpvim/ctrlp.vim.git
+	ignore = dirty
 [submodule ".vim/pack/plugins/start/vim-indent-guides"]
 	path = .vim/pack/plugins/start/vim-indent-guides
 	url = https://github.com/nathanaelkane/vim-indent-guides.git
+	ignore = dirty
 [submodule ".vim/pack/plugins/supertab"]
 	path = .vim/pack/plugins/supertab
 	url = https://github.com/ervandew/supertab.git
+	ignore = dirty
 [submodule ".vim/pack/plugins/start/vim-tmux-navigator"]
 	path = .vim/pack/plugins/start/vim-tmux-navigator
 	url = https://github.com/christoomey/vim-tmux-navigator.git
+	ignore = dirty
 [submodule ".vim/pack/plugins/start/supertab"]
 	path = .vim/pack/plugins/start/supertab
 	url = https://github.com/ervandew/supertab.git
+	ignore = dirty
 [submodule ".vim/pack/plugins/start/neocomplete.vim"]
 	path = .vim/pack/plugins/start/neocomplete.vim
 	url = https://github.com/Shougo/neocomplete.vim.git
+	ignore = dirty
 [submodule ".vim/pack/plugins/start/Conque-GDB"]
 	path = .vim/pack/plugins/start/Conque-GDB
 	url = https://github.com/vim-scripts/Conque-GDB.git
+	ignore = dirty
 [submodule ".vim/pack/plugins/start/vim-polyglot"]
 	path = .vim/pack/plugins/start/vim-polyglot
 	url = https://github.com/sheerun/vim-polyglot.git
+	ignore = dirty
 [submodule ".vim/pack/plugins/start/vim-closetag"]
 	path = .vim/pack/plugins/start/vim-closetag
 	url = https://github.com/alvan/vim-closetag.git
+	ignore = dirty
 [submodule ".vim/pack/plugins/start/vim-surround"]
 	path = .vim/pack/plugins/start/vim-surround
 	url = https://github.com/tpope/vim-surround.git
+	ignore = dirty
 [submodule ".vim/pack/plugins/start/tcomment_vim"]
 	path = .vim/pack/plugins/start/tcomment_vim
 	url = https://github.com/tomtom/tcomment_vim.git
+	ignore = dirty
 [submodule ".vim/pack/plugins/start/vim-multiple-cursors"]
 	path = .vim/pack/plugins/start/vim-multiple-cursors
 	url = https://github.com/terryma/vim-multiple-cursors.git
+	ignore = dirty
 [submodule ".vim/pack/plugins/start/vim-repeat"]
 	path = .vim/pack/plugins/start/vim-repeat
 	url = https://github.com/tpope/vim-repeat.git
+	ignore = dirty
 [submodule ".vim/pack/plugins/start/vim-cpp"]
 	path = .vim/pack/plugins/start/vim-cpp
 	url = https://github.com/vim-jp/vim-cpp.git
+	ignore = dirty
 [submodule ".vim/pack/plugins/start/ultisnips"]
 	path = .vim/pack/plugins/start/ultisnips
 	url = https://github.com/SirVer/ultisnips.git
+	ignore = dirty
 [submodule ".vim/pack/plugins/start/vim-snippets"]
 	path = .vim/pack/plugins/start/vim-snippets
 	url = https://github.com/honza/vim-snippets.git
+	ignore = dirty
 [submodule ".vim/pack/plugins/start/vim-unimpaired"]
 	path = .vim/pack/plugins/start/vim-unimpaired
 	url = https://github.com/tpope/vim-unimpaired.git
+	ignore = dirty
 [submodule ".vim/pack/plugins/start/vim-smooth-scroll"]
 	path = .vim/pack/plugins/start/vim-smooth-scroll
 	url = https://github.com/terryma/vim-smooth-scroll.git
+	ignore = dirty
 [submodule ".vim/pack/plugins/start/ag.vim"]
 	path = .vim/pack/plugins/start/ag.vim
 	url = https://github.com/rking/ag.vim.git
+	ignore = dirty
 [submodule ".vim/pack/plugins/start/PHP-Indenting-for-VIm"]
 	path = .vim/pack/plugins/start/PHP-Indenting-for-VIm
 	url = https://github.com/2072/PHP-Indenting-for-VIm.git
+	ignore = dirty
 [submodule ".vim/pack/plugins/start/vim-power-mode"]
 	path = .vim/pack/plugins/start/vim-power-mode
 	url = https://HadesD@github.com/HadesD/vim-power-mode.git
+	ignore = dirty
 [submodule ".vim/pack/plugins/start/asyncrun.vim"]
 	path = .vim/pack/plugins/start/asyncrun.vim
 	url = https://github.com/skywind3000/asyncrun.vim.git
+	ignore = dirty
 [submodule ".vim/pack/plugins/start/vim-better-whitespace"]
 	path = .vim/pack/plugins/start/vim-better-whitespace
 	url = https://github.com/ntpeters/vim-better-whitespace.git
+	ignore = dirty
 [submodule ".vim/pack/plugins/start/MatchTagAlways"]
 	path = .vim/pack/plugins/start/MatchTagAlways
 	url = https://github.com/Valloric/MatchTagAlways.git
+	ignore = dirty
 [submodule ".vim/pack/plugins/start/vim-matchit"]
 	path = .vim/pack/plugins/start/vim-matchit
 	url = https://github.com/adelarsq/vim-matchit.git
+	ignore = dirty
 [submodule ".vim/pack/plugins/start/auto-pairs"]
 	path = .vim/pack/plugins/start/auto-pairs
 	url = https://github.com/jiangmiao/auto-pairs.git
+	ignore = dirty
 [submodule ".vim/pack/plugins/start/lightline.vim"]
 	path = .vim/pack/plugins/start/lightline.vim
 	url = https://github.com/itchyny/lightline.vim.git
+	ignore = dirty
 [submodule ".vim/pack/plugins/start/lightline-ale"]
 	path = .vim/pack/plugins/start/lightline-ale
 	url = https://github.com/maximbaz/lightline-ale.git
+	ignore = dirty
 [submodule ".vim/pack/plugins/start/vim-vinegar"]
 	path = .vim/pack/plugins/start/vim-vinegar
 	url = https://github.com/tpope/vim-vinegar.git
+	ignore = dirty
