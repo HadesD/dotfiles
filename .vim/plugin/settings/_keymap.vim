@@ -27,3 +27,6 @@ abbreviate qqb CloseHiddenBuffers
 
 nmap <BS> <C-W>h
 
+" `gf` opens file under cursor in a new vertical split
+nnoremap gf :vertical wincmd f<CR>
+
