@@ -14,6 +14,15 @@ nnoremap E $
 " `gf` opens file under cursor in a new vertical split
 nnoremap gf :vertical wincmd f<CR>
 
+let g:dot_vim_dir = $HOME
+if has('unix')
+  let g:dot_vim_dir = $HOME.'/.vim'
+elseif (has('win32') || has('win64')) && !has('win32unix')
+  let g:dot_vim_dir = $HOME.'/vimfiles'
+end
+
 " Load plugins
-execute init_runtime#Init()
+if filereadable(g:dot_vim_dir . '/autoload/init_runtime.vim')
+  execute init_runtime#Init()
+endif
 
