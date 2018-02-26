@@ -166,3 +166,6 @@
 	path = .vim/pack/plugins/start/ale
 	url = https://github.com/w0rp/ale.git
 	ignore = dirty
+[submodule ".vim/pack/plugins/start/nerdtree-git-plugin"]
+	path = .vim/pack/plugins/start/nerdtree-git-plugin
+	url = https://github.com/Xuyuanp/nerdtree-git-plugin.git
