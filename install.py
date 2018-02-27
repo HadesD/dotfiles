@@ -92,7 +92,8 @@ if (sys.platform == 'linux2') \
   remove(HOME+'/.tmux')
   remove(HOME+'/.tmux.conf')
   os.symlink(THIS_TMUX_DIR, HOME+'/.tmux')
-  os.symlink(HOME+'/.tmux/.tmux.conf', HOME+'/.tmux.conf')
+  os.symlink(HOME+'/.tmux/oh-my-tmux/.tmux.conf', HOME+'/.tmux.conf')
+  os.symlink(HOME+'/.tmux/.tmux.conf.local', HOME+'/.tmux.conf.local')
 
   if sys.platform == 'linux2':
     installYCM()

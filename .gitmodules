@@ -166,3 +166,6 @@
 	path = .vim/pack/plugins/start/ale
 	url = https://github.com/w0rp/ale.git
 	ignore = dirty
+[submodule ".tmux/oh-my-tmux"]
+	path = .tmux/oh-my-tmux
+	url = https://github.com/gpakosz/.tmux.git
