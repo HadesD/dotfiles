@@ -174,3 +174,7 @@
 	path = .tmux/oh-my-tmux
 	url = https://github.com/gpakosz/.tmux.git
 	ignore = dirty
+[submodule ".tmux/plugins/tmux-continuum"]
+	path = .tmux/plugins/tmux-continuum
+	url = https://github.com/tmux-plugins/tmux-continuum.git
+	ignore = dirty
