@@ -6,10 +6,6 @@
 	path = .tmux/plugins/tmux-resurrect
 	url = https://github.com/tmux-plugins/tmux-resurrect.git
 	ignore = dirty
-[submodule ".tmux/plugins/vim-tmux-navigator"]
-	path = .tmux/plugins/vim-tmux-navigator
-	url = https://github.com/christoomey/vim-tmux-navigator.git
-	ignore = dirty
 [submodule ".vim/autoload/vim-pathogen"]
 	path = .vim/autoload/vim-pathogen
 	url = https://github.com/tpope/vim-pathogen.git
@@ -49,10 +45,6 @@
 [submodule ".vim/pack/plugins/supertab"]
 	path = .vim/pack/plugins/supertab
 	url = https://github.com/ervandew/supertab.git
-	ignore = dirty
-[submodule ".vim/pack/plugins/start/vim-tmux-navigator"]
-	path = .vim/pack/plugins/start/vim-tmux-navigator
-	url = https://github.com/christoomey/vim-tmux-navigator.git
 	ignore = dirty
 [submodule ".vim/pack/plugins/start/supertab"]
 	path = .vim/pack/plugins/start/supertab
@@ -178,3 +170,12 @@
 	path = .tmux/plugins/tmux-continuum
 	url = https://github.com/tmux-plugins/tmux-continuum.git
 	ignore = dirty
+[submodule ".tmux/plugins/tmux-pain-control"]
+	path = .tmux/plugins/tmux-pain-control
+	url = https://github.com/tmux-plugins/tmux-pain-control.git
+[submodule ".vim/pack/plugins/start/vim-tmux-focus-events"]
+	path = .vim/pack/plugins/start/vim-tmux-focus-events
+	url = https://github.com/tmux-plugins/vim-tmux-focus-events.git
+[submodule ".tmux/plugins/tmux-sensible"]
+	path = .tmux/plugins/tmux-sensible
+	url = https://github.com/tmux-plugins/tmux-sensible.git

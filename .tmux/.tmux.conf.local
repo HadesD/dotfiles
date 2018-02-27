@@ -14,9 +14,13 @@ bind-key -n C-\ if-shell "$is_vim" "send-keys C-\\" "select-pane -l"
 
 # Plugins {
 
-set -g @continuum-restore 'on'
+run-shell $HOME/.tmux/plugins/tmux-resurrect/resurrect.tmux
+run-shell $HOME/.tmux/plugins/tmux-continuum/continuum.tmux
+run-shell $HOME/.tmux/plugins/tmux-pain-control/pain_control.tmux
+run-shell $HOME/.tmux/plugins/tmux-sensible/sensible.tmux
 
-run $HOME/.tmux/plugins/tpm/tpm
+set -g focus-events on
+set -g @continuum-restore 'on'
 
 # }
 
