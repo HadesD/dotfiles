@@ -4,11 +4,11 @@ let g:NERDTreeShowHidden          = 1
 let g:NERDTreeShowIgnoredStatus = 1
 
 if &encoding != "utf-8"
-  let g:NERDTreeDirArrows         = 0
-end
+  let g:NERDTreeDirArrows = 0
 
-if has("unix")
-  if v:version < 703
-    let s:checkout = system("cd ~/.vim/bundle/nerdtree && git checkout 4.1.0")
+  if has("unix")
+    let s:nerdtree_path = g:dot_vim_dir . '/pack/plugins/start/nerdtree'
+    let s:checkout = system("cd " . s:nerdtree_path . " && git apply --stat " . s:nerdtree_path . "/../../../../patches/fix_error_utf8_encoding.patch")
   end
 end
+
