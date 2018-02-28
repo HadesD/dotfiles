@@ -2,9 +2,14 @@
 
 ALL dot file setting for our work
 
+## Screen Shots
+
+![Full demo](https://i.imgur.com/eXeqQxd.jpg)
+
 ## WHY?
 
-Most of time, I'm working on unix-like OS, I'm too lazy to config all of theme from-scratch when I re-install my OS, or change my working-computer, server.
+Most of time, I'm working on unix-like OS.
+I'm too lazy to config all of theme from-scratch when I re-install my OS, or change my working-computer, server.
 
 ## Support
 
@@ -24,7 +29,7 @@ Most of time, I'm working on unix-like OS, I'm too lazy to config all of theme f
 ### Clone & Auto Install
 
 ```bash
-git clone https://HadesD@github.com/HadesD/dotfiles.git $HOME/dotfiles && \
+git clone https://github.com/HadesD/dotfiles.git $HOME/dotfiles && \
 cd $HOME/dotfiles && \
 python install.py
 ```
