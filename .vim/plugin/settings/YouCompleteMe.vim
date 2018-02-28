@@ -3,7 +3,6 @@ if v:version < 703 || (!has('python') && !has('python3'))
   finish
 endif
 
-set encoding=utf-8
 let g:ycm_keep_logfiles                = 1
 let g:ycm_log_level                    = 'debug'
 let g:ycm_confirm_extra_conf           = 0
@@ -16,22 +15,31 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 
 let s:dotfile = '.ycm_extra_conf.py'
 
+let s:dotfile_filepath = g:dot_vim_dir . '/' . s:dotfile
+
+if empty(glob(s:dotfile_filepath))
+  finish
+endif
+
+if empty(glob(getcwd() . '/.git'))
+  finish
+endif
+
+if glob(getcwd() . '/' . s:dotfile)
+  finish
+endif
+
 if has('unix')
-  let g:ycm_global_ycm_extra_conf = $HOME . '/.vim/' . s:dotfile
-  let s:cmd = 'ln -s ' . g:ycm_global_ycm_extra_conf . ' ' . getcwd()
+  let s:cmd = 'ln -s ' . s:dotfile_filepath . ' ' . getcwd()
 elseif has('win32') || has('win64')
-  let g:ycm_global_ycm_extra_conf = $HOME . '/vimfiles/' . s:dotfile
-  let s:cmd = 'copy ' . g:ycm_global_ycm_extra_conf . ' ' . getcwd()
+  let s:cmd = 'copy ' . s:dotfile_filepath . ' ' . getcwd()
 endif
 
 if exists('s:cmd')
-  if !empty(glob(getcwd() . '/.git'))
-        \ && empty(glob(getcwd() . '/' . s:dotfile))
-        \ && !empty(glob(g:ycm_global_ycm_extra_conf))
-    if exists(':AsyncRun')
-      silent exe 'AsyncRun ' s:cmd
-    else
-      let run = system(s:cmd)
-    end
-  endif
+  if exists(':AsyncRun')
+    silent exe 'AsyncRun ' s:cmd
+  else
+    let run = system(s:cmd)
+  end
 end
+

@@ -1,10 +1,4 @@
-if v:version < 703 || !has('python')
-  let g:loaded_EditorConfig = 1
-  finish
-endif
-
-let s:dotfile = '.editorconfig'
-
+let s:dotfile = '.eslintrc.json'
 let s:dotfile_filepath = g:dot_vim_dir . '/' . s:dotfile
 
 if empty(glob(s:dotfile_filepath))
@@ -32,3 +26,4 @@ if exists('s:cmd')
     let run = system(s:cmd)
   end
 end
+
