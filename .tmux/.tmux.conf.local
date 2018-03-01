@@ -6,3 +6,11 @@ run-shell $HOME/.tmux/plugins/tmux-sensible/sensible.tmux
 
 # }
 
+# Key {
+
+set -g prefix2 C-b                       # GNU-Screen compatible prefix
+bind C-b send-prefix -2
+unbind-key C-a
+
+# }
+

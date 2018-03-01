@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<ruleset name="Custom Standard">
+  <description>A custom coding standard</description>
+  <rule ref="Generic.WhiteSpace.ScopeIndent">
+    <properties>
+      <property name="indent" value="2"/>
+      <property name="tabIndent" value="false"/>
+    </properties>
+  </rule>
+  <rule ref="Generic.Arrays.ArrayIndent">
+      <property name="indent" value="2"/>
+      <property name="tabIndent" value="false"/>
+  </rule>
+</ruleset>
+
