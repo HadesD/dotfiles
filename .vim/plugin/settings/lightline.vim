@@ -83,6 +83,9 @@ endfunction
 " Auto update
 augroup YcmUpdateLightline
   autocmd!
-  autocmd InsertLeave * call lightline#update()
+  autocmd TextChanged * call lightline#update()
+  autocmd TextChangedI * call lightline#update()
+  autocmd InsertCharPre * call lightline#update()
+  autocmd CursorMoved * call lightline#update()
 augroup END
 
