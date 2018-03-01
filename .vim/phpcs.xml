@@ -1,14 +1,33 @@
 <?xml version="1.0"?>
 <ruleset name="Dark.Hades">
-  <description>A custom coding standard</description>
-  <rule ref="Generic.WhiteSpace.ScopeIndent">
-    <properties>
-      <property name="indent" value="2"/>
-      <property name="tabIndent" value="false"/>
-    </properties>
-  </rule>
-  <rule ref="Generic.Arrays.ArrayIndent">
-      <property name="indent" value="2"/>
-      <property name="tabIndent" value="false"/>
-  </rule>
+    <description>My coding style for PHPCS</description>
+
+    <file>autoload.php</file>
+    <file>bin</file>
+    <file>src</file>
+    <file>tests</file>
+
+    <exclude-pattern>*/Standards/*/Tests/*\.(inc|css|js)</exclude-pattern>
+
+    <arg name="basepath" value="."/>
+    <arg name="colors" />
+    <arg name="parallel" value="75" />
+    <arg value="np"/>
+
+    <!-- Don't hide tokenizer exceptions -->
+    <rule ref="Internal.Tokenizer.Exception">
+        <type>error</type>
+    </rule>
+
+    <!-- Include the whole PEAR standard -->
+    <rule ref="PEAR">
+        <exclude name="PEAR.NamingConventions.ValidFunctionName" />
+        <exclude name="PEAR.NamingConventions.ValidVariableName" />
+        <exclude name="PEAR.Commenting.ClassComment" />
+        <!-- <exclude name="PEAR.Commenting.FileComment.MissingCategoryTag" /> -->
+        <!-- <exclude name="PEAR.Commenting.FileComment.MissingPackageTag" /> -->
+        <!-- <exclude name="PEAR.Commenting.FileComment.MissingLinkTag" /> -->
+        <!-- <exclude name="PEAR.Commenting.FileComment.MissingVersion" /> -->
+    </rule>
+
 </ruleset>
