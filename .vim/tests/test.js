@@ -6,7 +6,6 @@ class Foo
 
     x = 2
 
-    sss
   }
 }
 

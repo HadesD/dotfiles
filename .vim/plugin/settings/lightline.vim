@@ -3,9 +3,9 @@ set noshowmode
 let g:lightline = {}
 let g:lightline.colorscheme = 'jellybeans'
 let g:lightline.component_expand = {
-      \  'linter_warnings': 'lightline#ale#warnings',
-      \  'linter_errors': 'lightline#ale#errors',
-      \  'linter_ok': 'lightline#ale#ok',
+      \  'linter_warnings': 'LinterWarnings',
+      \  'linter_errors': 'LinterErrors',
+      \  'linter_ok': 'LinterOk',
       \ }
 let g:lightline.component_type = {
       \  'linter_warnings': 'warning',
@@ -28,7 +28,7 @@ let g:lightline.active.left = [
       \   ['readonly', 'filename'],
       \ ]
 
-" --- Functionals
+" Functionals
 function! LightlineFileformat()
   return winwidth(0) > 70 ? &fileformat : ''
 endfunction
@@ -42,4 +42,47 @@ function! LightlineFilename()
   let modified = &modified ? '[+]' : ''
   return filename . modified
 endfunction
+
+function! LinterWarnings()
+  let l:result = ''
+  if (index(['c', 'cpp'], &filetype) >= 0)
+    let l:returnCount = youcompleteme#GetWarningCount()
+    let l:result = (l:returnCount == 0) ? '' : printf('E:%d', l:returnCount)
+  else
+    let l:result = lightline#ale#warnings()
+  endif
+
+  return l:result
+endfunction
+
+function! LinterErrors()
+  let l:result = ''
+  if (index(['c', 'cpp'], &filetype) >= 0)
+    let l:returnCount = youcompleteme#GetErrorCount()
+    let l:result = (l:returnCount == 0) ? '' : printf('E:%d', l:returnCount)
+  else
+    let l:result = lightline#ale#errors()
+  endif
+
+  return l:result
+endfunction
+
+function! LinterOk()
+  let l:result = ''
+  if (index(['c', 'cpp'], &filetype) >= 0)
+    if empty(LinterErrors()) && empty(LinterWarnings())
+      let l:result = 'OK'
+    endif
+  else
+    let l:result = lightline#ale#ok()
+  endif
+
+  return l:result
+endfunction
+
+" Auto update
+augroup YcmUpdateLightline
+  autocmd!
+  autocmd InsertLeave * call lightline#update()
+augroup END
 
