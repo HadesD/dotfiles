@@ -1,7 +1,8 @@
 set noshowmode
 
 let g:lightline = {}
-let g:lightline.colorscheme = 'jellybeans'
+" let g:lightline.colorscheme = 'OldHope'
+let g:lightline.colorscheme = 'Tomorrow_Night_Eighties'
 let g:lightline.component_expand = {
       \  'linter_warnings': 'LinterWarnings',
       \  'linter_errors': 'LinterErrors',
@@ -79,13 +80,4 @@ function! LinterOk()
 
   return l:result
 endfunction
-
-" Auto update
-augroup YcmUpdateLightline
-  autocmd!
-  autocmd TextChanged * call lightline#update()
-  autocmd TextChangedI * call lightline#update()
-  autocmd InsertCharPre * call lightline#update()
-  autocmd CursorMoved * call lightline#update()
-augroup END
 

@@ -29,7 +29,6 @@ int f = 1;
 int main()
 {
   int i;
-  i = 1;
 
   std::thread f([](){
     int i = 1;
