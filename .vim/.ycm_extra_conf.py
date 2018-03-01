@@ -133,7 +133,7 @@ if (os.path.exists(CPPDB_INC)):
     '-I', CPPDB_INC
   ])
 SQLITE_INC = 'Dependencies/sqlite_modern_cpp/include'
-if (os.path.exists(CPPDB_INC)):
+if (os.path.exists(SQLITE_INC)):
   flags.extend([
     '-I', SQLITE_INC+'/hdr'
   ])
