@@ -1,6 +1,5 @@
 <?xml version="1.0"?>
-
-<ruleset name="Custom Standard">
+<ruleset name="Dark.Hades">
   <description>A custom coding standard</description>
   <rule ref="Generic.WhiteSpace.ScopeIndent">
     <properties>
@@ -13,4 +12,3 @@
       <property name="tabIndent" value="false"/>
   </rule>
 </ruleset>
-

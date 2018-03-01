@@ -1,4 +1,5 @@
-let s:dotfile = 'phpcs.xml'
+finish
+let s:dotfile = 'ruleset.xml'
 let s:dotfile_filepath = g:dot_vim_dir . '/' . s:dotfile
 
 if empty(glob(s:dotfile_filepath))
