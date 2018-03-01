@@ -9,7 +9,7 @@ if empty(glob(getcwd() . '/.git'))
   finish
 endif
 
-if glob(getcwd() . '/' . s:dotfile)
+if !empty(glob(getcwd() . '/' . s:dotfile))
   finish
 endif
 
