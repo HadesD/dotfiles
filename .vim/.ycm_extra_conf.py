@@ -234,3 +234,4 @@ def FlagsForFile( filename, **kwargs ):
     'flags': final_flags,
     'include_paths_relative_to_dir': compilation_info.compiler_working_dir_
   }
+
