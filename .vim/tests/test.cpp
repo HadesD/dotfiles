@@ -39,6 +39,9 @@ int main()
     }
   });
 
+  std::map<std::pair<int, int>, int> m;
+  m[{1, 2}] = 3;
+
   // v<C-n>I
   // cs{[
   std::vector<std::string> v = { "f", "", "", "" };
