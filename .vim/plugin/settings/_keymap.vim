@@ -5,9 +5,6 @@ set nopaste
 " cnoreabbrev qq qa
 abbreviate qq qa
 
-" Silver searcher
-abbreviate ag Ag
-
 abbreviate terminal term ++curwin
 
 abbreviate qqb CloseHiddenBuffers
