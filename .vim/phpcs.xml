@@ -30,4 +30,8 @@
         <!-- <exclude name="PEAR.Commenting.FileComment.MissingVersion" /> -->
     </rule>
 
+    <rule ref="">
+
+    </rule>
+
 </ruleset>
