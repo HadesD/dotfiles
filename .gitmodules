@@ -122,10 +122,6 @@
 	path = .vim/pack/plugins/start/MatchTagAlways
 	url = https://github.com/Valloric/MatchTagAlways.git
 	ignore = dirty
-[submodule ".vim/pack/plugins/start/vim-matchit"]
-	path = .vim/pack/plugins/start/vim-matchit
-	url = https://github.com/adelarsq/vim-matchit.git
-	ignore = dirty
 [submodule ".vim/pack/plugins/start/auto-pairs"]
 	path = .vim/pack/plugins/start/auto-pairs
 	url = https://github.com/jiangmiao/auto-pairs.git
@@ -173,3 +169,9 @@
 [submodule ".vim/pack/plugins/start/ack.vim"]
 	path = .vim/pack/plugins/start/ack.vim
 	url = https://github.com/mileszs/ack.vim.git
+[submodule ".vim/pack/plugins/start/vim-matchup"]
+	path = .vim/pack/plugins/start/vim-matchup
+	url = https://github.com/andymass/vim-matchup.git
+[submodule ".vim/pack/plugins/start/php.vim"]
+	path = .vim/pack/plugins/start/php.vim
+	url = https://github.com/StanAngeloff/php.vim.git
