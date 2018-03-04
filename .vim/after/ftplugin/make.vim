@@ -1,4 +1,5 @@
 set noexpandtab
 set noet
 
-set formatoptions-=cro
+" set formatoptions-=cro
+
