@@ -8,15 +8,15 @@ namespace test::names
   template<typename T>
   class TestClass
   {
-  public:
-    TestClass();
-    ~TestClass();
-  public:
-    template<typename T>
-    int d()
-    {
-      T a;
-    }
+    public:
+      TestClass();
+      ~TestClass();
+    public:
+      template<typename T>
+      int d()
+      {
+        T a;
+      }
   };
 }
 
@@ -45,7 +45,11 @@ enum class TestEnum
 
 class Test
 {
-
+  public:
+    template<typename S>
+    struct FF : public S
+    {
+    };
 };
 
 int f = 1;
@@ -73,8 +77,6 @@ int main()
     "bb",
   };
 
-  // v<C-n>I
-  // cs{[
   std::vector<std::string> v3 = { "f", "", "", "" };
 }
 
