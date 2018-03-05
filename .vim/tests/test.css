@@ -1,11 +1,15 @@
 .testClass
 {
   background-color: #FFF;
+  color: #aaa blue;
+  border-color: red;
 }
 
 #testId
 {
   background: #CCC;
+  color: #333;
+  border-color: #000;
   font-size: 90%;
 }
 

@@ -171,3 +171,9 @@
 [submodule ".vim/pack/plugins/start/php.vim"]
 	path = .vim/pack/plugins/start/php.vim
 	url = https://github.com/StanAngeloff/php.vim.git
+[submodule ".vim/pack/plugins/start/MatchTagAlways"]
+	path = .vim/pack/plugins/start/MatchTagAlways
+	url = https://github.com/Valloric/MatchTagAlways.git
+[submodule ".vim/pack/plugins/start/Colorizer"]
+	path = .vim/pack/plugins/start/Colorizer
+	url = https://github.com/chrisbra/Colorizer.git
