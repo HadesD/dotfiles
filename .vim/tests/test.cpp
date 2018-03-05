@@ -3,12 +3,22 @@
 #include <string>
 #include <thread>
 #include <map>
-
-template<typename T>
-class TestClass
+namespace test::names
 {
-  TestClass();
-};
+  template<typename T>
+  class TestClass
+  {
+  public:
+    TestClass();
+    ~TestClass();
+  public:
+    template<typename T>
+    int d()
+    {
+      T a;
+    }
+  };
+}
 
 // sdfsdf
 /**
@@ -44,6 +54,8 @@ int main()
 {
   int i;
 
+  i = 1;
+
   std::thread f([](){
     int i = 1;
     for (; i < 10; i++)
@@ -56,8 +68,13 @@ int main()
   std::map<std::pair<int, int>, int> m;
   m[{1, 2}] = 3;
 
+  std::vector<std::string> v = {
+    "aa",
+    "bb",
+  };
+
   // v<C-n>I
   // cs{[
-  std::vector<std::string> v = { "f", "", "", "" };
+  std::vector<std::string> v3 = { "f", "", "", "" };
 }
 

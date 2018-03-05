@@ -118,10 +118,6 @@
 	path = .vim/pack/plugins/start/vim-better-whitespace
 	url = https://github.com/ntpeters/vim-better-whitespace.git
 	ignore = dirty
-[submodule ".vim/pack/plugins/start/MatchTagAlways"]
-	path = .vim/pack/plugins/start/MatchTagAlways
-	url = https://github.com/Valloric/MatchTagAlways.git
-	ignore = dirty
 [submodule ".vim/pack/plugins/start/auto-pairs"]
 	path = .vim/pack/plugins/start/auto-pairs
 	url = https://github.com/jiangmiao/auto-pairs.git

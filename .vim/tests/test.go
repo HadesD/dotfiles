@@ -1,2 +1,5 @@
-get
+func a() : int
+{
+
+}
 
