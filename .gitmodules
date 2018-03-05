@@ -177,3 +177,6 @@
 [submodule ".vim/pack/plugins/start/Colorizer"]
 	path = .vim/pack/plugins/start/Colorizer
 	url = https://github.com/chrisbra/Colorizer.git
+[submodule ".vim/pack/plugins/start/undotree"]
+	path = .vim/pack/plugins/start/undotree
+	url = https://github.com/mbbill/undotree.git
