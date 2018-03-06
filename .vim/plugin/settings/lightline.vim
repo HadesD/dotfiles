@@ -3,6 +3,9 @@ set noshowmode
 let g:lightline = {}
 " let g:lightline.colorscheme = 'OldHope'
 let g:lightline.colorscheme = 'Tomorrow_Night_Eighties'
+let g:lightline.component = {
+      \  'lineinfo': "%{printf('%d/%d : %d/%d', line('.'),  line('$'), col('.'), col('$'))}",
+      \ }
 let g:lightline.component_expand = {
       \  'linter_warnings': 'LinterWarnings',
       \  'linter_errors': 'LinterErrors',
@@ -21,7 +24,7 @@ let g:lightline.component_function = {
 let g:lightline.active = {}
 let g:lightline.active.right = [
       \   ['linter_errors', 'linter_warnings', 'linter_ok'],
-      \   ['lineinfo'],
+      \   ['linecount', 'lineinfo'],
       \   ['fileformat', 'fileencoding', 'filetype'],
       \ ]
 let g:lightline.active.left = [
