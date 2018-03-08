@@ -77,10 +77,7 @@ if (sys.platform == 'linux2') \
     f.close()
     f = open(CURRENT_SHELL_RC, 'w')
     f.write(
-
-# if (os.path.exists(HOME + '/.gitconfig'))
-
-      'export ZSH_CUSTOM=$HOME/dotfiles/zshcustom\n'
+      'export ZSH_CUSTOM='+DIR+'/zshcustom\n'
       + 'export EDITOR=vim\n'
       + r
     )
@@ -94,6 +91,20 @@ if (sys.platform == 'linux2') \
   os.symlink(THIS_TMUX_DIR, HOME+'/.tmux')
   os.symlink(HOME+'/.tmux/oh-my-tmux/.tmux.conf', HOME+'/.tmux.conf')
   os.symlink(HOME+'/.tmux/.tmux.conf.local', HOME+'/.tmux.conf.local')
+
+  DOT_GITCONFIG_DIR = HOME '/.gitconfig'
+  if (os.path.exists(DOT_GITCONFIG_DIR)):
+    print('ZSH :: start')
+    f = open(DOT_GITCONFIG_DIR, 'r')
+    r = f.read()
+    f.close()
+    f = open(DOT_GITCONFIG_DIR, 'w')
+    f.write(
+      r
+      + '\n[include]\n'
+      + '  path = '+DIR+'/.gitconfig\n'
+    )
+    f.close()
 
   if sys.platform == 'linux2':
     installYCM()
