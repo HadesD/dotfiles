@@ -2,7 +2,19 @@ if !exists('g:ale_linters')
   let g:ale_linters = {}
 endif
 
-let g:ale_php_phpcs_standard = g:dot_vim_dir . '/phpcs.xml'
+if executable('phpcs')
+  if (g:is_ssh)
+    let g:ale_php_phpcs_executable = ''
+  else
+    let g:ale_php_phpcs_standard = g:dot_vim_dir . '/phpcs.xml'
+  endif
+endif
+
+if executable('phpmd')
+  if (g:is_ssh)
+    let g:ale_php_phpmd_executable = ''
+  endif
+endif
 
 let s:ycm_dir = g:dot_vim_dir . '/pack/plugins/start/YouCompleteMe'
 if has('unix')
