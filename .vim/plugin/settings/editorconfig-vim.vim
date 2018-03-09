@@ -1,4 +1,4 @@
-if v:version < 703 || !has('python')
+if !has('python') || !has('python3')
   let g:loaded_EditorConfig = 1
   finish
 endif
@@ -32,3 +32,4 @@ if exists('s:cmd')
     let run = system(s:cmd)
   end
 end
+
