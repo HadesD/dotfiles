@@ -10,6 +10,8 @@ class Foo
     let x = 3
 
     x = 2
+    return (
+    )
 
     let a = '<html>' \
     '</html>';
