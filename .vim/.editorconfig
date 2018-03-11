@@ -7,21 +7,21 @@ indent_size = 2
 indent_style = space
 trim_trailing_whitespace = true
 
-[*.{cpp,h,hpp,js,jsx,php,py}]
+[*.{cpp,h,hpp,js,jsx,php,py,vim,go}]
 max_line_length = 80
 insert_final_newline = true
 
-[*.{html,phtml}]
-insert_final_newline = false
-
+; Tab indent
 [Makefile]
 indent_style = tab
 indent_size = 4
 
 [.gitmodules]
-indent_size = 4
 indent_style = tab
+indent_size = 4
 
-# Adding
-[*.tmpl]
+[*.{html,phtml,ctp}]
+indent_style = tab
+indent_size = 4
+insert_final_newline = false
 
