@@ -7,10 +7,6 @@ nnoremap <leader><space> :nohlsearch<CR> " \<space>
 
 map <F2> :retab <CR> :w <CR>
 
-" move to beginning/end of line
-nnoremap B ^
-nnoremap E $
-
 " `gf` opens file under cursor in a new vertical split
 nnoremap gf :vertical wincmd f<CR>
 
