@@ -4,3 +4,4 @@ if &encoding != "utf-8"
     let s:checkout = system("cd " . s:plugin_path . " && git apply --stat " . s:plugin_path . "/../../../../patches/nerdtree-git-plugin.fix_error_utf8_encoding.patch")
   end
 end
+

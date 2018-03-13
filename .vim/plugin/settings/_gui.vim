@@ -34,14 +34,7 @@ if (exists('g:dot_vim_dir') && filereadable(g:dot_vim_dir . '/pack/plugins/start
   colorscheme monokai
 endif
 
-" hi IndentGuidesOdd  ctermbg=None
-hi IndentGuidesOdd ctermbg=235
-hi IndentGuidesEven ctermbg=235
-
-" highlight NonText guifg=#abc123 ctermfg=123
-hi NonText guifg=bg ctermfg=bg
-
-au BufRead,BufNewFile .tmux.conf setf sh
+highlight NonText guifg=bg ctermfg=bg
 
 if (&enc == 'utf-8')
   set fillchars=vert:\│

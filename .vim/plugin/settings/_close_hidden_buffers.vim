@@ -12,3 +12,6 @@ function! s:CloseHiddenBuffers()
     endif
   endfor
 endfunction
+
+abbreviate qqb CloseHiddenBuffers
+

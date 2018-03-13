@@ -1,6 +1,7 @@
 if (!has('python'))
   let g:loaded_matchtagalways = 1
 endif
+
 " let g:mta_use_matchparen_group = 1
 "
 " let g:mta_filetypes = {

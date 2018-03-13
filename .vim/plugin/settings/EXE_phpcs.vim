@@ -1,4 +1,7 @@
-finish
+if g:is_ssh
+  finish
+endif
+
 let s:dotfile = 'ruleset.xml'
 let s:dotfile_filepath = g:dot_vim_dir . '/' . s:dotfile
 
