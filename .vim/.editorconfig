@@ -7,7 +7,7 @@ indent_size = 2
 indent_style = space
 trim_trailing_whitespace = true
 
-[*.{cpp,h,hpp,js,jsx,php,py,vim,go}]
+[*.{cpp,h,hpp,js,jsx,php,py,vim,go,scss}]
 max_line_length = 80
 insert_final_newline = true
 
@@ -20,8 +20,11 @@ indent_size = 4
 indent_style = tab
 indent_size = 4
 
-[*.{html,phtml,ctp}]
+[*.{html,phtml,ctp,css}]
 indent_style = tab
 indent_size = 4
 insert_final_newline = false
+
+[*.css]
+insert_final_newline = true
 
