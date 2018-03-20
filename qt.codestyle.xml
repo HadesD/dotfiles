@@ -22,7 +22,7 @@
    <value type="bool" key="IndentEnumBraces">false</value>
    <value type="bool" key="IndentFunctionBody">true</value>
    <value type="bool" key="IndentFunctionBraces">false</value>
-   <value type="bool" key="IndentNamespaceBody">false</value>
+   <value type="bool" key="IndentNamespaceBody">true</value>
    <value type="bool" key="IndentNamespaceBraces">false</value>
    <value type="int" key="IndentSize">2</value>
    <value type="bool" key="IndentStatementsRelativeToSwitchLabels">true</value>

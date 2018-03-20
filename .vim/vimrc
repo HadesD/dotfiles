@@ -56,4 +56,5 @@ set ttimeoutlen=50
 set wildmenu
 set lazyredraw
 set showmatch
+set ttyfast
 
