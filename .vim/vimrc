@@ -54,7 +54,9 @@ set autowrite
 set laststatus=2 " Always show airline
 set ttimeoutlen=50
 set wildmenu
-set lazyredraw
+set nolazyredraw
 set showmatch
 set ttyfast
+set noeb vb t_vb=
+set nolist
 

@@ -14,3 +14,5 @@ unbind-key C-a
 
 # }
 
+set-option -s escape-time 10
+
