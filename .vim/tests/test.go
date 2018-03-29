@@ -1,5 +1,7 @@
-func a() : int
-{
+package main
+
+func main()
+;{
 
 }
 

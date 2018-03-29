@@ -156,8 +156,6 @@ if (os.path.exists('Dependencies/godot-cpp/include/include')):
   ])
 if (os.path.exists('Dependencies/godot_headers/include')):
   flags.extend(['-I', 'Dependencies/godot_headers/include'])
-if (os.path.exists('include/godot_cpp')):
-  flags.extend(['-I', 'include'])
 if (os.path.exists('cpp_bindings')):
   flags.extend(['-I', 'cpp_bindings/include'])
   flags.extend(['-I', 'cpp_bindings/include/core'])

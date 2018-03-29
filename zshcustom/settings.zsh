@@ -14,3 +14,5 @@ alias lss='ls -la --block-size=M'
 ttyctl -f
 export GIT_LFS_SKIP_SMUDGE=1
 
+export PATH=$HOME/.local/usr/bin:$PATH
+
