@@ -121,6 +121,8 @@ if (os.path.exists('cocos2d')):
     # Windows
     flags.extend(['-I', 'cocos2d/external/glfw3/include/win32'])
 
+flags.extend(['-I', '/srv/emsdk/emscripten/1.37.36/system/include'])
+
 #################################################################################
 #                                   LaraCC                                      #
 #################################################################################
