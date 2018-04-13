@@ -21,8 +21,8 @@ indent_style = tab
 indent_size = 4
 
 [*.{html,phtml,ctp,css}]
-indent_style = tab
-indent_size = 4
+; indent_style = tab
+; indent_size = 4
 insert_final_newline = false
 
 [*.css]
