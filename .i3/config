@@ -1,0 +1,12 @@
+set $mod  Mod4
+bindsym $mod+1 workspace $WS1, exec --no-startup-id ~/bin/st xfce4-terminal
+bindsym $mod+2 workspace $WS2, exec --no-startup-id ~/bin/st google-chrome
+bindsym $mod+3 workspace $WS3, exec --no-startup-id WizNote > /dev/null 2>&1
+bindsym $mod+4 workspace $WS4, exec --no-startup-id ~/bin/st smplayer
+bindsym $mod+5 workspace $WS5, exec --no-startup-id ~/bin/st thunar
+bindsym $mod+6 workspace $WS6, exec --no-startup-id ~/bin/st virtualbox
+bindsym $mod+7 workspace $WS7
+bindsym $mod+8 workspace $WS8
+bindsym $mod+9 workspace $WS9
+bindsym $mod+0 workspace $WS0
+
