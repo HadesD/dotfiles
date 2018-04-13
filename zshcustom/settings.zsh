@@ -19,4 +19,5 @@ export PATH=$HOME/.local/usr/bin:$PATH
 # Run if found ibus
 if [[ -f "$(which ibus-daemon)" ]]; then
   ibus-daemon -drx
+fi
 
