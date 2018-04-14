@@ -163,8 +163,31 @@ bindsym Mod1+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
+# bar {
+#         status_command i3status
+# }
+############################# 主题相关 ###############################
+
+client.focused          #333333 #333333 #FFFFFF #333333
+client.focused_inactive #999999 #999999 #FFFFFF #3399FF
+client.unfocused        #999999 #999999 #FFFFFF #3399FF
+client.urgent           #990000 #990000 #FFFFFF #990000
+client.placeholder      #000000 #000000 #FFFFFF #000000
+client.background       #FFFFFF
+
+# i3bar
+bindsym $mod+m bar mode toggle
 bar {
-        status_command i3status
+    status_command conky -c $HOME/.i3/conkyrc_bar
+    strip_workspace_numbers yes
+    colors {
+        background #333333
+        statusline #FFFFFF
+        focused_workspace  #111111 #111111 #FFFFFF
+        active_workspace   #FFFFFF #FFFFFF #FFFFFF
+        inactive_workspace #333333 #333333 #FFFFFF
+        urgent_workspace   #990000 #990000 #FFFFFF
+    }
 }
 
 #######################################################################
