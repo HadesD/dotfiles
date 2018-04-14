@@ -1,1 +1,7 @@
+conky.config = {
+}
+
+conky.text = [[
+  111
+]]
 

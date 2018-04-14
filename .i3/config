@@ -183,6 +183,10 @@ bindsym $alt+r mode "resize"
 # Please remove the following exec line:
 #######################################################################
 
+# Fix {
+exec --no-startup-id xrandr --output HDMI-3 --left-of HDMI-1
+# }
+
 # theme {
 client.focused          #333333 #333333 #FFFFFF #333333
 client.focused_inactive #999999 #999999 #FFFFFF #3399FF
@@ -195,6 +199,7 @@ client.background       #FFFFFF
 bindsym $win+m bar mode toggle
 bar {
   status_command i3status
+  # status_command conky -c $HOME/.i3/conkyrc_bar
   strip_workspace_numbers yes
   colors {
     background #333333
