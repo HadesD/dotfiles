@@ -14,6 +14,7 @@ DOT_VIM_DIR = HOME + '/.vim'
 DOT_VIM_NAME = ''
 THIS_VIM_DIR = DIR + '/.vim'
 THIS_TMUX_DIR = DIR + '/.tmux'
+THIS_I3_DIR = DIR + '/.i3'
 
 def remove(path):
   if (os.path.exists(path)):
