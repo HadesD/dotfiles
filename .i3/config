@@ -26,11 +26,10 @@ font pango:monospace 8
 
 # use these keys for focus, movement, and resize directions when reaching for
 # the arrows is not convenient
-set $up l
-set $down k
-set $left j
-set $right semicolon
-set $mod Mod4
+set $up k
+set $down j
+set $left h
+set $right l
 
 # use Mouse+Mod1 to drag floating windows to their wanted position
 floating_modifier Mod1
@@ -162,13 +161,16 @@ mode "resize" {
 
 bindsym Mod1+r mode "resize"
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-# bar {
-#         status_command i3status
-# }
-############################# 主题相关 ###############################
-
+#######################################################################
+# automatically start i3-config-wizard to offer the user to create a
+# keysym-based config which used their favorite modifier (alt or windows)
+#
+# i3-config-wizard will not launch if there already is a config file
+# in ~/.i3/config.
+#
+# Please remove the following exec line:
+#######################################################################
+set $mod Mod4
 client.focused          #333333 #333333 #FFFFFF #333333
 client.focused_inactive #999999 #999999 #FFFFFF #3399FF
 client.unfocused        #999999 #999999 #FFFFFF #3399FF
@@ -191,15 +193,6 @@ bar {
     }
 }
 
-#######################################################################
-# automatically start i3-config-wizard to offer the user to create a
-# keysym-based config which used their favorite modifier (alt or windows)
-#
-# i3-config-wizard will not launch if there already is a config file
-# in ~/.i3/config.
-#
-# Please remove the following exec line:
-#######################################################################
 exec i3-config-wizard
 bindsym $mod+1 workspace $WS1, exec --no-startup-id google-chrome
 bindsym $mod+2 workspace $WS2, exec --no-startup-id virtualbox
