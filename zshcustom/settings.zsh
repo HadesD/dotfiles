@@ -17,7 +17,10 @@ export GIT_LFS_SKIP_SMUDGE=1
 export PATH=$HOME/.local/usr/bin:$PATH
 
 # Run if found ibus
+IBUS_RUNNING=$(ps aux | grep ibus-daemon | grep -v "grep" | awk '{print $2}')
 if [[ -f "$(which ibus-daemon)" ]]; then
-  ibus-daemon -drx
+  if [[ -z $IBUS_RUNNING ]]; then
+    ibus-daemon -drx
+  fi
 fi
 
