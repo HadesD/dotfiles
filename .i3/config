@@ -31,114 +31,115 @@ set $down j
 set $left h
 set $right l
 
-set $win Mod4
+set $mod Mod4
 set $alt Mod1
 
-# use Mouse+$win to drag floating windows to their wanted position
-floating_modifier $win
+# use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
 
 # start a terminal
-bindsym $win+Return exec i3-sensible-terminal
+bindsym $mod+Return exec i3-sensible-terminal
 
 # kill focused window
-bindsym $win+Shift+q kill
+bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $win+d exec dmenu_run
+bindsym $mod+d exec dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
-# bindsym $win+d exec --no-startup-id i3-dmenu-desktop
+# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $win+$left focus left
-bindsym $win+$down focus down
-bindsym $win+$up focus up
-bindsym $win+$right focus right
+bindsym $mod+$left focus left
+bindsym $mod+$down focus down
+bindsym $mod+$up focus up
+bindsym $mod+$right focus right
 
 # alternatively, you can use the cursor keys:
-bindsym $win+Left focus left
-bindsym $win+Down focus down
-bindsym $win+Up focus up
-bindsym $win+Right focus right
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
 
 # move focused window
-bindsym $win+Shift+$left move left
-bindsym $win+Shift+$down move down
-bindsym $win+Shift+$up move up
-bindsym $win+Shift+$right move right
+bindsym $mod+Shift+$left move left
+bindsym $mod+Shift+$down move down
+bindsym $mod+Shift+$up move up
+bindsym $mod+Shift+$right move right
 
 # alternatively, you can use the cursor keys:
-bindsym $win+Shift+Left move left
-bindsym $win+Shift+Down move down
-bindsym $win+Shift+Up move up
-bindsym $win+Shift+Right move right
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $win+s+p split h
+bindsym $mod+s+p split h
 
 # split in vertical orientation
-bindsym $win+v split v
+bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
-bindsym $win+f fullscreen toggle
+bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $win+s layout stacking
-bindsym $win+w layout tabbed
-bindsym $win+e layout toggle split
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-bindsym $win+Shift+space floating toggle
+bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $win+space focus mode_toggle
+bindsym $alt+space focus mode_toggle
 
 # focus the parent container
-bindsym $win+a focus parent
+bindsym $mod+a focus parent
 
 # focus the child container
-#bindsym $win+d focus child
+#bindsym $mod+d focus child
 
 # move the currently focused window to the scratchpad
-bindsym $win+Shift+minus move scratchpad
+bindsym $mod+Shift+minus move scratchpad
 
 # Show the next scratchpad window or hide the focused scratchpad window.
 # If there are multiple scratchpad windows, this command cycles through them.
-bindsym $win+minus scratchpad show
+bindsym $mod+minus scratchpad show
 
 # switch to workspace
-bindsym $win+1 workspace 1
-bindsym $win+2 workspace 2
-bindsym $win+3 workspace 3
-bindsym $win+4 workspace 4
-bindsym $win+5 workspace 5
-bindsym $win+6 workspace 6
-bindsym $win+7 workspace 7
-bindsym $win+8 workspace 8
-bindsym $win+9 workspace 9
-bindsym $win+0 workspace 10
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10
 
 # move focused container to workspace
-bindsym $win+Shift+1 move container to workspace 1
-bindsym $win+Shift+2 move container to workspace 2
-bindsym $win+Shift+3 move container to workspace 3
-bindsym $win+Shift+4 move container to workspace 4
-bindsym $win+Shift+5 move container to workspace 5
-bindsym $win+Shift+6 move container to workspace 6
-bindsym $win+Shift+7 move container to workspace 7
-bindsym $win+Shift+8 move container to workspace 8
-bindsym $win+Shift+9 move container to workspace 9
-bindsym $win+Shift+0 move container to workspace 10
+bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+6 move container to workspace 6
+bindsym $mod+Shift+7 move container to workspace 7
+bindsym $mod+Shift+8 move container to workspace 8
+bindsym $mod+Shift+9 move container to workspace 9
+bindsym $mod+Shift+0 move container to workspace 10
 
 # reload the configuration file
-bindsym $win+Shift+c reload
+bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $win+Shift+r restart
+bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $win+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+# exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 set $mode_system System:Lock(L) Logout(O) Shutdown(S) Restart(R) Cancel(Esc)
-bindsym Pause mode "$mode_system"
+bindsym $mod+Shift+e mode "$mode_system"
+# bindsym Pause mode "$mode_system"
 mode "$mode_system" {
     bindsym l exec i3lock -c '#333333', exec sleep .1 && exec xset dpms force off, mode "default"
     bindsym o exec i3-msg exit
@@ -171,7 +172,7 @@ mode "resize" {
   bindsym Escape mode "default"
 }
 
-bindsym $win+r mode "resize"
+bindsym $mod+r mode "resize"
 
 #######################################################################
 # automatically start i3-config-wizard to offer the user to create a
@@ -196,7 +197,7 @@ client.placeholder      #000000 #000000 #FFFFFF #000000
 client.background       #FFFFFF
 
 # i3bar
-bindsym $win+m bar mode toggle
+bindsym $mod+m bar mode toggle
 bar {
   status_command i3status
   # status_command conky -c $HOME/.i3/conkyrc_bar
@@ -214,8 +215,8 @@ bar {
 
 
 # New Workspace {
-bindsym $alt+1 workspace $WS1, exec --no-startup-id google-chrome
-bindsym $alt+2 workspace $WS2, exec --no-startup-id virtualbox
+bindsym $alt+1 workspace $WS1, exec --no-startup-id nautilus
+bindsym $alt+2 workspace $WS2, exec --no-startup-id google-chrome
 bindsym $alt+3 workspace $WS3
 bindsym $alt+4 workspace $WS4
 bindsym $alt+5 workspace $WS5
@@ -224,6 +225,11 @@ bindsym $alt+7 workspace $WS7
 bindsym $alt+8 workspace $WS8
 bindsym $alt+9 workspace $WS9
 bindsym $alt+0 workspace $WS0
+# }
+
+# ScreenShot {
+bindsym --release Print exec "~/.i3/bin/screenshot full"
+bindsym --release Shift+Print exec "~/.i3/bin/screenshot area"
 # }
 
 exec i3-config-wizard
