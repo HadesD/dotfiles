@@ -8,8 +8,6 @@ LOG="${DIR}/screenshots.log"
 # Check if the dir to store the screenshots exists, else create it:
 if [ ! -d "${DIR}" ]; then mkdir -p "${DIR}"; fi
 
-if [ "$1" = "full" ]; then import -format png -screen "${NAME}"; fi
-
 # Screenshot a selected window
 if [ "$1" = "win" ]; then import -format png "${NAME}"; fi
 

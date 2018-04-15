@@ -228,7 +228,7 @@ bindsym $alt+0 workspace $WS0
 # }
 
 # ScreenShot {
-bindsym --release Print exec "~/.i3/bin/screenshot full"
+bindsym --release Print exec "~/.i3/bin/screenshot scr"
 bindsym --release Shift+Print exec "~/.i3/bin/screenshot area"
 # }
 
