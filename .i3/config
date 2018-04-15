@@ -232,5 +232,20 @@ bindsym --release Print exec "~/.i3/bin/screenshot scr"
 bindsym --release Shift+Print exec "~/.i3/bin/screenshot area"
 # }
 
+# Sound {
+# Pulse Audio controls
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
+
+# Sreen brightness controls
+bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+
+bindsym $alt+F9 exec --no-startup-id pactl set-sink-mute 0 toggle
+bindsym $alt+F10 exec --no-startup-id pactl set-sink-volume 0 -5%
+bindsym $alt+F11 exec --no-startup-id pactl set-sink-volume 0 +5%
+# }
+
 exec i3-config-wizard
 
