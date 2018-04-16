@@ -199,8 +199,7 @@ client.background       #FFFFFF
 # i3bar
 bindsym $mod+m bar mode toggle
 bar {
-  status_command i3status
-  # status_command conky -c $HOME/.i3/conkyrc_bar
+  status_command i3status -c ~/.i3/i3status.config
   strip_workspace_numbers yes
   colors {
     background #333333
@@ -245,6 +244,13 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightne
 bindsym $alt+F9 exec --no-startup-id pactl set-sink-mute 0 toggle
 bindsym $alt+F10 exec --no-startup-id pactl set-sink-volume 0 -5%
 bindsym $alt+F11 exec --no-startup-id pactl set-sink-volume 0 +5%
+# }
+
+# Specifial Window {
+for_window [class="Chromium"] border none
+for_window [class="Xarchiver"] floating enable
+for_window [title="Task Manager - Chromium"] floating enable
+for_window [title="Task Manager - Chromium"] resize set 640 480
 # }
 
 exec i3-config-wizard
