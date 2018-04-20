@@ -93,7 +93,7 @@ if (sys.platform == 'linux2') \
   os.symlink(HOME+'/.tmux/oh-my-tmux/.tmux.conf', HOME+'/.tmux.conf')
   os.symlink(HOME+'/.tmux/.tmux.conf.local', HOME+'/.tmux.conf.local')
 
-  DOT_GITCONFIG_DIR = HOME '/.gitconfig'
+  DOT_GITCONFIG_DIR = HOME + '/.gitconfig'
   if (os.path.exists(DOT_GITCONFIG_DIR)):
     print('ZSH :: start')
     f = open(DOT_GITCONFIG_DIR, 'r')
