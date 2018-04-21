@@ -16,6 +16,12 @@ if executable('phpmd')
   endif
 endif
 
+if executable('htmlhint')
+  if (g:is_ssh)
+    let g:ale_html_htmlhint_executable = ''
+  endif
+endif
+
 let s:ycm_dir = g:dot_vim_dir . '/pack/plugins/start/YouCompleteMe'
 if has('unix')
   if !empty(glob(s:ycm_dir . '/third_party/ycmd/libclang.so*'))
