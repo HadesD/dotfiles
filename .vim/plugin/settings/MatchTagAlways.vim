@@ -1,5 +1,6 @@
 if (!has('python'))
   let g:loaded_matchtagalways = 1
+  finish
 endif
 
 " let g:mta_use_matchparen_group = 1
@@ -11,3 +12,4 @@ endif
 "       \ 'jinja' : 1,
 "       \ 'html.php' : 1,
 "       \ }
+
