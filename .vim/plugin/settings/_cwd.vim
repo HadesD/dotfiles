@@ -1,5 +1,5 @@
 " follow symlinked file
-function! FollowSymlink()
+function! s:FollowSymlink()
   let current_file = expand('%:p')
   " check if file type is a symlink
   if getftype(current_file) == 'link'
@@ -12,7 +12,7 @@ endfunction
 
 " set working directory to git project root
 " or directory of current file if not git project
-function! SetProjectRoot()
+function! s:SetProjectRoot()
   " default to the current file's directory
   lcd %:p:h
   if !executable(g:gitgutter_git_executable)
@@ -31,12 +31,12 @@ endfunction
 autocmd CursorMoved silent *
   " short circuit for non-netrw files
   \ if &filetype == 'netrw' |
-  \   call FollowSymlink() |
-  \   call SetProjectRoot() |
+  \   call s:FollowSymlink() |
+  \   call s:SetProjectRoot() |
   \ endif
 
 " follow symlink and set working directory
 autocmd BufRead *
-  \ call FollowSymlink() |
-  \ call SetProjectRoot()
+  \ call s:FollowSymlink() |
+  \ call s:SetProjectRoot()
 

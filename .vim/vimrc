@@ -19,7 +19,7 @@ elseif (has('win32') || has('win64')) && !has('win32unix')
 end
 
 " Load plugins
-if filereadable(g:dot_vim_dir.g:filepath_sep . 'autoload/init_runtime.vim')
+if filereadable(g:dot_vim_dir . '/autoload/init_runtime.vim')
   execute init_runtime#Init()
 endif
 

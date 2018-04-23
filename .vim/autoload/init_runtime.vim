@@ -1,18 +1,18 @@
 function! init_runtime#Init() abort
-  call CheckSSH()
+  call s:CheckSSH()
   if v:version < 800
-    call LoadPlugins()
+    call s:LoadPlugins()
   end
 endfunction
 
-function! CheckSSH()
+function! s:CheckSSH()
   let g:is_ssh = 0
   if has('unix')
     let g:is_ssh = ($SSH_TTY != "")
   endif
 endfunction
 
-function LoadPlugins() abort
+function s:LoadPlugins() abort
   if (exists('g:dot_vim_dir'))
     let &rtp = &rtp . ',' . g:dot_vim_dir . '/autoload/vim-pathogen'
   endif

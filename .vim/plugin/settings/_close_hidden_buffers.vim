@@ -1,4 +1,5 @@
 command! CloseHiddenBuffers call s:CloseHiddenBuffers()
+
 function! s:CloseHiddenBuffers()
   let open_buffers = []
 
