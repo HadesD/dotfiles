@@ -87,6 +87,8 @@ if platform.system() != 'Windows':
 if (os.path.exists('include')):
   flags.extend(['-I', 'include'])
 
+flags.extend(['-I', 'deps/SDL/include'])
+
 #################################################################################
 # CaroOnline
 #################################################################################
