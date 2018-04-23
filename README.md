@@ -4,7 +4,7 @@ ALL dot file setting for our work
 
 ## Screen Shots
 
-![Full demo](https://i.imgur.com/eXeqQxd.jpg)
+![Full demo](https://i.imgur.com/jGvtw7q.png)
 
 ## WHY?
 
