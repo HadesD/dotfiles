@@ -1,3 +1,7 @@
+if !executable('eslint')
+  finish
+endif
+
 let s:dotfile = '.eslintrc.json'
 let s:dotfile_filepath = g:dot_vim_dir . '/' . s:dotfile
 

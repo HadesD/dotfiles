@@ -13,6 +13,10 @@ let g:ycm_extra_conf_vim_data          = ['&filetype']
 let g:ycm_add_preview_to_completeopt = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 
+if !isdirectory(g:dot_vim_dir . '/pack/plugins/start/YouCompleteMe')
+  finish
+endif
+
 " config compile
 if filereadable(getcwd() . '/compile_commands.json')
   finish
