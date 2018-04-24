@@ -14,7 +14,7 @@ alias lss='ls -la --block-size=M'
 ttyctl -f
 export GIT_LFS_SKIP_SMUDGE=1
 
-export PATH=$HOME/.local/usr/bin:$PATH
+export PATH=$HOME/.local/bin:$HOME/.local/usr/bin:$PATH
 
 # Run if found ibus
 IBUS_RUNNING=$(ps aux | grep ibus-daemon | grep -v "grep" | awk '{print $2}')
