@@ -1,5 +1,8 @@
 " let g:lsc_auto_map = v:true
+" let g:lsc_loaded = 1
+" finish
 autocmd CompleteDone * silent! pclose
+
 let g:lsc_auto_map = {
       \  'GoToDefinition': '<C-]>',
       \  'FindReferences': 'gr',
@@ -13,12 +16,17 @@ let g:lsc_auto_map = {
       \  'Completion': 'completefunc',
       \ }
 
-let g:lsc_server_commands = {
-      \   'c': {
-      \     'command': 'clangd',
-      \   },
-      \   'cpp': {
-      \     'command': 'clangd',
-      \   },
-      \ }
+" Config servers
+if !exists('g:lsc_server_commands')
+  let g:lsc_server_commands = {}
+endif
+
+if executable('clangd')
+  let g:lsc_server_commands.c = {
+        \   'command': 'clangd',
+        \ }
+  let g:lsc_server_commands.cpp = {
+        \   'command': 'clangd',
+        \ }
+endif
 

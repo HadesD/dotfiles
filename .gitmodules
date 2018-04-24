@@ -194,3 +194,9 @@
 	path = .vim/pack/plugins/start/vim-lsc
 	url = https://github.com/natebosch/vim-lsc.git
 	ignore = dirty
+[submodule ".vim/pack/plugins/start/asyncomplete-lsp.vim"]
+	path = .vim/pack/plugins/start/asyncomplete-lsp.vim
+	url = https://github.com/prabirshrestha/asyncomplete-lsp.vim.git
+[submodule ".vim/pack/plugins/start/asyncomplete.vim"]
+	path = .vim/pack/plugins/start/asyncomplete.vim
+	url = https://github.com/prabirshrestha/asyncomplete.vim.git
