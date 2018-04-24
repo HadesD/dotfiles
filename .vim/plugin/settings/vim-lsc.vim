@@ -1,20 +1,21 @@
-" let g:lsc_auto_map = v:true
 " let g:lsc_loaded = 1
 " finish
 autocmd CompleteDone * silent! pclose
 
 let g:lsc_auto_map = {
-      \  'GoToDefinition': '<C-]>',
+      \  'GoToDefinition': 'gd',
       \  'FindReferences': 'gr',
       \  'NextReference': '<C-n>',
       \  'PreviousReference': '<C-p>',
       \  'FindImplementations': 'gI',
       \  'FindCodeActions': 'ga',
+      \  'Rename': 'gR',
+      \  'ShowHover': 'K',
       \  'DocumentSymbol': 'go',
       \  'WorkspaceSymbol': 'gS',
-      \  'ShowHover': 'K',
       \  'Completion': 'completefunc',
       \ }
+let g:lsc_auto_map = v:false
 
 " Config servers
 if !exists('g:lsc_server_commands')

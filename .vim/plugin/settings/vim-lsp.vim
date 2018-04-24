@@ -19,3 +19,12 @@ if executable('clangd')
         \ })
 endif
 
+" Bind
+nnoremap gr :LspReferences<CR>
+nnoremap gR :LspRename<CR>
+nnoremap go :LspDocumentSymbol<CR>
+nnoremap gS :LspWorkspaceSymbol<CR>
+nnoremap gI :LspImplementation<CR>
+nnoremap gd :LspDefinition<CR>
+nnoremap K :LspHover<CR>
+
