@@ -15,7 +15,7 @@ endfunction
 function! s:SetProjectRoot()
   " default to the current file's directory
   lcd %:p:h
-  if !executable(g:gitgutter_git_executable)
+  if !executable('git')
     return
   end
   let git_dir = system("git rev-parse --show-toplevel")

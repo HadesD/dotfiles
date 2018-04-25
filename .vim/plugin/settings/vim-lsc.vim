@@ -25,9 +25,11 @@ endif
 if executable('clangd')
   let g:lsc_server_commands.c = {
         \   'command': 'clangd',
+        \   'suppress_stderr': v:true
         \ }
   let g:lsc_server_commands.cpp = {
         \   'command': 'clangd',
+        \   'suppress_stderr': v:true
         \ }
 endif
 
