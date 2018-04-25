@@ -5,10 +5,11 @@ unset ZSH_THEME
 export ZSH_THEME="mortalscumbag"
 
 # alias vim="stty stop '' -ixoff ; vim"
+export EDITOR=vim
+export SHELL=$(which zsh)
 alias vi=vim
 alias tmux="TERM=xterm-256color tmux"
-export EDITOR=vim
-alias lss='ls -la --block-size=M'
+alias lss='ls -la --block-size=h'
 
 # # `Frozing' tty, so after any command terminal settings will be restored
 ttyctl -f
