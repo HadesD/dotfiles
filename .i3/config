@@ -185,7 +185,7 @@ bindsym $mod+r mode "resize"
 #######################################################################
 
 # Fix {
-exec --no-startup-id xrandr --output HDMI-3 --left-of HDMI-1
+exec --no-startup-id xrandr --output  HDMI-4 --left-of DVI-I-1
 # }
 
 # theme {
@@ -216,7 +216,7 @@ bar {
 # New Workspace {
 bindsym $alt+1 workspace $WS1, exec --no-startup-id nautilus
 bindsym $alt+2 workspace $WS2, exec --no-startup-id google-chrome
-bindsym $alt+3 workspace $WS3
+bindsym $alt+3 workspace $WS3, exec --no-startup-id virtualbox
 bindsym $alt+4 workspace $WS4
 bindsym $alt+5 workspace $WS5
 bindsym $alt+6 workspace $WS6
