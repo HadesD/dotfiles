@@ -184,8 +184,9 @@ bindsym $mod+r mode "resize"
 # Please remove the following exec line:
 #######################################################################
 
-# Fix {
+# Fix - Startup{
 exec --no-startup-id xrandr --output  HDMI-0 --left-of DVI-I-1
+exec_always --no-startup-id numlockx off
 # }
 
 # theme {
