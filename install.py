@@ -8,6 +8,9 @@ import subprocess
 subprocess.call(['git', 'config', '--global', 'core.fileMode', 'false'])
 subprocess.call(['git', 'config', 'core.fileMode', 'false'])
 
+import update
+update.gitUpdate()
+
 DIR = os.path.dirname(os.path.realpath(__file__))
 HOME = os.environ['HOME']
 DOT_VIM_DIR = HOME + '/.vim'
@@ -24,37 +27,7 @@ def remove(path):
     else:
       shutil.rmtree(path)
 
-def installYCM():
-  ycm_dir = THIS_VIM_DIR + '/pack/plugins/start/YouCompleteMe'
-  if (os.path.exists(ycm_dir)):
-    return
-  print('Vim :: start :: YouCompleteMe')
-  subprocess.call([
-    'git',
-    'clone',
-    'https://github.com/Valloric/YouCompleteMe.git',
-    ycm_dir
-  ])
-  return
-  subprocess.call([
-    'git',
-    'submodule',
-    '--update',
-    '--init'
-  ], cwd=ycm_dir
-  )
-  subprocess.call([
-    'python',
-    'install.py',
-    '--all',
-  ], cwd=ycm_dir
-  )
-
-if (sys.argv[0] == 'ycm'):
-  installYCM()
-  exit()
-
-if (sys.platform == 'linux2') \
+if (sys.platform == 'linux2') or (sys.platform == 'linux') \
    or (sys.platform == 'darwin') \
    or (sys.platform == 'msys'):
   print('Unix :: found')
@@ -108,21 +81,6 @@ if (sys.platform == 'linux2') \
     )
     f.close()
 
-  if sys.platform == 'linux2':
-    installYCM()
-
-  elif (sys.platform == "win32"):
-    # Is Windows
-    HOME = os.environ['HOME']
-
-  print('Auto install is being updated...')
-  print('Manual VIM install')
-  print('- Copy ./vim to ' + HOME + '/vimfiles')
-  print('- Copy ./vim/vimrc to ' + HOME +'/_vimrc')
 else:
   print('OS not found')
-
-import update
-
-update.gitUpdate()
 
