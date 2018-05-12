@@ -73,6 +73,7 @@ if (sys.platform == 'linux2') \
   CURRENT_SHELL_RC = HOME + '/.zshrc'
   if (os.path.exists(CURRENT_SHELL_RC)):
     print('ZSH :: start')
+    subprocess.call(['sh', DIR + '/scripts/install-oh-my-zsh.sh'])
     f = open(CURRENT_SHELL_RC, 'r')
     r = f.read()
     f.close()
