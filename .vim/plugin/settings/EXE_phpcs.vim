@@ -1,4 +1,8 @@
-if g:is_ssh
+if !executable('phpcs')
+  finish
+endif
+
+if empty(glob('composer.json'))
   finish
 endif
 
@@ -17,17 +21,5 @@ if !empty(glob(getcwd() . '/' . s:dotfile))
   finish
 endif
 
-if has('unix')
-  let s:cmd = 'ln -s ' . s:dotfile_filepath . ' ' . getcwd()
-elseif has('win32') || has('win64')
-  let s:cmd = 'copy ' . s:dotfile_filepath . ' ' . getcwd()
-endif
-
-if exists('s:cmd')
-  if exists(':AsyncRun')
-    silent exe 'AsyncRun ' s:cmd
-  else
-    let run = system(s:cmd)
-  end
-end
+call Symlink(s:dotfile_filepath, getcwd())
 
