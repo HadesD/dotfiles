@@ -27,35 +27,6 @@ def gitUpdate():
     'git', 'pull', 'origin', 'master'
   ])
 
-def ycmUpdate():
-  YCM_DIR = THIS_VIM_DIR + '/pack/plugins/start/YouCompleteMe'
-
-  if not os.path.exists(YCM_DIR):
-    print('Vim :: YouCompleteMe :: 404 - Not found')
-    return
-
-  print('Vim :: YouCompleteMe :: checkout')
-  subprocess.call(['git', 'pull', 'origin', 'master'], cwd=YCM_DIR)
-
-  print('Vim :: YouCompleteMe :: checkout')
-  subprocess.call([
-    'git', 'submodule', 'foreach',
-    'git', 'checkout', '.'
-  ], cwd=YCM_DIR)
-
-  print('Vim :: YouCompleteMe :: pull')
-  subprocess.call(['git', 'pull', 'origin', 'master'], cwd=YCM_DIR)
-
-  print('Vim :: YouCompleteMe :: submodule')
-  subprocess.call(
-    ['git', 'submodule', 'update', '--init', '--recursive'],
-    cwd=YCM_DIR
-  )
-  subprocess.call([
-    'git', 'submodule', 'foreach',
-    'git', 'pull', 'origin', 'master'
-  ], cwd=YCM_DIR)
-
-gitUpdate()
-ycmUpdate()
+if name == '__main__':
+  gitUpdate()
 

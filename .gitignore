@@ -1,6 +1,5 @@
 *.log
 
-/.ycm_extra_conf.py
 /.editorconfig
 /.eslintrc.json
 /phpcs.xml
