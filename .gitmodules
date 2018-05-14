@@ -94,10 +94,6 @@
 	path = .vim/pack/plugins/start/vim-unimpaired
 	url = https://github.com/tpope/vim-unimpaired.git
 	ignore = dirty
-[submodule ".vim/pack/plugins/start/vim-smooth-scroll"]
-	path = .vim/pack/plugins/start/vim-smooth-scroll
-	url = https://github.com/terryma/vim-smooth-scroll.git
-	ignore = dirty
 [submodule ".vim/pack/plugins/start/ag.vim"]
 	path = .vim/pack/plugins/start/ag.vim
 	url = https://github.com/rking/ag.vim.git
