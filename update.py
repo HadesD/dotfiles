@@ -27,6 +27,6 @@ def gitUpdate():
     'git', 'pull', 'origin', 'master'
   ])
 
-if name == '__main__':
+if __name__ == '__main__':
   gitUpdate()
 
