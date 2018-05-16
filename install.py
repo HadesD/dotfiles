@@ -36,12 +36,8 @@ if (sys.platform == 'linux2') or (sys.platform == 'linux') \
 
   remove(DOT_VIM_DIR)
 
-  # dot_vimrc_file = HOME + '/.vimrc'
-  # remove(dot_vimrc_file)
-
   print('Vim :: start :: Symlink')
   os.symlink(THIS_VIM_DIR, DOT_VIM_DIR)
-  # os.symlink(THIS_VIM_DIR + '/vimrc', dot_vimrc_file)
 
   CURRENT_SHELL_RC = HOME + '/.zshrc'
   if (os.path.exists(CURRENT_SHELL_RC)):

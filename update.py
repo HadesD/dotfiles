@@ -19,8 +19,6 @@ def gitUpdate():
   subprocess.call(['git', 'pull', 'origin', 'master'])
   print('Git :: submodule :: update')
   subprocess.call(['git', 'submodule', 'update', '--init', '--recursive'])
-  print('Git :: rebase')
-  subprocess.call(['git', 'pull', '--rebase'])
   print('Git :: submodule :: pull')
   subprocess.call([
     'git', 'submodule', 'foreach',
