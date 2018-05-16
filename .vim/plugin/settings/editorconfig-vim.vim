@@ -4,7 +4,6 @@ if (!has('python') && !has('python3'))
 endif
 
 let s:dotfile = '.editorconfig'
-
 let s:dotfile_filepath = g:dot_vim_dir . '/' . s:dotfile
 
 if !filereadable(s:dotfile_filepath)
