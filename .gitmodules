@@ -196,3 +196,6 @@
 [submodule ".vim/pack/plugins/start/asyncomplete.vim"]
 	path = .vim/pack/plugins/start/asyncomplete.vim
 	url = https://github.com/prabirshrestha/asyncomplete.vim.git
+[submodule ".vim/pack/plugins/start/VimCompletesMe"]
+	path = .vim/pack/plugins/start/VimCompletesMe
+	url = https://github.com/ajh17/VimCompletesMe.git
