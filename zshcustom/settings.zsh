@@ -25,3 +25,6 @@ if type "ibus-daemon" > /dev/null; then
   fi
 fi
 
+#so as not to be disturbed by Ctrl-S ctrl-Q in terminals:
+stty -ixon
+
