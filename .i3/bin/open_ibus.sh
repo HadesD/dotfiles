@@ -1,8 +1,10 @@
+#!/bin/bash
+
 # Run if found ibus
-IBUS_RUNNING=$(ps aux | grep ibus-daemon | grep -v "grep" | awk '{print $2}')
-if type "ibus-daemon" > /dev/null; then
+IBUS_RUNNING=$(ps aux | grep /usr/bin/ibus-daemon | grep -v "grep" | awk '{print $2}')
+if type "/usr/bin/ibus-daemon" > /dev/null; then
   if [[ -z $IBUS_RUNNING ]]; then
-    ibus-daemon -drx
+    /usr/bin/ibus-daemon -drx
   fi
 fi
 
