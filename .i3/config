@@ -186,6 +186,7 @@ bindsym $mod+r mode "resize"
 
 # Fix - Startup{
 exec --no-startup-id xrandr --output  HDMI-0 --left-of DVI-I-1
+exec --no-startup-id ~/.i3/bin/open_ibus.sh
 exec_always --no-startup-id numlockx on
 # }
 
