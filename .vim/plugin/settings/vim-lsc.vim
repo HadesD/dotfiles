@@ -1,3 +1,7 @@
+if v:version < 800
+  let g:loaded_lsc = 1
+endif
+
 " let g:lsc_loaded = 1
 " finish
 autocmd CompleteDone * silent! pclose
