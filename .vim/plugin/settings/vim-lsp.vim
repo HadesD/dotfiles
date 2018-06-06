@@ -1,3 +1,6 @@
+if &enc != 'utf-8'
+  let g:lsp_loaded = 1
+endif
 " let g:lsp_loaded = 1
 " finish
 let g:lsp_signs_enabled = 1         " enable signs
