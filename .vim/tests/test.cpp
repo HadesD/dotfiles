@@ -1,8 +1,9 @@
 #include <iostream>
-#include <vector>
 #include <string>
 #include <thread>
+#include <vector>
 #include <map>
+
 namespace test::names
 {
   template<typename T>
@@ -72,10 +73,7 @@ int main()
   std::map<std::pair<int, int>, int> m;
   m[{1, 2}] = 3;
 
-  std::vector<std::string> v = {
-    "aa",
-    "bb",
-  };
+  std::vector<std::string> v();
 
   std::vector<std::string> v3 = { "f", "", "", "" };
 }

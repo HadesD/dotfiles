@@ -1,3 +1,6 @@
+if &enc != 'utf-8'
+  let g:lsp_loaded = 1
+endif
 " let g:lsp_loaded = 1
 " finish
 let g:lsp_signs_enabled = 1         " enable signs
@@ -6,7 +9,7 @@ let g:lsp_signs_error = {'text': '✗'}
 let g:lsp_signs_warning = {'text': '‼', 'icon': '/path/to/some/icon'} " icons require GUI
 let g:lsp_signs_hint = {'icon': '/path/to/some/other/icon'} " icons require GUI
 
-highlight link LspErrorText GruvboxRedSign " requires gruvbox
+highlight link LspErrorText GruvboxRedSign
 highlight clear LspWarningLine
 
 autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
