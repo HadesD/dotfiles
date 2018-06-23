@@ -199,3 +199,6 @@
 [submodule ".vim/pack/plugins/start/VimCompletesMe"]
 	path = .vim/pack/plugins/start/VimCompletesMe
 	url = https://github.com/ajh17/VimCompletesMe.git
+[submodule ".vim/pack/plugins/start/vim-fifs"]
+	path = .vim/pack/plugins/start/vim-fifs
+	url = https://github.com/HadesD/vim-fifs.git
