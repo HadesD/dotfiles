@@ -202,3 +202,6 @@
 [submodule ".vim/pack/plugins/start/vim-fifs"]
 	path = .vim/pack/plugins/start/vim-fifs
 	url = https://github.com/HadesD/vim-fifs.git
+[submodule ".vim/pack/plugins/start/vim-dispatch"]
+	path = .vim/pack/plugins/start/vim-dispatch
+	url = https://github.com/tpope/vim-dispatch.git
