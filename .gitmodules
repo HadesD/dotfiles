@@ -90,10 +90,6 @@
 	path = .vim/pack/plugins/start/vim-snippets
 	url = https://github.com/honza/vim-snippets.git
 	ignore = dirty
-[submodule ".vim/pack/plugins/start/vim-unimpaired"]
-	path = .vim/pack/plugins/start/vim-unimpaired
-	url = https://github.com/tpope/vim-unimpaired.git
-	ignore = dirty
 [submodule ".vim/pack/plugins/start/ag.vim"]
 	path = .vim/pack/plugins/start/ag.vim
 	url = https://github.com/rking/ag.vim.git
