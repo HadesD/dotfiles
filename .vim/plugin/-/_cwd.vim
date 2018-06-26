@@ -55,7 +55,6 @@ function! s:SetProjectRoot()
 endfunction
 
 " follow symlink and set working directory
-autocmd BufRead *
-      \ call s:FollowSymlink() |
-      \ call s:SetProjectRoot()
+autocmd VimEnter * call s:SetProjectRoot()
+autocmd BufRead * call s:FollowSymlink()
 
