@@ -9,7 +9,7 @@ ALL dot file setting for our work
 ## WHY?
 
 Most of time, I'm working on unix-like OS.
-I'm too lazy to config all of theme from-scratch when I re-install my OS, or change my working-computer, server.
+I'm too lazy to config all of them from-scratch when I re-install my OS, or change my working-computer, server.
 
 ## Support
 
@@ -35,11 +35,6 @@ python install.py
 ```
 
 ### Vim
-
-_**Install Vim :: Ag.vim - Search text all file in dir :Ag**_
-
-- Goto: https://github.com/ggreer/the_silver_searcher#installing
-- Ubuntu: sudo apt-get install silversearcher-ag
 
 ### ZSH
 

@@ -16,27 +16,46 @@ function! s:SetProjectRoot()
   " default to the current file's directory
   lcd %:p:h
   if !executable('git')
-    return
+    let is_not_git_dir = 1
   end
-  let git_dir = system("git rev-parse --show-toplevel")
-  " See if the command output starts with 'fatal' (if it does, not in a git repo)
-  let is_not_git_dir = matchstr(git_dir, '^fatal:.*')
-  " if git project, change local directory to git project root
-  if empty(is_not_git_dir)
-    lcd `=git_dir`
+  if !has('is_not_git_dir')
+    let git_dir = system("git rev-parse --show-toplevel")
+    " See if the command output starts with 'fatal' (if it does, not in a git repo)
+    let is_not_git_dir = matchstr(git_dir, '^fatal:.*')
+    " if git project, change local directory to git project root
+    if empty(is_not_git_dir)
+      lcd `=git_dir`
+    endif
+  endif
+
+  if has('is_not_git_dir') && empty(is_not_git_dir)
+    let l:project_root_markers = ["/.git/", "/.cvs/", "/.svn/", "/.hg/", "/Makefile", "/Makefile.in", "/Makefile.am", "/package.json", "/bower.json", "/build.xml", "/pom.xml", "/build.gradle", "/Rakefile", "/CMakeLists.txt", "/configure", "/build.sbt", "/Makefile"]
+    let ap = expand("%:p:h")
+    let ap = substitute(ap,"\\","\/","g")
+    let hit = 0
+    while ap != ""
+      for srm in g:ag_src_root_markers
+        if (srm[-1:-1] == "/" && isdirectory(ap.srm)) || filereadable(ap.srm)
+          let hit = 1
+          break
+        endif
+      endfor
+
+      if hit == 0
+        let ap = substitute(ap, '/[^/]\+$', "","")
+      else
+        break
+      endif
+    endwhile
+
+    if ap != ""
+      lcd `=ap`
+    endif
   endif
 endfunction
 
-" netrw: follow symlink and set working directory
-autocmd CursorMoved silent *
-  " short circuit for non-netrw files
-  \ if &filetype == 'netrw' |
-  \   call s:FollowSymlink() |
-  \   call s:SetProjectRoot() |
-  \ endif
-
 " follow symlink and set working directory
 autocmd BufRead *
-  \ call s:FollowSymlink() |
-  \ call s:SetProjectRoot()
+      \ call s:FollowSymlink() |
+      \ call s:SetProjectRoot()
 
