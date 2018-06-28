@@ -13,11 +13,18 @@ namespace test::names
       TestClass();
       ~TestClass();
     public:
+      void testCase(const std::string& t)
+      {
+      }
+
       template<typename T>
       int d()
       {
         T a;
+
+        return a;
       }
+
   };
 }
 

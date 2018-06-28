@@ -46,10 +46,6 @@
 	path = .vim/pack/plugins/start/supertab
 	url = https://github.com/ervandew/supertab.git
 	ignore = dirty
-[submodule ".vim/pack/plugins/start/neocomplete.vim"]
-	path = .vim/pack/plugins/start/neocomplete.vim
-	url = https://github.com/Shougo/neocomplete.vim.git
-	ignore = dirty
 [submodule ".vim/pack/plugins/start/Conque-GDB"]
 	path = .vim/pack/plugins/start/Conque-GDB
 	url = https://github.com/vim-scripts/Conque-GDB.git
@@ -170,24 +166,10 @@
 	path = .vim/pack/plugins/start/undotree
 	url = https://github.com/mbbill/undotree.git
 	ignore = dirty
-[submodule ".vim/pack/plugins/start/async.vim"]
-	path = .vim/pack/plugins/start/async.vim
-	url = https://github.com/prabirshrestha/async.vim.git
-	ignore = dirty
-[submodule ".vim/pack/plugins/start/vim-lsp"]
-	path = .vim/pack/plugins/start/vim-lsp
-	url = https://github.com/prabirshrestha/vim-lsp.git
-	ignore = dirty
 [submodule ".vim/pack/plugins/start/vim-lsc"]
 	path = .vim/pack/plugins/start/vim-lsc
 	url = https://github.com/natebosch/vim-lsc.git
 	ignore = dirty
-[submodule ".vim/pack/plugins/start/asyncomplete-lsp.vim"]
-	path = .vim/pack/plugins/start/asyncomplete-lsp.vim
-	url = https://github.com/prabirshrestha/asyncomplete-lsp.vim.git
-[submodule ".vim/pack/plugins/start/asyncomplete.vim"]
-	path = .vim/pack/plugins/start/asyncomplete.vim
-	url = https://github.com/prabirshrestha/asyncomplete.vim.git
 [submodule ".vim/pack/plugins/start/VimCompletesMe"]
 	path = .vim/pack/plugins/start/VimCompletesMe
 	url = https://github.com/ajh17/VimCompletesMe.git
