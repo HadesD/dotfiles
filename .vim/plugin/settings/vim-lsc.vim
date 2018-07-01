@@ -1,3 +1,7 @@
+if v:version < 800
+  let g:lsc_enable_autocomplete = 1
+endif
+
 autocmd CompleteDone * silent! pclose
 
 let g:lsc_auto_map = {
