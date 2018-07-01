@@ -19,7 +19,7 @@ let g:lsc_auto_map = {
       \  'WorkspaceSymbol': 'gS',
       \  'Completion': 'completefunc',
       \ }
-let g:lsc_auto_map = v:false
+let g:lsc_auto_map = 0
 
 " Config servers
 if !exists('g:lsc_server_commands')
@@ -29,11 +29,11 @@ endif
 if executable('clangd')
   let g:lsc_server_commands.c = {
         \   'command': 'clangd',
-        \   'suppress_stderr': v:true
+        \   'suppress_stderr': 1
         \ }
   let g:lsc_server_commands.cpp = {
         \   'command': 'clangd',
-        \   'suppress_stderr': v:true
+        \   'suppress_stderr': 1
         \ }
 endif
 
