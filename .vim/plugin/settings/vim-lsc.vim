@@ -1,9 +1,3 @@
-if v:version < 800
-  let g:loaded_lsc = 1
-endif
-
-" let g:lsc_loaded = 1
-" finish
 autocmd CompleteDone * silent! pclose
 
 let g:lsc_auto_map = {
@@ -19,7 +13,6 @@ let g:lsc_auto_map = {
       \  'WorkspaceSymbol': 'gS',
       \  'Completion': 'completefunc',
       \ }
-let g:lsc_auto_map = 0
 
 " Config servers
 if !exists('g:lsc_server_commands')
