@@ -94,10 +94,6 @@
 	path = .vim/pack/plugins/start/PHP-Indenting-for-VIm
 	url = https://github.com/2072/PHP-Indenting-for-VIm.git
 	ignore = dirty
-[submodule ".vim/pack/plugins/start/vim-power-mode"]
-	path = .vim/pack/plugins/start/vim-power-mode
-	url = https://HadesD@github.com/HadesD/vim-power-mode.git
-	ignore = dirty
 [submodule ".vim/pack/plugins/start/asyncrun.vim"]
 	path = .vim/pack/plugins/start/asyncrun.vim
 	url = https://github.com/skywind3000/asyncrun.vim.git
@@ -179,3 +175,6 @@
 [submodule ".vim/pack/plugins/start/vim-dispatch"]
 	path = .vim/pack/plugins/start/vim-dispatch
 	url = https://github.com/tpope/vim-dispatch.git
+[submodule ".vim/pack/plugins/start/vim-power-mode"]
+	path = .vim/pack/plugins/start/vim-power-mode
+	url = https://github.com/HadesD/vim-power-mode.git
