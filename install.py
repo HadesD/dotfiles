@@ -59,6 +59,7 @@ if (sys.platform == 'linux2') or (sys.platform == 'linux') \
   print('Tmux :: start :: Symlink')
   remove(HOME+'/.tmux')
   remove(HOME+'/.tmux.conf')
+  remove(HOME+'/.tmux.conf.local')
   os.symlink(THIS_TMUX_DIR, HOME+'/.tmux')
   os.symlink(HOME+'/.tmux/oh-my-tmux/.tmux.conf', HOME+'/.tmux.conf')
   os.symlink(HOME+'/.tmux/.tmux.conf.local', HOME+'/.tmux.conf.local')
