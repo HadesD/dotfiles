@@ -12,7 +12,7 @@ function! s:SetProjectRoot()
     let ap = substitute(ap,"\\","\/","g")
     let hit = 0
     while ap != ""
-      for srm in g:ag_src_root_markers
+      for srm in l:ag_src_root_markers
         if (srm[-1:-1] == "/" && isdirectory(ap.srm)) || filereadable(ap.srm)
           let hit = 1
           break
