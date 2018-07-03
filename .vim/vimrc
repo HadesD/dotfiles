@@ -58,3 +58,7 @@ set ttyfast
 set noeb vb t_vb=
 set nolist
 
+if has('multi_byte')
+  set enc=utf-8
+end
+
