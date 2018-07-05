@@ -1,3 +1,3 @@
-set noexpandtab
-set noet
+setlocal noexpandtab
+setlocal noet
 

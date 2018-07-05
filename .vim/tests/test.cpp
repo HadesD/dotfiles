@@ -7,9 +7,17 @@
 #include <vector>
 #include <future>
 
-namespace test::names {
+std::tuple<std::string, std::vector<std::string>>
+TestFunc()
+{
+  return;
+}
+
+namespace test::names
+{
   template <typename T>
-  class TestClass {
+  class TestClass
+  {
     public:
       TestClass();
       ~TestClass();
@@ -26,7 +34,9 @@ namespace test::names {
   };
 
   template <typename T, typename Arg, typename... Args>
-  class TestIndent {
+  class TestIndent :
+    public TestClass<T>
+  {
     private:
       int a = 1;
 
@@ -88,20 +98,40 @@ int main() {
 
   i = 1;
 
-  std::thread f([]() {
-    int i = 1;
-    for (; i < 10; i++) {
+  if (i > 100)
+  {
+    i = 100;
+  }
+
+  std::to_string(i);
+
+  if (
+    (i >= 100) ||
+    (i < 1000)
+    )
+  {
+
+  }
+
+  std::thread f([](){
+    for (int i = 1; i < 10; i++) {
       int f;
       f = 3;
+      std::to_string(f);
     }
   });
 
-  std::async(
-   std::launch::async,
-   [](){
-     int a = 1;
-   }
-   );
+  std::function<std::string&(const int v, const std::vector<int>& mv)> ftest;
+
+  auto ftt = [](
+    const std::string& e,
+    const std::array<std::string, 2>& aa
+    ){
+  };
+
+  std::async(std::launch::async, [](){
+    int a = 1;
+  });
 
   std::map<std::pair<int, int>, int> m;
   m[{1, 2}] = 3;
@@ -109,5 +139,18 @@ int main() {
   std::vector<std::string> v();
 
   std::vector<std::string> v3 = {"f", "", "", ""};
+
+  switch(1)
+  {
+    case 1: {
+      int f;
+      break;
+    }
+    case 2: {
+      break;
+    }
+    default:
+      break;
+  }
 }
 
