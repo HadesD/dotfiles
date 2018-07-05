@@ -1,9 +1,11 @@
 " Key map here for all third party app 's plugin to use
 
 " jk is escape
-inoremap jk <esc>
+if v:version >= 500
+  inoremap jk <esc>
+endif
 
-nnoremap <leader><space> :nohlsearch<CR> " \<space>
+nnoremap <leader><space> :nohlsearch<CR>
 
 map <F2> :retab <CR> :w <CR>
 
