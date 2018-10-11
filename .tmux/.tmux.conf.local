@@ -1,3 +1,5 @@
+set -g default-terminal "screen-256color"
+
 # Plugins {
 
 run-shell $HOME/.tmux/plugins/tmux-resurrect/resurrect.tmux
@@ -15,4 +17,5 @@ unbind-key C-a
 # }
 
 set-option -s escape-time 10
+
 

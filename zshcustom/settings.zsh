@@ -7,8 +7,9 @@ export ZSH_THEME="mortalscumbag"
 # alias vim="stty stop '' -ixoff ; vim"
 export EDITOR=vim
 export SHELL=$(which zsh)
+export TERM=xterm-256color
+
 alias vi=vim
-alias tmux="TERM=xterm-256color tmux"
 alias lss='ls -la --block-size=h'
 
 # # `Frozing' tty, so after any command terminal settings will be restored

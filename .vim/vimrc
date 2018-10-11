@@ -61,6 +61,6 @@ set noeb vb t_vb=
 set nolist
 
 if has('multi_byte')
-  set enc=utf-8
+  set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
 end
 
