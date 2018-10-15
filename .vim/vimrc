@@ -59,8 +59,10 @@ set showmatch
 set ttyfast
 set noeb vb t_vb=
 set nolist
+set isprint=
+set display+=uhex
 
 if has('multi_byte')
-  set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
+  set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8,latin1
 end
 
