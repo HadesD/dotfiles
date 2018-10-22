@@ -3,7 +3,7 @@ function! s:SetProjectRoot()
   if executable('git')
     let git_dir = system("git rev-parse --show-toplevel")
     let is_not_git_dir = matchstr(git_dir, '^fatal:.*')
-    if empty(is_not_git_dir)
+    if empty(is_not_git_dir) && isdirectory(is_not_git_dir)
       lcd `=git_dir`
     endif
   else
@@ -26,7 +26,7 @@ function! s:SetProjectRoot()
       endif
     endwhile
 
-    if ap != ""
+    if ap != "" && isdirectory(is_not_git_dir)
       lcd `=ap`
     endif
   end
