@@ -7,7 +7,9 @@ export ZSH_THEME="mortalscumbag"
 # alias vim="stty stop '' -ixoff ; vim"
 export EDITOR=vim
 export SHELL=$(which zsh)
-export TERM=xterm-256color
+if [ -z "$TMUX"  ]; then
+  export TERM='xterm-256color'
+fi
 
 alias vi=vim
 alias lss='ls -la --block-size=h'
