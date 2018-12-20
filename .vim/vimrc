@@ -63,6 +63,8 @@ set isprint=
 set display+=uhex
 
 if has('multi_byte')
+  set encoding=utf-8
   set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8,latin1
+  set fileformats=unix,dos,mac
 end
 

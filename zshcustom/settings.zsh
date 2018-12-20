@@ -1,3 +1,4 @@
+export LC_ALL=en_US.UTF-8
 # Theme setting
 unset ZSH_THEME
 # ZSH_THEME="zeta-zsh-theme/zeta"
