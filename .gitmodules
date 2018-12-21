@@ -130,10 +130,6 @@
 	path = .vim/pack/plugins/start/nerdtree-git-plugin
 	url = https://github.com/Xuyuanp/nerdtree-git-plugin.git
 	ignore = dirty
-[submodule ".tmux/oh-my-tmux"]
-	path = .tmux/oh-my-tmux
-	url = https://github.com/gpakosz/.tmux.git
-	ignore = dirty
 [submodule ".tmux/plugins/tmux-pain-control"]
 	path = .tmux/plugins/tmux-pain-control
 	url = https://github.com/tmux-plugins/tmux-pain-control.git
