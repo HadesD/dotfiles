@@ -64,7 +64,7 @@ set display+=uhex
 
 if has('multi_byte')
   set encoding=utf-8
-  set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8,latin1
+  set fileencodings=iso-2022-jp,cp932,euc-jp,ucs-bom,sjis,utf-8,latin1,default
   set fileformats=unix,dos,mac
 end
 
