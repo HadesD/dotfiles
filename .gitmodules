@@ -177,3 +177,6 @@
 [submodule ".vim/pack/plugins/start/vim-crunch"]
 	path = .vim/pack/plugins/start/vim-crunch
 	url = https://github.com/arecarn/vim-crunch.git
+[submodule ".vim/pack/plugins/start/vim-endwise"]
+	path = .vim/pack/plugins/start/vim-endwise
+	url = https://github.com/tpope/vim-endwise.git

@@ -10,7 +10,7 @@
 std::tuple<std::string, std::vector<std::string>>
 TestFunc()
 {
-  return;
+  return {};
 }
 
 namespace test::names
@@ -110,7 +110,12 @@ int main() {
     (i < 1000)
     )
   {
-
+  }
+  else if (1)
+  {
+  }
+  else
+  {
   }
 
   std::thread f([](){
