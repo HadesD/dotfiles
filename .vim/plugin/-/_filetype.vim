@@ -7,3 +7,5 @@ autocmd BufNewFile,BufRead .babelrc set filetype=json | set syntax=json
 " autocmd BufRead,BufNewFile .tmux.conf setf sh
 autocmd BufRead,BufNewFile *.tmux.conf set filetype=tmux | set syntax=sh
 
+autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css.less.pug
+
