@@ -183,3 +183,6 @@
 [submodule ".vim/pack/plugins/start/vim-vue"]
 	path = .vim/pack/plugins/start/vim-vue
 	url = https://github.com/posva/vim-vue.git
+[submodule ".vim/pack/plugins/start/yats.vim"]
+	path = .vim/pack/plugins/start/yats.vim
+	url = https://github.com/herringtondarkholme/yats.vim.git
