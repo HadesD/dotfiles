@@ -134,10 +134,6 @@
 	path = .tmux/plugins/tmux-pain-control
 	url = https://github.com/tmux-plugins/tmux-pain-control.git
 	ignore = dirty
-[submodule ".tmux/plugins/tmux-sensible"]
-	path = .tmux/plugins/tmux-sensible
-	url = https://github.com/tmux-plugins/tmux-sensible.git
-	ignore = dirty
 [submodule ".vim/pack/plugins/start/vim-matchup"]
 	path = .vim/pack/plugins/start/vim-matchup
 	url = https://github.com/andymass/vim-matchup.git
