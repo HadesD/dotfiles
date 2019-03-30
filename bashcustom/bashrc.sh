@@ -19,3 +19,6 @@ if [ -f ${DIR}/_os/${OSTYPE}.sh ]; then
   source ${DIR}/_os/${OSTYPE}.sh
 fi
 
+unset OSH_THEME
+export OSH_THEME='candy'
+
