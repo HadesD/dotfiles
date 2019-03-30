@@ -1,3 +1,5 @@
 .gitignore text eol=lf
 .gitattributes text eol=lf
 *.sh text eol=lf
+*.bash text eol=lf
+*.zsh text eol=lf

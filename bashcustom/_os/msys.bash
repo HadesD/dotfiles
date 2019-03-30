@@ -1,10 +1,3 @@
-#!/usr/bin/env bash
-
-###############################################################################
-# GitBash.exe
-# echo -e "source /d/Documents/Git/dotfiles/scripts/gitbashrc.sh" | tee -a ~/.bashrc
-###############################################################################
-
 #source /d/Documents/Git/emsdk/emsdk_env.sh
 
 # export PATH=$PATH

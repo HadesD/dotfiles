@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 export LC_ALL=en_US.UTF-8
@@ -9,16 +7,18 @@ if [ -z "$TMUX"  ]; then
   export TERM=xterm-256color
 fi
 
-# # `Frozing' tty, so after any command terminal settings will be restored
 export GIT_LFS_SKIP_SMUDGE=1
 
 alias vi=vim
 alias lss='ls -la --block-size=h'
 
-if [ -f ${DIR}/_os/${OSTYPE}.sh ]; then
-  source ${DIR}/_os/${OSTYPE}.sh
+OS_CUSTOM_SCRIPT=${DIR}/_os/${OSTYPE}.bash
+if [ -f $OS_CUSTOM_SCRIPT ]; then
+  source $OS_CUSTOM_SCRIPT
 fi
 
-unset OSH_THEME
-export OSH_THEME='candy'
+# if [ -z "$BASH_IT_THEME" ]; then
+#   unset BASH_IT_THEME
+# fi
+export BASH_IT_THEME='candy'
 
