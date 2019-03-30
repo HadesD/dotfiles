@@ -2,8 +2,7 @@
 
 ###############################################################################
 # GitBash.exe
-# vi ~/.bashrc
-# source /d/Documents/Git/dotfiles/scripts/gitbashrc.sh
+# echo -e "source /d/Documents/Git/dotfiles/scripts/gitbashrc.sh" | tee -a ~/.bashrc
 ###############################################################################
 
 #source /d/Documents/Git/emsdk/emsdk_env.sh
