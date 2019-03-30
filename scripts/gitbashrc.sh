@@ -22,10 +22,6 @@ for i in "${_PATH_LIST[@]}"; do
 done
 export PATH=$_TEMP_PATH
 
-if [ -z "$TMUX"  ]; then
-  export TERM='xterm-256color'
-fi
-
 # Check docker-machine
 type -P docker-machine > /dev/null 2>&1
 if [ $? -eq 0 ]; then
