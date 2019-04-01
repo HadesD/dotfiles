@@ -20,5 +20,6 @@ fi
 # if [ -z "$BASH_IT_THEME" ]; then
 #   unset BASH_IT_THEME
 # fi
+
 export BASH_IT_THEME='candy'
 
