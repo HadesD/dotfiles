@@ -28,8 +28,8 @@ def remove(path):
       shutil.rmtree(path)
 
 if (sys.platform == 'linux2') or (sys.platform == 'linux') \
-   or (sys.platform == 'darwin') \
-   or (sys.platform == 'msys'):
+    or (sys.platform == 'darwin') \
+    or (sys.platform == 'msys'):
   print('Unix :: found')
 
   HOME = os.environ['HOME']
