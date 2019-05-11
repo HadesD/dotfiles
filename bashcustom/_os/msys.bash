@@ -16,8 +16,8 @@ done
 export PATH=$_TEMP_PATH
 
 # Check docker-machine
-type -P docker-machine > /dev/null 2>&1
-if [ $? -eq 0 ]; then
-	eval $(docker-machine env default)
-fi
+#type -P docker-machine > /dev/null 2>&1
+#if [ $? -eq 0 ]; then
+# eval $(docker-machine env default)
+#fi
 
