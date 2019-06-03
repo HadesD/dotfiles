@@ -182,3 +182,6 @@
 [submodule ".vim/pack/plugins/start/yats.vim"]
 	path = .vim/pack/plugins/start/yats.vim
 	url = https://github.com/herringtondarkholme/yats.vim.git
+[submodule ".vim/pack/plugins/start/vim-pawn"]
+	path = .vim/pack/plugins/start/vim-pawn
+	url = https://github.com/mcnelson/vim-pawn.git
