@@ -21,5 +21,6 @@ fi
 #   unset BASH_IT_THEME
 # fi
 
-export BASH_IT_THEME='candy'
+# export BASH_IT_THEME='candy'
+export PATH=$PATH:$DIR/../../bin
 

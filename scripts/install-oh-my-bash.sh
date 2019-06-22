@@ -11,5 +11,5 @@ else
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
 fi
 
-sed -i "1s;^;export OSH_CUSTOM=${DIR}\/..\/bashcustom\n;" ~/.bashrc
+sed -i "1s;^;export OSH_CUSTOM=${DIR}\/..\/.local\/etc\/bashcustom\n;" ~/.bashrc
 
