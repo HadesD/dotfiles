@@ -1,4 +1,5 @@
-map <C-m> :NERDTreeToggle<CR>
+nnoremap <C-m> :NERDTreeToggle<CR>
+nnoremap <silent> <Leader>v :NERDTreeFind<CR>
 
 let g:NERDTreeShowHidden = 1
 let NERDTreeAutoDeleteBuffer = 1
