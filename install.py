@@ -48,7 +48,7 @@ if (sys.platform == 'linux2') or (sys.platform == 'linux') \
     f.close()
     f = open(CURRENT_SHELL_RC, 'w')
     f.write(
-      'export ZSH_CUSTOM='+DIR+'/zshcustom\n'
+      'export ZSH_CUSTOM='+DIR+'/.local/etc/zshcustom\n'
       + 'export EDITOR=vim\n'
       + r
     )
