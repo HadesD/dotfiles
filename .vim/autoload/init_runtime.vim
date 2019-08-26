@@ -1,6 +1,6 @@
 function! init_runtime#Init() abort
   call s:CheckSSH()
-  if v:version < 800
+  if v:version < 800 || has('win32unix')
     call s:LoadPlugins()
   end
 endfunction
@@ -16,6 +16,6 @@ function s:LoadPlugins() abort
   if (exists('g:dot_vim_dir'))
     let &rtp = &rtp . ',' . g:dot_vim_dir . '/autoload/vim-pathogen'
   endif
-  execute pathogen#infect('pack/plugins/start/{}')
+  execute pathogen#infect(g:dot_vim_dir.'/pack/plugins/start/{}')
 endfunction
 

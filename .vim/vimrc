@@ -11,10 +11,13 @@ map <F2> :retab <CR> :w <CR>
 " `gf` opens file under cursor in a new vertical split
 nnoremap gf :vertical wincmd f<CR>
 
-if has('unix')
-  let g:dot_vim_dir = $HOME.'/.vim'
-elseif (has('win32') || has('win64')) && !has('win32unix')
+if (has('win32') || has('win64')) && !has('win32unix')
   let g:dot_vim_dir = $HOME.'/vimfiles'
+elseif has('win32unix')
+  let g:dot_vim_dir = expand('<sfile>:p:h')
+  let &runtimepath = &runtimepath . ',' . g:dot_vim_dir
+elseif has('unix')
+  let g:dot_vim_dir = $HOME.'/.vim'
 end
 
 " Load plugins
