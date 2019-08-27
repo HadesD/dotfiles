@@ -6,8 +6,6 @@ import subprocess
 
 DIR = os.path.dirname(os.path.abspath(__file__))
 HOME = os.environ['HOME']
-DOT_VIM_NAME = ''
-THIS_VIM_DIR = DIR + '/' + '.vim'
 
 def gitUpdate():
   print('Git :: submodule :: checkout')
