@@ -16,6 +16,6 @@ function s:LoadPlugins() abort
   if (exists('g:dot_vim_dir'))
     let &rtp = &rtp . ',' . g:dot_vim_dir . '/autoload/vim-pathogen'
   endif
-  execute pathogen#infect(g:dot_vim_dir.'/pack/plugins/start/{}')
+  execute pathogen#infect(has('win32unix') ? (g:dot_vim_dir.'/') : 'pack/plugins/start/{}')
 endfunction
 
