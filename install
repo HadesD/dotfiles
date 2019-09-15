@@ -20,8 +20,9 @@ THIS_TMUX_DIR = DIR + '/.tmux'
 THIS_I3_DIR = DIR + '/.i3'
 
 def remove(path):
-    if (os.path.exists(path)):
-        print('Detele :: ' + path)
+    if not os.path.exists(path):
+      return
+    print('Detele :: ' + path)
     if os.path.isfile(path):
         os.remove(path)
     elif os.path.islink(path):
