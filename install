@@ -22,8 +22,10 @@ THIS_I3_DIR = DIR + '/.i3'
 def remove(path):
     if (os.path.exists(path)):
         print('Detele :: ' + path)
-    if (os.path.islink(path)) or os.path.isfile(path):
+    if os.path.isfile(path):
         os.remove(path)
+    elif os.path.islink(path):
+      os.unlink(path)
     else:
         shutil.rmtree(path)
 
