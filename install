@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import distutils.spawn
 import os
 import sys
 import shutil
@@ -37,26 +38,7 @@ if (sys.platform == 'linux2') or (sys.platform == 'linux') \
 
     HOME = os.environ['HOME']
 
-    if (sys.platform == 'msys'):
-        f = open(HOME+'/.vimrc', 'w')
-        f.write('source "' + THIS_VIM_DIR + '/vimrc"')
-        f.close()
-    else:
-        remove(DOT_VIM_DIR)
-        print('Vim :: start :: Symlink')
-        os.symlink(THIS_VIM_DIR, DOT_VIM_DIR)
-
-    if (shutil.which('zsh')):
-        print('ZSH :: start')
-        subprocess.call(['bash', DIR + '/scripts/install-oh-my-zsh.sh'])
-    else:
-        print('ZSH :: NOT FOUND!!!')
-
-    print('Tmux :: start :: Symlink')
-    remove(HOME+'/.tmux')
-    remove(HOME+'/.tmux.conf')
-    os.symlink(THIS_TMUX_DIR, HOME+'/.tmux')
-    os.symlink(HOME+'/.tmux/.tmux.conf', HOME+'/.tmux.conf')
+    print('Git :: .gitconfig')
 
     DOT_GITCONFIG_DIR = HOME + '/.gitconfig'
     if (os.path.exists(DOT_GITCONFIG_DIR)):
@@ -70,6 +52,27 @@ if (sys.platform == 'linux2') or (sys.platform == 'linux') \
             + '  path = '+DIR+'/.gitconfig\n'
         )
         f.close()
+
+    if (sys.platform == 'msys'):
+        f = open(HOME+'/.vimrc', 'w')
+        f.write('source "' + THIS_VIM_DIR + '/vimrc"')
+        f.close()
+    else:
+        remove(DOT_VIM_DIR)
+        print('Vim :: start :: Symlink')
+        os.symlink(THIS_VIM_DIR, DOT_VIM_DIR)
+
+    if (distutils.spawn.find_executable('zsh')):
+        print('ZSH :: start')
+        subprocess.call(['bash', DIR + '/scripts/install-oh-my-zsh.sh'])
+    else:
+        print('ZSH :: NOT FOUND!!!')
+
+    print('Tmux :: start :: Symlink')
+    remove(HOME+'/.tmux')
+    remove(HOME+'/.tmux.conf')
+    os.symlink(THIS_TMUX_DIR, HOME+'/.tmux')
+    os.symlink(HOME+'/.tmux/.tmux.conf', HOME+'/.tmux.conf')
 
 else:
     print('OS not found')
