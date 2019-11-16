@@ -114,10 +114,6 @@
 	path = .vim/pack/plugins/start/lightline-ale
 	url = https://github.com/maximbaz/lightline-ale.git
 	ignore = dirty
-[submodule ".vim/pack/plugins/start/nerdtree"]
-	path = .vim/pack/plugins/start/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
-	ignore = dirty
 [submodule ".vim/pack/plugins/start/vim-buftabline"]
 	path = .vim/pack/plugins/start/vim-buftabline
 	url = https://github.com/ap/vim-buftabline.git
@@ -125,10 +121,6 @@
 [submodule ".vim/pack/plugins/start/ale"]
 	path = .vim/pack/plugins/start/ale
 	url = https://github.com/w0rp/ale.git
-	ignore = dirty
-[submodule ".vim/pack/plugins/start/nerdtree-git-plugin"]
-	path = .vim/pack/plugins/start/nerdtree-git-plugin
-	url = https://github.com/Xuyuanp/nerdtree-git-plugin.git
 	ignore = dirty
 [submodule ".tmux/plugins/tmux-pain-control"]
 	path = .tmux/plugins/tmux-pain-control
@@ -185,3 +177,6 @@
 [submodule ".vim/pack/plugins/start/vim-pawn"]
 	path = .vim/pack/plugins/start/vim-pawn
 	url = https://github.com/mcnelson/vim-pawn.git
+[submodule ".vim/pack/plugins/start/vim-vinegar"]
+	path = .vim/pack/plugins/start/vim-vinegar
+	url = https://github.com/tpope/vim-vinegar.git

@@ -1,3 +1,4 @@
+finish
 let g:NERDTreeShowIgnoredStatus = 0
 
 if &encoding != "utf-8"
