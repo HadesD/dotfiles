@@ -8,4 +8,5 @@ __pycache__
 *.pyc
 
 .netrw-whistlist
+.netrwbook
 
