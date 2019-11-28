@@ -1,5 +1,3 @@
-nnoremap <silent> <C-m> :Lex<CR>
-noremap <silent> <C-E> :Lex<CR>
 autocmd FileType netrw setl bufhidden=delete
 " let g:netrw_fastbrowse = 0
 let g:netrw_banner = 0
@@ -13,23 +11,27 @@ if has('unix')
   let g:netrw_localrmdir='rm -r'
 endif
 
-function! ToggleVExplorer()
-  if exists("t:expl_buf_num")
-    let expl_win_num = bufwinnr(t:expl_buf_num)
-    if expl_win_num != -1
-      let cur_win_nr = winnr()
-      exec expl_win_num . 'wincmd w'
-      close
-      exec cur_win_nr . 'wincmd w'
+if v:version < 800
+  function! ToggleVExplorer()
+      if exists("t:expl_buf_num")
+      let expl_win_num = bufwinnr(t:expl_buf_num)
+      if expl_win_num != -1
+        let cur_win_nr = winnr() - 1
+        exec expl_win_num . 'wincmd w'
+        close
+        exec cur_win_nr . 'wincmd w'
+      endif
+      unlet t:expl_buf_num
+    else
+      exec '1wincmd w'
+      Vexplore
+      let t:expl_buf_num = bufnr("%")
     endif
-    unlet t:expl_buf_num
-  else
-    exec '1wincmd w'
-    Vexplore
-    let t:expl_buf_num = bufnr("%")
-  endif
-endfunction
-" noremap <silent> <C-E> :call ToggleVExplorer()<CR>
+  endfunction
+  noremap <silent> <C-m> :call ToggleVExplorer()<CR>
+else
+  noremap <silent> <C-m> :Lex<CR>
+endif
 
 function! OpenVFile()
   exec 'wincmd w | vsp | 1wincmd w'
