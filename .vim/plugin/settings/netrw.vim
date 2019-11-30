@@ -41,6 +41,11 @@ function! OpenSFile()
   exec 'wincmd w | sp | 1wincmd w'
 endfunction
 
+function! CreateInPreview()
+  let l:filename = input("Enter filename to create: ")
+  execute 'pedit ' . b:netrw_curdir.'/'.l:filename
+endf
+
 augroup netrw_mapping
   autocmd!
   autocmd filetype netrw call NetrwMapping()
@@ -50,5 +55,7 @@ function! NetrwMapping()
   nmap <buffer> o :<CR><CR>
   nmap <buffer> v :call OpenVFile()<CR><CR>
   nmap <buffer> s :call OpenSFile()<CR><CR>
+  " nmap <buffer> x :call NetrwCollapse()<CR><CR>
+  nmap <buffer>% :call CreateInPreview()<cr>
 endfunction
 
