@@ -48,16 +48,23 @@ function! CreateInPreview()
   endif
 endf
 
+fun! NetrwRefresh()
+  let screenposn = winsaveview()
+  NetrwKeepj call netrw#LocalBrowseCheck(b:netrw_curdir)
+  NetrwKeepj call winrestview(screenposn)
+endf
+
 augroup netrw_mapping
   autocmd!
   autocmd filetype netrw call NetrwMapping()
 augroup END
 
 function! NetrwMapping()
-  nmap <buffer> o :<CR><CR>
-  nmap <buffer> v :call OpenVFile()<CR><CR>
-  nmap <buffer> s :call OpenSFile()<CR><CR>
+  nmap <buffer>o :<CR><CR>
+  nmap <buffer>v :call OpenVFile()<CR><CR>
+  nmap <buffer>s :call OpenSFile()<CR><CR>
   " nmap <buffer> x :call NetrwCollapse()<CR><CR>
   nmap <buffer>% :call CreateInPreview()<cr>
+  nmap <buffer><C-l> :call NetrwRefresh()<cr>
 endfunction
 
