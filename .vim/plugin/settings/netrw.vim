@@ -41,17 +41,24 @@ function! OpenSFile()
   exec 'wincmd w | sp | 1wincmd w'
 endfunction
 
-function! CreateInPreview()
-  let l:filename = input("Enter filename to create in <".b:netrw_curdir.">: ")
-  if l:filename != ''
-    exec 'wincmd w | sp' . b:netrw_curdir.'/'.l:filename
-  endif
-endf
-
 fun! NetrwRefresh()
   let screenposn = winsaveview()
   NetrwKeepj call netrw#LocalBrowseCheck(b:netrw_curdir)
   NetrwKeepj call winrestview(screenposn)
+endf
+
+function! CreateInPreview()
+  let l:filename = input("Enter filename to create in <".b:netrw_curdir.">: ")
+  if l:filename != ''
+    let l:filefullname = b:netrw_curdir.'/'.l:filename
+    if !filereadable(l:filefullname)
+      call system('touch "'.l:filefullname.'"')
+      call NetrwRefresh()
+    else
+      redraw!
+      echoerr l:filefullname.':'.'File exists or can not create '
+    endif
+  endif
 endf
 
 augroup netrw_mapping
