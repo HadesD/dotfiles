@@ -42,8 +42,10 @@ function! OpenSFile()
 endfunction
 
 function! CreateInPreview()
-  let l:filename = input("Enter filename to create: ")
-  execute 'pedit ' . b:netrw_curdir.'/'.l:filename
+  let l:filename = input("Enter filename to create in <".b:netrw_curdir.">: ")
+  if l:filename != ''
+    exec 'wincmd w | sp' . b:netrw_curdir.'/'.l:filename
+  endif
 endf
 
 augroup netrw_mapping
