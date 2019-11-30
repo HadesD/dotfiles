@@ -78,10 +78,6 @@
 	path = .vim/pack/plugins/start/vim-cpp
 	url = https://github.com/vim-jp/vim-cpp.git
 	ignore = dirty
-[submodule ".vim/pack/plugins/start/ultisnips"]
-	path = .vim/pack/plugins/start/ultisnips
-	url = https://github.com/SirVer/ultisnips.git
-	ignore = dirty
 [submodule ".vim/pack/plugins/start/vim-snippets"]
 	path = .vim/pack/plugins/start/vim-snippets
 	url = https://github.com/honza/vim-snippets.git
