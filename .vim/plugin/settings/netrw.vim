@@ -2,7 +2,7 @@ autocmd FileType netrw setl bufhidden=delete
 " let g:netrw_fastbrowse = 0
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
-let g:netrw_browse_split = 4
+" let g:netrw_browse_split = 4
 let g:netrw_altv = 1
 let g:netrw_winsize = 15
 let g:netrw_sort_sequence = '[\/]$,*'
@@ -61,17 +61,25 @@ function! CreateInPreview()
   endif
 endf
 
+function! NetrwCollapse()
+	redir => cnt
+	silent .s/|//gn
+	redir END
+	let lvl = substitute(cnt, '\n', '', '')[0:0] - 1
+	exec '?^\(| \)\{' . lvl . '\}\w'
+endfunction
+
 augroup netrw_mapping
-  autocmd!
-  autocmd filetype netrw call NetrwMapping()
+	autocmd!
+	autocmd filetype netrw call NetrwMapping()
 augroup END
 
 function! NetrwMapping()
-  nmap <buffer>o :<CR><CR>
-  nmap <buffer>v :call OpenVFile()<CR><CR>
-  nmap <buffer>s :call OpenSFile()<CR><CR>
-  " nmap <buffer> x :call NetrwCollapse()<CR><CR>
-  nmap <buffer>% :call CreateInPreview()<cr>
-  nmap <buffer><C-l> :call NetrwRefresh()<cr>
+	nmap <buffer>o :<CR><CR>
+	nmap <buffer>v :call OpenVFile()<CR><CR>
+	nmap <buffer>s :call OpenSFile()<CR><CR>
+	" nmap <buffer> x :call NetrwCollapse()<CR><CR>
+	nmap <buffer>% :call CreateInPreview()<cr>
+	nmap <buffer><C-l> :call NetrwRefresh()<cr>
 endfunction
 
