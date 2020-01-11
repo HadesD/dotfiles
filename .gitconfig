@@ -35,6 +35,9 @@
 [diff]
   tool = vimdiff
 
+[merge]
+  tool = vimdiff
+
 [alias]
   l = log -p --pretty=format:'%C(yellow)%h %C(cyan)%cd %Cblue%cn %Creset%s'
   ld = log --date=short --pretty=format:'%C(yellow)%h %C(cyan)%cd %Cblue%cn %Creset%s'
