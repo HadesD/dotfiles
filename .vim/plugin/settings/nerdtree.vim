@@ -1,3 +1,5 @@
+finish
+
 nnoremap <C-m> :NERDTreeToggle<CR>
 nnoremap <silent> <Leader>v :NERDTreeFind<CR>
 

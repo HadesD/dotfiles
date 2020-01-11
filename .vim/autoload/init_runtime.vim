@@ -1,6 +1,6 @@
 function! init_runtime#Init() abort
   call s:CheckSSH()
-  if v:version < 800 || has('win32unix')
+  if v:version < 800 " || has('win32unix')
     call s:LoadPlugins()
   end
 endfunction
