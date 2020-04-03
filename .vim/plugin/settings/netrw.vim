@@ -33,12 +33,26 @@ else
   noremap <silent> <C-m> :Lex<CR>
 endif
 
+function! OpenFile()
+  if winnr() == winnr('$')
+    exec 'vsp | vertical resize 25 | 0wincmd w'
+  endif
+endfunction
+
 function! OpenVFile()
-  exec 'wincmd w | vsp | 1wincmd w'
+  if winnr() == winnr('$')
+    exec 'vsp | vertical resize 25 | 0wincmd w'
+  else
+    exec 'wincmd p | vsp | 0wincmd w'
+  endif
 endfunction
 
 function! OpenSFile()
-  exec 'wincmd w | sp | 1wincmd w'
+  if winnr() == winnr('$')
+    exec 'vsp | vertical resize 25 | 0wincmd w'
+  else
+    exec 'wincmd p | sp | 0wincmd w'
+  endif
 endfunction
 
 fun! NetrwRefresh()
@@ -75,9 +89,9 @@ augroup netrw_mapping
 augroup END
 
 function! NetrwMapping()
-	nmap <buffer>o :<CR><CR>
-	nmap <buffer>v :call OpenVFile()<CR><CR>
-	nmap <buffer>s :call OpenSFile()<CR><CR>
+	nmap <buffer>o :call OpenFile()<CR><CR>
+	nmap <buffer>s :call OpenVFile()<CR><CR>
+	nmap <buffer>i :call OpenSFile()<CR><CR>
 	" nmap <buffer> x :call NetrwCollapse()<CR><CR>
 	nmap <buffer>% :call CreateInPreview()<cr>
 	nmap <buffer><C-l> :call NetrwRefresh()<cr>
