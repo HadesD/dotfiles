@@ -1,9 +1,9 @@
 ; [include]
 ;   path = ~/dotfiles/.gitconfig
 
-[user]
-  email = dark.hades.1102@gmail.com
-  name = Dark.Hades
+#[user]
+#  email = dark.hades.1102@gmail.com
+#  name = Dark.Hades
 
 [core]
   editor = vi
