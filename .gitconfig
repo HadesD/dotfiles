@@ -39,10 +39,12 @@
   tool = vimdiff
 
 [alias]
-  logf = log --pretty=format:'%C(yellow)%h %C(green)%cd %C(reset)%s %C(red)%d %C(cyan)[%an]' --date=iso
-  logp = logf -p
-  logs = logf --stat --decorate=short
-  logg = logf --graph --date=short --decorate=short
-  logm = logf --merges
+  # Log
+  logd = log --pretty=format:'%C(yellow)%h %C(green)%cd %C(reset)%s %C(red)%d %C(cyan)[%an]' --date=iso
+  logp = log --pretty=format:'%C(yellow)%h %C(green)%cd %C(reset)%s %C(red)%d %C(cyan)[%an]' --date=iso -p
+  logs = log --pretty=format:'%C(yellow)%h %C(green)%cd %C(reset)%s %C(red)%d %C(cyan)[%an]' --date=iso --stat --decorate=short
+  logg = log --pretty=format:'%C(yellow)%h %C(green)%cd %C(reset)%s %C(red)%d %C(cyan)[%an]' --date=iso --graph --date=short --decorate=short
+  logm = log --pretty=format:'%C(yellow)%h %C(green)%cd %C(reset)%s %C(red)%d %C(cyan)[%an]' --date=iso --merges
+
   uiau = update-index --assume-unchanged
   uinau = update-index --no-assume-unchanged
