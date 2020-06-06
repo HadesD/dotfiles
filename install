@@ -1,10 +1,17 @@
 #!/usr/bin/env python3
 
-import distutils.spawn
 import os
 import sys
 import shutil
 import subprocess
+
+which = None
+
+if (sys.version_info > (3, 0)):
+    which = shutil.which
+else:
+    import distutils.spawn
+    which = distutils.spawn.find_executable
 
 subprocess.call(['git', 'config', '--global', 'core.fileMode', 'false'])
 subprocess.call(['git', 'config', 'core.fileMode', 'false'])
@@ -62,7 +69,7 @@ if (sys.platform == 'linux2') or (sys.platform == 'linux') \
         print('Vim :: start :: Symlink')
         os.symlink(THIS_VIM_DIR, DOT_VIM_DIR)
 
-    if (distutils.spawn.find_executable('zsh')):
+    if (which('zsh')):
         print('ZSH :: start')
         subprocess.call(['bash', DIR + '/scripts/install-oh-my-zsh.sh'])
     else:
