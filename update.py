@@ -11,6 +11,10 @@ def gitUpdate():
   print('Git :: submodule :: checkout')
   subprocess.call([
     'git', 'submodule', 'foreach',
+    'git', 'reset', 'HEAD'
+  ])
+  subprocess.call([
+    'git', 'submodule', 'foreach',
     'git', 'checkout', '.'
   ])
   print('Git :: pull')

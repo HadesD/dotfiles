@@ -13,9 +13,6 @@ else:
     import distutils.spawn
     which = distutils.spawn.find_executable
 
-subprocess.call(['git', 'config', '--global', 'core.fileMode', 'false'])
-subprocess.call(['git', 'config', 'core.fileMode', 'false'])
-
 import update
 update.gitUpdate()
 
