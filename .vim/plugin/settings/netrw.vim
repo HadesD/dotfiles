@@ -85,7 +85,7 @@ endfunction
 
 augroup netrw_mapping
 	autocmd!
-	autocmd filetype netrw call NetrwMapping()
+	autocmd FileType netrw call NetrwMapping()
 augroup END
 
 function! NetrwMapping()
@@ -95,6 +95,7 @@ function! NetrwMapping()
 	" nmap <buffer> x :call NetrwCollapse()<CR><CR>
 	nmap <buffer>% :call CreateInPreview()<CR>
 	nmap <buffer><F5> :call NetrwRefresh()<CR>
-  unmap <buffer><C-l>
+  sil! unmap <buffer><C-l>
+  sil! unmap <buffer>v
 endfunction
 
