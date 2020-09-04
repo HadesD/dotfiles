@@ -93,7 +93,8 @@ function! NetrwMapping()
 	nmap <buffer>s :call OpenVFile()<CR><CR>
 	nmap <buffer>i :call OpenSFile()<CR><CR>
 	" nmap <buffer> x :call NetrwCollapse()<CR><CR>
-	nmap <buffer>% :call CreateInPreview()<cr>
-	nmap <buffer><C-l> :call NetrwRefresh()<cr>
+	nmap <buffer>% :call CreateInPreview()<CR>
+	nmap <buffer><F5> :call NetrwRefresh()<CR>
+  unmap <buffer><C-l>
 endfunction
 
