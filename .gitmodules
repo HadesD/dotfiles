@@ -176,3 +176,9 @@
 [submodule ".vim/pack/plugins/start/vim-vinegar"]
 	path = .vim/pack/plugins/start/vim-vinegar
 	url = https://github.com/tpope/vim-vinegar.git
+[submodule ".local/etc/zshcustom/artisan"]
+	path = .local/etc/zshcustom/plugins/artisan
+	url = https://github.com/jessarcher/zsh-artisan.git
+[submodule ".vim/pack/plugins/start/vim-eunuch"]
+	path = .vim/pack/plugins/start/vim-eunuch
+	url = https://github.com/tpope/vim-eunuch.git
