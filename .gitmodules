@@ -46,10 +46,6 @@
 	path = .vim/pack/plugins/start/supertab
 	url = https://github.com/ervandew/supertab.git
 	ignore = dirty
-[submodule ".vim/pack/plugins/start/Conque-GDB"]
-	path = .vim/pack/plugins/start/Conque-GDB
-	url = https://github.com/vim-scripts/Conque-GDB.git
-	ignore = dirty
 [submodule ".vim/pack/plugins/start/vim-polyglot"]
 	path = .vim/pack/plugins/start/vim-polyglot
 	url = https://github.com/sheerun/vim-polyglot.git

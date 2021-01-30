@@ -1,4 +1,5 @@
 nnoremap <F6> :set invpaste paste?<CR>
+command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
 set pastetoggle=<F6>
 " set nopaste
 " set showmode
