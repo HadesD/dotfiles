@@ -1,8 +1,6 @@
 export LC_ALL=en_US.UTF-8
 # Theme setting
-unset ZSH_THEME
-# ZSH_THEME="zeta-zsh-theme/zeta"
-# export ZSH_THEME="candy"
+# unset ZSH_THEME
 export ZSH_THEME="mortalscumbag"
 
 # alias vim="stty stop '' -ixoff ; vim"

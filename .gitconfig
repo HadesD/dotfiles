@@ -1,12 +1,9 @@
-; [include]
-;   path = ~/dotfiles/.gitconfig
-
 #[user]
 #  email = dark.hades.1102@gmail.com
 #  name = Dark.Hades
 
 [core]
-  editor = vi
+  editor = vim
   filemode = false
   autocrlf = false
   pager = less -r
