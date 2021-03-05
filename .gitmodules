@@ -160,9 +160,6 @@
 [submodule ".vim/pack/plugins/start/vim-endwise"]
 	path = .vim/pack/plugins/start/vim-endwise
 	url = https://github.com/tpope/vim-endwise.git
-[submodule ".vim/pack/plugins/start/vim-vue"]
-	path = .vim/pack/plugins/start/vim-vue
-	url = https://github.com/posva/vim-vue.git
 [submodule ".vim/pack/plugins/start/yats.vim"]
 	path = .vim/pack/plugins/start/yats.vim
 	url = https://github.com/herringtondarkholme/yats.vim.git
@@ -178,3 +175,6 @@
 [submodule ".vim/pack/plugins/start/vim-eunuch"]
 	path = .vim/pack/plugins/start/vim-eunuch
 	url = https://github.com/tpope/vim-eunuch.git
+[submodule ".vim/pack/plugins/start/vim-vue-plugin"]
+	path = .vim/pack/plugins/start/vim-vue-plugin
+	url = https://github.com/leafOfTree/vim-vue-plugin.git
