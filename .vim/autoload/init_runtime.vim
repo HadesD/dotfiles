@@ -3,6 +3,14 @@ function! init_runtime#Init() abort
   if v:version < 800 " || has('win32unix')
     call s:LoadPlugins()
   end
+
+  " After load
+
+  let g:polyglot_disabled = ['cpp']
+
+  if (v:version < 702)
+    g:polyglot_disabled = add(g:polyglot_disabled, 'julia')
+  endif
 endfunction
 
 function! s:CheckSSH()

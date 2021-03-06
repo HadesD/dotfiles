@@ -16,8 +16,12 @@ map <F2> :retab <CR> :w <CR>
 nnoremap gf :vertical wincmd f<CR>
 
 nnoremap <F6> :set invpaste paste?<CR>
-command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
 set pastetoggle=<F6>
+
+" --- Save as sudo
+if has('unix')
+  command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
+endif
 
 " --- Quit all faster ---
 abbreviate qq qa
@@ -30,11 +34,6 @@ nnoremap <C-k> <C-w>k
 nnoremap gn :bn<CR>
 nnoremap gp :bp<CR>
 nnoremap gd :bd<CR>
-
-" Load plugins
-if filereadable($HOME . '/.vim/autoload/init_runtime.vim')
-  execute init_runtime#Init()
-endif
 
 "****************************************************************************** 
 " *
@@ -88,4 +87,9 @@ end
 " https://github.com/numirias/security/blob/master/doc/2019-06-04_ace-vim-neovim.md
 set modelines=0
 set nomodeline
+
+" Load plugins
+if filereadable($HOME . '/.vim/autoload/init_runtime.vim')
+  execute init_runtime#Init()
+endif
 

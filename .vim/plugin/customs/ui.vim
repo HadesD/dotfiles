@@ -33,10 +33,6 @@ set background=dark
 " syntax sync minlines=256
 set lazyredraw
 
-if (exists('g:dot_vim_dir') && filereadable(g:dot_vim_dir . '/pack/plugins/start/vim-monokai/colors/monokai.vim'))
-  colorscheme monokai
-endif
-
 highlight NonText guifg=bg ctermfg=bg
 
 if (&enc == 'utf-8')
