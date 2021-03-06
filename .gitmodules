@@ -7,35 +7,35 @@
 	url = https://github.com/tpope/vim-pathogen.git
 	ignore = dirty
 [submodule ".vim/pack/plugins/start/vim-gitgutter"]
-	path = .vim/pack/plugins/vendor/vim-gitgutter
+	path = .vim/pack/vendor/start/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter.git
 	ignore = dirty
 [submodule ".vim/pack/plugins/start/vim-cpp-enhanced-highlight"]
-	path = .vim/pack/plugins/vendor/vim-cpp-enhanced-highlight
+	path = .vim/pack/vendor/start/vim-cpp-enhanced-highlight
 	url = https://github.com/octol/vim-cpp-enhanced-highlight.git
 	ignore = dirty
 [submodule ".vim/pack/plugins/start/editorconfig-vim"]
-	path = .vim/pack/plugins/vendor/editorconfig-vim
+	path = .vim/pack/vendor/start/editorconfig-vim
 	url = https://github.com/editorconfig/editorconfig-vim.git
 	ignore = dirty
 [submodule ".vim/pack/plugins/start/vim-monokai"]
-	path = .vim/pack/plugins/vendor/vim-monokai
+	path = .vim/pack/vendor/start/vim-monokai
 	url = https://github.com/crusoexia/vim-monokai.git
 	ignore = dirty
 [submodule ".vim/pack/plugins/start/vim-easy-align"]
-	path = .vim/pack/plugins/vendor/vim-easy-align
+	path = .vim/pack/vendor/start/vim-easy-align
 	url = https://github.com/junegunn/vim-easy-align.git
 	ignore = dirty
 [submodule ".vim/pack/plugins/start/vim-json"]
-	path = .vim/pack/plugins/vendor/vim-json
+	path = .vim/pack/vendor/start/vim-json
 	url = https://github.com/elzr/vim-json.git
 	ignore = dirty
 [submodule ".vim/pack/plugins/start/ctrlp.vim"]
-	path = .vim/pack/plugins/vendor/ctrlp.vim
+	path = .vim/pack/vendor/start/ctrlp.vim
 	url = https://github.com/ctrlpvim/ctrlp.vim.git
 	ignore = dirty
 [submodule ".vim/pack/plugins/start/vim-indent-guides"]
-	path = .vim/pack/plugins/vendor/vim-indent-guides
+	path = .vim/pack/vendor/start/vim-indent-guides
 	url = https://github.com/nathanaelkane/vim-indent-guides.git
 	ignore = dirty
 [submodule ".vim/pack/plugins/supertab"]
@@ -43,31 +43,31 @@
 	url = https://github.com/ervandew/supertab.git
 	ignore = dirty
 [submodule ".vim/pack/plugins/start/supertab"]
-	path = .vim/pack/plugins/vendor/supertab
+	path = .vim/pack/vendor/start/supertab
 	url = https://github.com/ervandew/supertab.git
 	ignore = dirty
 [submodule ".vim/pack/plugins/start/vim-polyglot"]
-	path = .vim/pack/plugins/vendor/vim-polyglot
+	path = .vim/pack/vendor/start/vim-polyglot
 	url = https://github.com/sheerun/vim-polyglot.git
 	ignore = dirty
 [submodule ".vim/pack/plugins/start/vim-closetag"]
-	path = .vim/pack/plugins/vendor/vim-closetag
+	path = .vim/pack/vendor/start/vim-closetag
 	url = https://github.com/alvan/vim-closetag.git
 	ignore = dirty
 [submodule ".vim/pack/plugins/start/vim-surround"]
-	path = .vim/pack/plugins/vendor/vim-surround
+	path = .vim/pack/vendor/start/vim-surround
 	url = https://github.com/tpope/vim-surround.git
 	ignore = dirty
 [submodule ".vim/pack/plugins/start/tcomment_vim"]
-	path = .vim/pack/plugins/vendor/tcomment_vim
+	path = .vim/pack/vendor/start/tcomment_vim
 	url = https://github.com/tomtom/tcomment_vim.git
 	ignore = dirty
 [submodule ".vim/pack/plugins/start/vim-multiple-cursors"]
-	path = .vim/pack/plugins/vendor/vim-multiple-cursors
+	path = .vim/pack/vendor/start/vim-multiple-cursors
 	url = https://github.com/terryma/vim-multiple-cursors.git
 	ignore = dirty
 [submodule ".vim/pack/plugins/start/vim-repeat"]
-	path = .vim/pack/plugins/vendor/vim-repeat
+	path = .vim/pack/vendor/start/vim-repeat
 	url = https://github.com/tpope/vim-repeat.git
 	ignore = dirty
 [submodule ".vim/pack/plugins/start/vim-cpp"]
@@ -75,7 +75,7 @@
 	url = https://github.com/vim-jp/vim-cpp.git
 	ignore = dirty
 [submodule ".vim/pack/plugins/start/vim-snippets"]
-	path = .vim/pack/plugins/vendor/vim-snippets
+	path = .vim/pack/vendor/start/vim-snippets
 	url = https://github.com/honza/vim-snippets.git
 	ignore = dirty
 [submodule ".vim/pack/plugins/start/ag.vim"]
@@ -83,35 +83,35 @@
 	url = https://github.com/rking/ag.vim.git
 	ignore = dirty
 [submodule ".vim/pack/plugins/start/PHP-Indenting-for-VIm"]
-	path = .vim/pack/plugins/vendor/PHP-Indenting-for-VIm
+	path = .vim/pack/vendor/start/PHP-Indenting-for-VIm
 	url = https://github.com/2072/PHP-Indenting-for-VIm.git
 	ignore = dirty
 [submodule ".vim/pack/plugins/start/asyncrun.vim"]
-	path = .vim/pack/plugins/vendor/asyncrun.vim
+	path = .vim/pack/vendor/start/asyncrun.vim
 	url = https://github.com/skywind3000/asyncrun.vim.git
 	ignore = dirty
 [submodule ".vim/pack/plugins/start/vim-better-whitespace"]
-	path = .vim/pack/plugins/vendor/vim-better-whitespace
+	path = .vim/pack/vendor/start/vim-better-whitespace
 	url = https://github.com/ntpeters/vim-better-whitespace.git
 	ignore = dirty
 [submodule ".vim/pack/plugins/start/auto-pairs"]
-	path = .vim/pack/plugins/vendor/auto-pairs
+	path = .vim/pack/vendor/start/auto-pairs
 	url = https://github.com/jiangmiao/auto-pairs.git
 	ignore = dirty
 [submodule ".vim/pack/plugins/start/lightline.vim"]
-	path = .vim/pack/plugins/vendor/lightline.vim
+	path = .vim/pack/vendor/start/lightline.vim
 	url = https://github.com/itchyny/lightline.vim.git
 	ignore = dirty
 [submodule ".vim/pack/plugins/start/lightline-ale"]
-	path = .vim/pack/plugins/vendor/lightline-ale
+	path = .vim/pack/vendor/start/lightline-ale
 	url = https://github.com/maximbaz/lightline-ale.git
 	ignore = dirty
 [submodule ".vim/pack/plugins/start/vim-buftabline"]
-	path = .vim/pack/plugins/vendor/vim-buftabline
+	path = .vim/pack/vendor/start/vim-buftabline
 	url = https://github.com/ap/vim-buftabline.git
 	ignore = dirty
 [submodule ".vim/pack/plugins/start/ale"]
-	path = .vim/pack/plugins/vendor/ale
+	path = .vim/pack/vendor/start/ale
 	url = https://github.com/w0rp/ale.git
 	ignore = dirty
 [submodule ".tmux/plugins/tmux-pain-control"]
@@ -119,62 +119,62 @@
 	url = https://github.com/tmux-plugins/tmux-pain-control.git
 	ignore = dirty
 [submodule ".vim/pack/plugins/start/vim-matchup"]
-	path = .vim/pack/plugins/vendor/vim-matchup
+	path = .vim/pack/vendor/start/vim-matchup
 	url = https://github.com/andymass/vim-matchup.git
 	ignore = dirty
 [submodule ".vim/pack/plugins/start/php.vim"]
-	path = .vim/pack/plugins/vendor/php.vim
+	path = .vim/pack/vendor/start/php.vim
 	url = https://github.com/StanAngeloff/php.vim.git
 	ignore = dirty
 [submodule ".vim/pack/plugins/start/MatchTagAlways"]
-	path = .vim/pack/plugins/vendor/MatchTagAlways
+	path = .vim/pack/vendor/start/MatchTagAlways
 	url = https://github.com/Valloric/MatchTagAlways.git
 	ignore = dirty
 [submodule ".vim/pack/plugins/start/Colorizer"]
-	path = .vim/pack/plugins/vendor/Colorizer
+	path = .vim/pack/vendor/start/Colorizer
 	url = https://github.com/chrisbra/Colorizer.git
 	ignore = dirty
 [submodule ".vim/pack/plugins/start/undotree"]
-	path = .vim/pack/plugins/vendor/undotree
+	path = .vim/pack/vendor/start/undotree
 	url = https://github.com/mbbill/undotree.git
 	ignore = dirty
 [submodule ".vim/pack/plugins/start/vim-lsc"]
-	path = .vim/pack/plugins/vendor/vim-lsc
+	path = .vim/pack/vendor/start/vim-lsc
 	url = https://github.com/natebosch/vim-lsc.git
 	ignore = dirty
 [submodule ".vim/pack/plugins/start/VimCompletesMe"]
-	path = .vim/pack/plugins/vendor/VimCompletesMe
+	path = .vim/pack/vendor/start/VimCompletesMe
 	url = https://github.com/ajh17/VimCompletesMe.git
 [submodule ".vim/pack/plugins/start/vim-fifs"]
-	path = .vim/pack/plugins/vendor/vim-fifs
+	path = .vim/pack/vendor/start/vim-fifs
 	url = https://github.com/HadesD/vim-fifs.git
 [submodule ".vim/pack/plugins/start/vim-power-mode"]
-	path = .vim/pack/plugins/vendor/vim-power-mode
+	path = .vim/pack/vendor/start/vim-power-mode
 	url = https://github.com/HadesD/vim-power-mode.git
 [submodule ".vim/pack/plugins/start/async.vim"]
-	path = .vim/pack/plugins/vendor/async.vim
+	path = .vim/pack/vendor/start/async.vim
 	url = https://github.com/prabirshrestha/async.vim.git
 [submodule ".vim/pack/plugins/start/vim-crunch"]
-	path = .vim/pack/plugins/vendor/vim-crunch
+	path = .vim/pack/vendor/start/vim-crunch
 	url = https://github.com/arecarn/vim-crunch.git
 [submodule ".vim/pack/plugins/start/vim-endwise"]
-	path = .vim/pack/plugins/vendor/vim-endwise
+	path = .vim/pack/vendor/start/vim-endwise
 	url = https://github.com/tpope/vim-endwise.git
 [submodule ".vim/pack/plugins/start/yats.vim"]
-	path = .vim/pack/plugins/vendor/yats.vim
+	path = .vim/pack/vendor/start/yats.vim
 	url = https://github.com/herringtondarkholme/yats.vim.git
 [submodule ".vim/pack/plugins/start/vim-pawn"]
-	path = .vim/pack/plugins/vendor/vim-pawn
+	path = .vim/pack/vendor/start/vim-pawn
 	url = https://github.com/mcnelson/vim-pawn.git
 [submodule ".vim/pack/plugins/start/vim-vinegar"]
-	path = .vim/pack/plugins/vendor/vim-vinegar
+	path = .vim/pack/vendor/start/vim-vinegar
 	url = https://github.com/tpope/vim-vinegar.git
 [submodule ".local/etc/zshcustom/artisan"]
 	path = .local/etc/zshcustom/plugins/artisan
 	url = https://github.com/jessarcher/zsh-artisan.git
 [submodule ".vim/pack/plugins/start/vim-eunuch"]
-	path = .vim/pack/plugins/vendor/vim-eunuch
+	path = .vim/pack/vendor/start/vim-eunuch
 	url = https://github.com/tpope/vim-eunuch.git
 [submodule ".vim/pack/plugins/start/vim-vue-plugin"]
-	path = .vim/pack/plugins/vendor/vim-vue-plugin
+	path = .vim/pack/vendor/start/vim-vue-plugin
 	url = https://github.com/leafOfTree/vim-vue-plugin.git

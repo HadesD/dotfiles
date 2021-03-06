@@ -33,8 +33,6 @@ set background=dark
 " syntax sync minlines=256
 set lazyredraw
 
-highlight NonText guifg=bg ctermfg=bg
-
 if (&enc == 'utf-8')
   set fillchars=vert:\│
 endif
