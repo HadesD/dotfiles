@@ -13,13 +13,11 @@ function! s:CheckSSH()
 endfunction
 
 function s:LoadPlugins() abort
-  if (exists('g:dot_vim_dir'))
-    let &rtp = &rtp . ',' . g:dot_vim_dir . '/autoload/vim-pathogen'
-  endif
+  :set runtimepath+=$HOME.'/.vim/autoload/vim-pathogen'
   if has('win32unix')
-    execute pathogen#infect(g:dot_vim_dir.'/pack/plugins/start/{}')
+    execute pathogen#infect($HOME.'/pack/plugins/vendor/{}')
   else
-    execute pathogen#infect('pack/plugins/start/{}')
+    execute pathogen#infect('pack/plugins/vendor/{}')
   endif
 endfunction
 

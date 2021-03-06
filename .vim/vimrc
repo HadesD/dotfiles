@@ -1,7 +1,11 @@
-" Key map here for all third party app 's plugin to use
-" jk is escape
+"****************************************************************************** 
+" *
+" * Key map here for all third party app 's plugin to use
+" *
+"****************************************************************************** 
+
 if v:version >= 500
-  inoremap jk <esc>
+  inoremap jk <ESC>
 endif
 
 nnoremap <leader><space> :nohlsearch<CR>
@@ -11,22 +15,33 @@ map <F2> :retab <CR> :w <CR>
 " `gf` opens file under cursor in a new vertical split
 nnoremap gf :vertical wincmd f<CR>
 
-if (has('win32') || has('win64')) && !has('win32unix')
-  let g:dot_vim_dir = $HOME.'/vimfiles'
-elseif has('win32unix')
-  let g:dot_vim_dir = expand('<sfile>:p:h')
-  let &runtimepath = &runtimepath . ',' . g:dot_vim_dir
-elseif has('unix')
-  let g:dot_vim_dir = $HOME.'/.vim'
-end
+nnoremap <F6> :set invpaste paste?<CR>
+command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
+set pastetoggle=<F6>
+
+" --- Quit all faster ---
+abbreviate qq qa
+
+nnoremap <C-l> <C-w>l
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+
+nnoremap gn :bn<CR>
+nnoremap gp :bp<CR>
+nnoremap gd :bd<CR>
 
 " Load plugins
-if filereadable(g:dot_vim_dir . '/autoload/init_runtime.vim')
+if filereadable($HOME . '/.vim/autoload/init_runtime.vim')
   execute init_runtime#Init()
 endif
 
-" Settings
-" --- Code Style ---
+"****************************************************************************** 
+" *
+" * Settings
+" *
+"****************************************************************************** 
+
 " set softtabstop = 0
 set expandtab
 set tabstop=4
