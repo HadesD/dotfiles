@@ -14,5 +14,5 @@ nnoremap <C-k> <C-w>k
 
 nnoremap gn :bn<CR>
 nnoremap gp :bp<CR>
-" nnoremap gd :bd<CR>
+nnoremap gd :bd<CR>
 
