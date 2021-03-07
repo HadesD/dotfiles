@@ -7,8 +7,7 @@
 #include <vector>
 #include <future>
 
-std::tuple<std::string, std::vector<std::string>>
-TestFunc()
+std::tuple<std::string, std::vector<std::string>> TestFunc()
 {
   return {};
 }
@@ -149,11 +148,9 @@ int main() {
   {
     case 1: {
       int f;
-      break;
-    }
+    } break;
     case 2: {
-      break;
-    }
+    } break;
     default:
       break;
   }
