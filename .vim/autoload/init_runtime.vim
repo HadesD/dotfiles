@@ -21,7 +21,7 @@ function! s:CheckSSH()
 endfunction
 
 function s:LoadPlugins() abort
-  :set runtimepath+=$HOME.'/.vim/autoload/vim-pathogen'
+  " :set runtimepath+=$HOME.'/.vim/autoload/vim-pathogen'
   if has('win32unix')
     execute pathogen#infect($HOME.'/.vim/pack/vendor/start/{}')
   else
