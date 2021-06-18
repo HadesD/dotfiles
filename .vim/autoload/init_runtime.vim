@@ -23,9 +23,9 @@ endfunction
 function s:LoadPlugins() abort
   :set runtimepath+=$HOME.'/.vim/autoload/vim-pathogen'
   if has('win32unix')
-    execute pathogen#infect($HOME.'/pack/plugins/vendor/{}')
+    execute pathogen#infect($HOME.'/.vim/pack/vendor/{}')
   else
-    execute pathogen#infect('pack/plugins/vendor/{}')
+    execute pathogen#infect('pack/vendor/{}')
   endif
 endfunction
 
