@@ -1,7 +1,7 @@
 export LC_ALL=en_US.UTF-8
 # Theme setting
 # unset ZSH_THEME
-RPROMPT='[%D{%L:%M:%S}]'
+RPROMPT='[%D{%H:%M:%S}]'
 export ZSH_THEME="mortalscumbag"
 
 # alias vim="stty stop '' -ixoff ; vim"
