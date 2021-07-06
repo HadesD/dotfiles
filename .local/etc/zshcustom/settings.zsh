@@ -1,14 +1,8 @@
 export LC_ALL=en_US.UTF-8
 
 # Theme setting
-RPROMPT='[%D{%H:%M:%S}]'
-if [[ "$(uname -a)" == *"microsoft"* ]]; then
-  local ret_status="%(?:%{$fg_bold[green]%}:%{$fg_bold[red]%})%?%{$reset_color%}"
-  RPROMPT="${RPROMPT} [${ret_status}]"
-  ZSH_THEME="steeef"
-else
-  ZSH_THEME="mortalscumbag"
-fi
+RPROMPT="[%D{%H:%M:%S}] [%(?:%{$fg_bold[green]%}:%{$fg_bold[red]%})%?%{$reset_color%}]"
+ZSH_THEME="steeef"
 
 export EDITOR=vim
 if [ -z "$TMUX" ]; then
