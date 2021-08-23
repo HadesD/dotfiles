@@ -38,7 +38,7 @@ nnoremap gn :bn<CR>
 nnoremap gp :bp<CR>
 nnoremap gd :bd<CR>
 
-xnoremap <C-\> gc
+" CTRL + _ to comment
 
 "******************************************************************************
 " *
