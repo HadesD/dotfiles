@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-__DIR__="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
+#__DIR__="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
+__DIR__='$HOME/dotfiles'
 
 # Usage: installDotfile SELF_DIR TO_DIR
 installDotfile() {
