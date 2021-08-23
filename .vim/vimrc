@@ -38,6 +38,8 @@ nnoremap gn :bn<CR>
 nnoremap gp :bp<CR>
 nnoremap gd :bd<CR>
 
+xnoremap <C-\> gc
+
 "******************************************************************************
 " *
 " * Settings
@@ -59,7 +61,8 @@ set foldnestmax=10
 set foldmethod=indent
 
 set nocompatible
-set backspace=2
+" set backspace=2
+set backspace=indent,eol,start
 set number
 set incsearch        " Search on typing
 set hlsearch         " Highlight search
