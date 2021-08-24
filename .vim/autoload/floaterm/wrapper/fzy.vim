@@ -1,6 +1,6 @@
 function! floaterm#wrapper#fzy#(cmd, jobopts, config) abort
   let s:fzy_tmpfile = tempname()
-  let cmd = 'find . -type f '
+  let cmd = 'find -type f '
 
   " Exclude list
   let cmd .= ''
