@@ -1,7 +1,16 @@
 function! floaterm#wrapper#fzy#(cmd, jobopts, config) abort
   let s:fzy_tmpfile = tempname()
-  let cmd = 'find -type f | fzy'
-  let cmd .= ' > ' . s:fzy_tmpfile
+  let cmd = 'find . -type f '
+  let cmd .= join([
+        \ "! -path */.git/*",
+        \ "! -path */.bundle/*",
+        \ "! -path */.cache/*",
+        \ "! -path */python2.7/*",
+        \ "! -path */python3.6/*",
+        \ "! -path */__pycache__/*",
+        \ "! -path */node_modules/*",
+        \ ], ' ')
+  let cmd .= ' | fzy > ' . s:fzy_tmpfile
   let cmd = [&shell, &shellcmdflag, cmd]
   let jobopts = {'on_exit': funcref('s:fzy_callback')}
   call floaterm#util#deep_extend(a:jobopts, jobopts)
