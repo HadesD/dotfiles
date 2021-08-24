@@ -22,6 +22,7 @@ endfunction
 function! s:fzy_callback(job, data, event, opener) abort
   if filereadable(s:fzy_tmpfile)
     let filenames = readfile(s:fzy_tmpfile)
+    call delete(s:fzy_tmpfile)
     if !empty(filenames)
       if has('nvim')
         call floaterm#window#hide(bufnr('%'))
