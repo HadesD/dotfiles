@@ -1,6 +1,6 @@
 augroup Binary
-	au!
-	au BufReadPre *.bin let &bin=1
+  au!
+  au BufReadPre *.bin let &bin=1
   au BufReadPost *.bin if &bin | %!xxd -g1
   au BufReadPost *.bin set ft=xxd | endif
   au BufWritePre *.bin if &bin | %!xxd -r
