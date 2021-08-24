@@ -178,3 +178,6 @@
 [submodule ".vim/pack/plugins/start/vim-vue-plugin"]
 	path = .vim/pack/vendor/start/vim-vue-plugin
 	url = https://github.com/leafOfTree/vim-vue-plugin.git
+[submodule ".vim/pack/vendor/start/vim-floaterm"]
+	path = .vim/pack/vendor/start/vim-floaterm
+	url = https://github.com/voldikss/vim-floaterm.git

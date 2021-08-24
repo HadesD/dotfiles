@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-#__DIR__="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
-__DIR__='$HOME/dotfiles'
+__DIR__="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
+#__DIR__='$HOME/dotfiles'
 
 # Usage: installDotfile SELF_DIR TO_DIR
 installDotfile() {
@@ -28,7 +28,7 @@ if [ $? -ne 0 ]; then
 fi
 
 # Install zsh
-INC_ZSH_CUSTOM_STR="export ZSH_CUSTOM=$__DIR__/.local/etc/zshcustom"
+INC_ZSH_CUSTOM_STR="ZSH_CUSTOM=$__DIR__/.local/etc/zshcustom"
 grep -Fq "$INC_ZSH_CUSTOM_STR" "$HOME/.zshrc" > /dev/null 2>&1
 if [ $? -ne 0 ]; then
   type -P zsh > /dev/null 2>&1
