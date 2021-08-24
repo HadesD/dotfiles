@@ -16,7 +16,7 @@ set pastetoggle=<F6>
 
 " --- Save as sudo
 if has('unix')
-  command W :execute ':silent w !sudo tee % > /dev/null' | :edit!
+  command W :exec ':silent w !sudo tee % > /dev/null' | :edit!
 endif
 
 " --- Quit all faster ---
@@ -28,6 +28,10 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 
 map <F4> <ESC>:exec stridx(&mouse,'a') ? "set mouse+=a" : "set mouse-=a"<CR>
+let g:floaterm_keymap_new    = '<F7>'
+let g:floaterm_keymap_prev   = '<F8>'
+let g:floaterm_keymap_next   = '<F9>'
+let g:floaterm_keymap_toggle = '<F12>'
 
 " CTRL + _ to comment
 
