@@ -33,6 +33,10 @@ grep -Fq "$INC_ZSH_CUSTOM_STR" "$HOME/.zshrc" > /dev/null 2>&1
 if [ $? -ne 0 ]; then
   type -P zsh > /dev/null 2>&1
   if [ $? -ne 0 ]; then
+    git clone https://github.com/zsh-users/zsh-autosuggestions.git ~/.zsh/zsh-autosuggestions
+    echo 'source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh' >> ~/.zshrc
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting
+    echo 'source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh' >> ~/.zshrc
     type -P wget > /dev/null 2>&1
     if [ $? -eq 0 ]; then
       sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
