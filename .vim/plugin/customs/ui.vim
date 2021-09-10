@@ -24,13 +24,16 @@ else
     let &t_EI.="\e[1 q"
     let &t_te.="\e[0 q"
   elseif has('win32') || has('win64')
-    set term=xterm
+    " set term=xterm
+    if (&term =~ '^xterm' && &t_Co == 256)
+      set t_ut= | set ttyscroll=1
+    endif
   endif
 endif
 
 set background=dark
-" set synmaxcol=128
-" syntax sync minlines=256
+set synmaxcol=128
+syntax sync minlines=256
 set lazyredraw
 
 if (&enc == 'utf-8')
