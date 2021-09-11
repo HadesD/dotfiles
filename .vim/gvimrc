@@ -1,2 +1,3 @@
 set vb t_vb=
+au GUIEnter * simalt ~x
 
