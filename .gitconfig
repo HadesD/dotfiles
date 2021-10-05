@@ -8,6 +8,7 @@
   autocrlf = false
   pager = less -r
   quotepath = false
+  compression = 0
 
 [push]
   default = matching
