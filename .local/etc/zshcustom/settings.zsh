@@ -1,4 +1,5 @@
-export LC_ALL=en_US.UTF-8
+#export LC_ALL=en_US.UTF-8
+export LC_ALL=C
 
 # Theme setting
 RPROMPT="[%D{%H:%M:%S}] [%(?:%{$fg_bold[green]%}:%{$fg_bold[red]%})%?%{$reset_color%}]"
