@@ -6,10 +6,6 @@
 	path = .vim/autoload/vim-pathogen
 	url = https://github.com/tpope/vim-pathogen.git
 	ignore = dirty
-[submodule ".vim/pack/plugins/start/vim-gitgutter"]
-	path = .vim/pack/vendor/start/vim-gitgutter
-	url = https://github.com/airblade/vim-gitgutter.git
-	ignore = dirty
 [submodule ".vim/pack/plugins/start/vim-cpp-enhanced-highlight"]
 	path = .vim/pack/vendor/start/vim-cpp-enhanced-highlight
 	url = https://github.com/octol/vim-cpp-enhanced-highlight.git
@@ -142,9 +138,6 @@
 	path = .vim/pack/vendor/start/vim-lsc
 	url = https://github.com/natebosch/vim-lsc.git
 	ignore = dirty
-[submodule ".vim/pack/plugins/start/VimCompletesMe"]
-	path = .vim/pack/vendor/start/VimCompletesMe
-	url = https://github.com/ajh17/VimCompletesMe.git
 [submodule ".vim/pack/plugins/start/vim-fifs"]
 	path = .vim/pack/vendor/start/vim-fifs
 	url = https://github.com/HadesD/vim-fifs.git
