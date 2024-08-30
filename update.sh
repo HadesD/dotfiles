@@ -1,9 +1,9 @@
 git pull origin master
-git submodule update --init --recursive
+git submodule update --jobs=5 --init --recursive
 
 git submodule foreach "
   git reset HEAD
   git checkout .
-  git pull origin master
+  git pull origin \$(basename \$(git symbolic-ref refs/remotes/origin/HEAD --short))
 "
 
