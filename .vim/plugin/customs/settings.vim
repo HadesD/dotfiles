@@ -8,7 +8,8 @@ endif
 if has('unix')
   set backupdir^=/tmp
   if (v:version > 703)
-    set undodir^=~/tmp,/tmp
+    set undodir^=/tmp
+    set undofile
   endif
 elseif has('win32') || has('win64')
   set backupdir^=$TEMP
