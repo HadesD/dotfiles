@@ -163,3 +163,6 @@
 [submodule ".vim/pack/vendor/start/vim-floaterm"]
 	path = .vim/pack/vendor/start/vim-floaterm
 	url = https://github.com/voldikss/vim-floaterm.git
+[submodule ".vim/bundle/nerdtree"]
+	path = .vim/pack/vendor/start/nerdtree
+	url = https://github.com/preservim/nerdtree.git

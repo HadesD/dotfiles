@@ -1,3 +1,4 @@
+finish " use NerdTREE
 autocmd FileType netrw setl bufhidden=delete
 " let g:netrw_fastbrowse = 0
 let g:netrw_banner = 0
