@@ -1,3 +1,4 @@
+finish " has vim-lsp
 if v:version < 800
   let g:loaded_lsc = 1
   " let g:lsc_enable_autocomplete = 1

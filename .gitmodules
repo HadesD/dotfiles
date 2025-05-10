@@ -126,10 +126,6 @@
 	path = .vim/pack/vendor/start/undotree
 	url = https://github.com/mbbill/undotree.git
 	ignore = dirty
-[submodule ".vim/pack/plugins/start/vim-lsc"]
-	path = .vim/pack/vendor/start/vim-lsc
-	url = https://github.com/natebosch/vim-lsc.git
-	ignore = dirty
 [submodule ".vim/pack/plugins/start/vim-fifs"]
 	path = .vim/pack/vendor/start/vim-fifs
 	url = https://github.com/HadesD/vim-fifs.git
@@ -166,3 +162,6 @@
 [submodule ".vim/bundle/nerdtree"]
 	path = .vim/pack/vendor/start/nerdtree
 	url = https://github.com/preservim/nerdtree.git
+[submodule ".vim/pack/vendor/start/vim-lsp"]
+	path = .vim/pack/vendor/start/vim-lsp
+	url = https://github.com/prabirshrestha/vim-lsp.git
