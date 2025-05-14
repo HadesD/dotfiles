@@ -1,5 +1,5 @@
 git pull origin master
-git submodule update --jobs=5 --init --recursive --recommend-shallow --depth 1
+git submodule update --jobs=5 --init --recursive #--recommend-shallow --depth 1
 
 git submodule foreach "
   git reset HEAD
